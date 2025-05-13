@@ -1,0 +1,58 @@
+import os
+from google import genai
+from google.genai import types
+from dotenv import load_dotenv
+
+load_dotenv()
+SYSTEM_PROMPT = """You are a helpful assistant.  
+You are proficient in extracting text from images using OCR.  
+The text you extract is returned in a markdown format with a header at the beginning of each page.  
+The header includes the page number.  Format your response for optimal use for a
+ language model RAG question/answer application.
+ """
+FILE_PATH = "raw_pdf_files/wingspan.pdf"
+
+
+def generate():
+    client = genai.Client(
+        api_key=os.environ.get("GEMINI_API_KEY"),
+    )
+
+    files = [
+        client.files.upload(file=FILE_PATH),
+    ]
+    model = "gemini-2.5-flash-preview-04-17"
+    contents = [
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_uri(
+                    file_uri=files[0].uri,
+                    mime_type=files[0].mime_type,
+                ),
+                types.Part.from_text(text="""INSERT_INPUT_HERE"""),
+            ],
+        ),
+    ]
+    generate_content_config = types.GenerateContentConfig(
+        temperature=0.2,
+        response_mime_type="text/plain",
+        system_instruction=[
+            types.Part.from_text(text=SYSTEM_PROMPT),
+        ],
+    )
+
+    response = client.models.generate_content(
+        model=model,
+        contents=contents,
+        config=generate_content_config,
+    )
+
+    output_file_path = "text/wingspan.txt"
+    with open(output_file_path, "w", encoding="utf-8") as f:
+        f.write(response.text)
+    print(f"Extracted text saved to {output_file_path}")
+
+
+if __name__ == "__main__":
+    generate()
