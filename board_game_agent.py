@@ -131,6 +131,22 @@ def manage_game_context_and_load_manual_node(state: BoardGameAgentState) -> dict
 
 
 def generate_answer_node(state: BoardGameAgentState) -> dict:
+    """
+    Generate an answer node for the given board game state and user query.
+
+    This function interprets the current state of the game as provided in the
+    state object, determines the appropriate response to the last user query,
+    and returns a message structure to relay the response.
+
+    :param state: The current state of the board game agent.
+
+    :return: A dictionary containing a single key "messages". The value of this key
+        is a list of `AIMessage` objects, each representing a crafted response to
+        the user's query.
+
+    :raises KeyError: If required keys ("messages", "current_game_name", etc.)
+        are missing from the `state` parameter.
+    """
     info_message = state.get("info_message_for_user")
     current_game = state.get("current_game_name")
     manual = state.get("current_game_manual")
@@ -182,7 +198,17 @@ builder.set_entry_point("identify_game_query")
 compiled_graph = builder.compile()
 
 
-def execute_agent():
+def execute_agent() -> None:
+    """
+    Executes an interactive board game assistant loop.
+
+    This function facilitates communication with a conversational agent which specializes in board game rules assistance.
+    It maintains a state for the conversation, including the ongoing messages, current game name, manual,
+    newly identified game, and user-facing informational messages. Users can interact by typing queries,
+    and the agent will process them and respond accordingly.
+
+    :return: None
+    """
     agent_conversation_state = {
         "messages": [SystemMessage(content=SYSTEM_PROMPT)],
         "current_game_name": None,
@@ -205,13 +231,18 @@ def execute_agent():
             print(f"Info message for user: {agent_conversation_state['info_message_for_user']}")
             continue
 
+        # Ensure message list does not exceed 5
+        if len(agent_conversation_state["messages"]) >= 5:
+            # Keep the first message (SystemMessage) and the last 4 messages
+            agent_conversation_state["messages"] = [agent_conversation_state["messages"][0]] + agent_conversation_state["messages"][-4:]
+
         agent_conversation_state["messages"].append(HumanMessage(content=user_input))
         # Since we're checking at each message, we need to reset these values to None
         agent_conversation_state['identified_game_in_query'] = None
         agent_conversation_state['info_message_for_user'] = None
 
         result_state = compiled_graph.invoke(agent_conversation_state, config=config)
-        #logger.debug(f"Messages: {result_state['messages']}, Current game: {result_state['current_game_name']}")
+        logger.debug(f"Messages: {result_state['messages']}, Current game: {result_state['current_game_name']}")
         print(f"Agent: {result_state['messages'][-1].content}")
 
         # Ensure manual and current game persist for the next interaction
