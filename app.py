@@ -3,8 +3,17 @@ from board_game_agent import compiled_graph, SYSTEM_PROMPT
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 import json
 import uuid
+import time
 
 st.title("Board Game Rules Assistant")
+"""
+I can help with:
+ - Wingspan
+ - Scythe
+ - Spirit Island
+ 
+**Ask Away!**
+"""
 
 if "messages" not in st.session_state:
     st.session_state.messages = [SystemMessage(content=SYSTEM_PROMPT)]
@@ -39,10 +48,10 @@ def _clear_chat_and_reset_state():
     st.session_state.chat_uuid = str(uuid.uuid4())
 
 
-# Function to run the agent with user input
+# Function to run the agent with user input and simulate typing
 def run_agent_via_streamlit(user_message: str) -> None:
     """
-    Processes a user message and interacts with a conversational agent to generate an answer.
+    Processes a user message and interacts with a conversational agent to generate an answer with a typing simulation effect.
 
     :param user_message: A string containing the message input provided by the user for processing.
     :type user_message: str
@@ -67,19 +76,28 @@ def run_agent_via_streamlit(user_message: str) -> None:
         "info_message_for_user": None
     }
 
-    # Execute the graph
+    # Execute the graph to get the full response first
     config = {"recursion_limit": 10}
     result_state = compiled_graph.invoke(agent_state, config=config)
+    ai_message_content = result_state['messages'][-1].content
 
-    # Update the  session state with the results from the graph
-    ai_message = result_state['messages'][-1]
-    st.session_state.messages.append(ai_message)  # Append the latest AIMessage
-    st.chat_message("assistant").write(ai_message.content)  # Write the AI message immediately
+    # Simulate typing effect
+    with st.chat_message("assistant"):
+        message_placeholder = st.empty()
+        full_response = ""
+        for character in ai_message_content:
+            full_response += character
+            message_placeholder.markdown(full_response + "▌")
+            time.sleep(0.00002) #
+        message_placeholder.markdown(full_response)
+
+    # Update the session state with the complete response
+    st.session_state.messages.append(AIMessage(content=ai_message_content))
     st.session_state.current_game_name = result_state.get('current_game_name')
     st.session_state.current_game_manual = result_state.get('current_game_manual')
     # Update the chat history
     st.session_state.current_chat_history.append({'user': user_message,
-                                                  'assistant': ai_message.content,
+                                                  'assistant': ai_message_content,
                                                   'game': st.session_state.current_game_name})
 
 
