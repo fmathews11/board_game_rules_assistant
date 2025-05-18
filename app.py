@@ -36,9 +36,10 @@ def _clear_chat_and_reset_state():
             with open(CHAT_HISTORIES_PATH, 'r') as f:
                 histories = json.load(f)
         except FileNotFoundError:
-            histories = {}
+            histories = []
 
-        histories[st.session_state.chat_uuid] = st.session_state.current_chat_history
+        temp_dict = {st.session_state.chat_uuid:st.session_state.current_chat_history}
+        histories.append(temp_dict)
 
         with open(CHAT_HISTORIES_PATH, 'w') as f:
             json.dump(histories, f)
@@ -95,10 +96,12 @@ def run_agent_via_streamlit(user_message: str) -> None:
     st.session_state.messages.append(AIMessage(content=ai_message_content))
     st.session_state.current_game_name = result_state.get('current_game_name')
     st.session_state.current_game_manual = result_state.get('current_game_manual')
-    # Update the chat history
-    st.session_state.current_chat_history.append({'user': user_message,
-                                                  'assistant': ai_message_content,
-                                                  'game': st.session_state.current_game_name})
+    message_id = str(uuid.uuid4())  # Use a unique ID for each message pair
+    st.session_state.current_chat_history.append = {
+        'user': user_message,
+        'assistant': ai_message_content,
+        'game': st.session_state.current_game_name
+    }
 
 
 # Display chat messages from history on app rerun
