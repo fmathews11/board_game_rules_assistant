@@ -150,14 +150,20 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
     info_message = state.get("info_message_for_user")
     current_game = state.get("current_game_name")
     manual = state.get("current_game_manual")
-    last_user_query = state["messages"][-1].content
 
     # Edge cases
     # If there was an error or clarification needed from previous step, prioritize info message
     if info_message:
         return {"messages": [AIMessage(content=info_message)]}
     if not current_game:
-        return {"messages": [AIMessage(content="I'm not sure which game you're referring to. Could you please specify?")]}
+        return {
+            "messages": [AIMessage(content="I'm not sure which game you're referring to. Could you please specify?")]}
+
+    # Check if messages list is not empty and the last message is a HumanMessage
+    if not state.get("messages") or not isinstance(state["messages"][-1], HumanMessage):
+        return {"messages": [AIMessage(content="An unexpected error occurred. Please try again.")]}
+
+    last_user_query = state["messages"][-1].content
 
     prompt_template = f"""
        You are a helpful board game rules assistant.
@@ -165,17 +171,17 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
        --- MANUAL START ---
        {manual}
        --- MANUAL END ---
-        
+
        --- HOW TO ANSWER --
         - Answer the user's question based ONLY on the provided manual.
         - Provide page number references to cite where the user can find this information.
         - If the answer is not found in the manual, clearly state that.
         - Do not make assumptions or use external knowledge.
-        - Answer the question directly, as you are a subject matter expert.  
+        - Answer the question directly, as you are a subject matter expert.
         - DO NOT include "based on the provided manual" or "based on the context".
         - Be as verbose as necessary.  First provide a detailed explanation of the answer, then provide a short summary.
         - Use bullet points and/or markdown format to make the answer as easily-interpreted as possible.
-        - Generate some potential follow up questions and suggest them to the user in a conversational manner. 
+        - Generate some potential follow up questions and suggest them to the user in a conversational manner.
         For instance: "Would you like to know more about *INSERT SUGGESTION(S) HERE*?"
 
        User's question: "{last_user_query}"
@@ -234,7 +240,8 @@ def execute_agent() -> None:
         # Ensure message list does not exceed 5
         if len(agent_conversation_state["messages"]) >= 5:
             # Keep the first message (SystemMessage) and the last 4 messages
-            agent_conversation_state["messages"] = [agent_conversation_state["messages"][0]] + agent_conversation_state["messages"][-4:]
+            agent_conversation_state["messages"] = [agent_conversation_state["messages"][0]] + agent_conversation_state[
+                                                                                                   "messages"][-4:]
 
         agent_conversation_state["messages"].append(HumanMessage(content=user_input))
         # Since we're checking at each message, we need to reset these values to None
