@@ -13,6 +13,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("AgentStatusLogger")
 
 POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe"]
+POSSIBLE_BOARD_GAMES_FORMATTED = ", ".join([game.replace("_", " ").title() for game in POSSIBLE_BOARD_GAMES])
 MANUALS_DIR = "text"
 # Using flash preview for both now, but may move to a lower latency model for the game ID model
 GAME_IDENTIFICATION_MODEL_NAME = "gemini-2.5-flash-preview-04-17"
@@ -112,7 +113,7 @@ def manage_game_context_and_load_manual_node(state: BoardGameAgentState) -> dict
             logger.debug(f"No new game in query, using existing context: {current_game}")
             game_to_use = current_game
             # Here we want to create a message to let the user know that we don't know what game is being talked about
-            info_message = "Which board game are you asking about?"
+            info_message = f"Which board game are you asking about? I am able to answer questions about {POSSIBLE_BOARD_GAMES_FORMATTED}."
 
     # Handling cases where the first node determined the user has mentioned game
     else:
