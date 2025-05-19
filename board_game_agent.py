@@ -152,18 +152,17 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
     manual = state.get("current_game_manual")
 
     # Edge cases
+    # Check if messages list is not empty and the last message is a HumanMessage
+    if not state.get("messages") or not isinstance(state["messages"][-1], HumanMessage):
+        return {"messages": [AIMessage(content="An unexpected error occurred. Please try again.")]}
+    # We now know the user's latest query is a HumanMessage, so we can extract it
+    last_user_query = state["messages"][-1].content
     # If there was an error or clarification needed from previous step, prioritize info message
     if info_message:
         return {"messages": [AIMessage(content=info_message)]}
     if not current_game:
         return {
             "messages": [AIMessage(content="I'm not sure which game you're referring to. Could you please specify?")]}
-
-    # Check if messages list is not empty and the last message is a HumanMessage
-    if not state.get("messages") or not isinstance(state["messages"][-1], HumanMessage):
-        return {"messages": [AIMessage(content="An unexpected error occurred. Please try again.")]}
-
-    last_user_query = state["messages"][-1].content
 
     prompt_template = f"""
        You are a helpful board game rules assistant.
