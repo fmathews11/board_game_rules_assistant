@@ -159,6 +159,9 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
         return {"messages": [AIMessage(content="An unexpected error occurred. Please try again.")]}
     # We now know the user's latest query is a HumanMessage, so we can extract it
     last_user_query = state["messages"][-1].content
+    previous_messages = state["messages"][:-1]
+    previous_messages_formatted = {type(i).__name__: i.content for i in previous_messages}
+    print(previous_messages)
     # If there was an error or clarification needed from previous step, prioritize info message
     if info_message:
         return {"messages": [AIMessage(content=info_message)]}
@@ -172,9 +175,14 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
        --- MANUAL START ---
        {manual}
        --- MANUAL END ---
+       
+       You also have access to the previous chat history:
+       --- CHAT HISTORY START ---
+        {previous_messages_formatted}
+       --- CHAT HISTORY END ---
 
        --- HOW TO ANSWER --
-        - Answer the user's question based ONLY on the provided manual.
+        - Answer the user's question based ONLY on the provided manual and chat history.
         - Provide page number references to cite where the user can find this information.
         - If the answer is not found in the manual, clearly state that.
         - Do not make assumptions or use external knowledge.

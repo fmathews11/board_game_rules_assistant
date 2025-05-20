@@ -96,12 +96,11 @@ def run_agent_via_streamlit(user_message: str) -> None:
     st.session_state.messages.append(AIMessage(content=ai_message_content))
     st.session_state.current_game_name = result_state.get('current_game_name')
     st.session_state.current_game_manual = result_state.get('current_game_manual')
-    message_id = str(uuid.uuid4())  # Use a unique ID for each message pair
-    st.session_state.current_chat_history.append = {
+    st.session_state.current_chat_history.append({
         'user': user_message,
         'assistant': ai_message_content,
         'game': st.session_state.current_game_name
-    }
+    })
 
 
 # Display chat messages from history on app rerun

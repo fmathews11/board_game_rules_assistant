@@ -1,12 +1,13 @@
 import unittest
 from board_game_agent import generate_answer_node, BoardGameAgentState
-from langchain_core.messages import HumanMessage, AIMessage
+from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 import os
 import numpy as np
-from answer_benchmarks import WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER
+from answer_benchmarks import WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER, HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER, \
+    WHAT_IS_FEAR_IN_SPIRIT_ISLAND_ANSWER
 
 load_dotenv()
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -19,7 +20,6 @@ def _get_gemini_embeddings(text: str) -> np.ndarray:
         model=EMBEDDING_MODEL,
         contents=text,
         config=types.EmbedContentConfig(task_type='SEMANTIC_SIMILARITY'))
-
     return np.array(result.embeddings[0].values)
 
 
@@ -31,19 +31,17 @@ def _load_spirit_island_manual():
 def _cosine_similarity(vector1, vector2) -> float | None:
     """
   Computes the cosine similarity between two vectors using NumPy.
-
   """
     dot_product = np.dot(vector1, vector2)
     norm_vector1 = np.linalg.norm(vector1)
     norm_vector2 = np.linalg.norm(vector2)
-
     if norm_vector1 == 0 or norm_vector2 == 0:
-        return None  # Cosine similarity is undefined for zero vectors
-
+        return None  # Undefined
     similarity = dot_product / (norm_vector1 * norm_vector2)
     return similarity
 
 
+# Bringing in spirit island rules for semantic similarity validation
 SPIRIT_ISLAND_TEXT = _load_spirit_island_manual()
 
 
@@ -101,6 +99,49 @@ class TestGenerateAnswerNode(unittest.TestCase):
         print(cosine_similarity_to_benchmark_answer)
         self.assertGreater(cosine_similarity_to_benchmark_answer, 0.9)
         self.assertLess(cosine_similarity_to_benchmark_answer, 1.0)
+
+    def test_how_to_gain_presence_in_spirit_island_message(self):
+        state = BoardGameAgentState(
+            messages=[HumanMessage(content="How do I gain presence in spirit island?")],
+            current_game_name="spirit_island",
+            current_game_manual=SPIRIT_ISLAND_TEXT,
+            identified_game_in_query=None,
+            info_message_for_user=None
+        )
+        result = generate_answer_node(state)
+        known_valid_answer = HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER
+        result_embedding = _get_gemini_embeddings(result["messages"][0].content)
+        known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
+        cosine_similarity_to_benchmark_answer = _cosine_similarity(result_embedding, known_valid_answer_embedding)
+        print(f"Cosine similarity for 'How to gain presence': {cosine_similarity_to_benchmark_answer}")
+        self.assertGreater(cosine_similarity_to_benchmark_answer, 0.85)  # Adjust threshold as needed
+
+    def test_follow_up_what_is_fear_in_spirit_island_message_with_history(self):
+        # Simulate a previous turn in the conversation
+        previous_messages = [
+            SystemMessage(
+                content="You are a helpful assistant.  Your job is to help users answer questions about board games "
+                        "by referencing the rules."),
+            HumanMessage(content="What are dahan in spirit island?"),
+            AIMessage(content=WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER)  # Include a previous AI response
+        ]
+
+        state = BoardGameAgentState(
+            messages=previous_messages + [HumanMessage(content="What is fear?")],  # Add the follow-up question
+            current_game_name="spirit_island",
+            current_game_manual=SPIRIT_ISLAND_TEXT,
+            identified_game_in_query=None,
+            info_message_for_user=None
+        )
+
+        result = generate_answer_node(state)
+        known_valid_answer = WHAT_IS_FEAR_IN_SPIRIT_ISLAND_ANSWER
+        result_embedding = _get_gemini_embeddings(
+            result["messages"][-1].content)  # Get embedding of the latest AI message
+        known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
+        cosine_similarity_to_benchmark_answer = _cosine_similarity(result_embedding, known_valid_answer_embedding)
+        print(f"Cosine similarity for 'What is fear' (follow-up): {cosine_similarity_to_benchmark_answer}")
+        self.assertGreater(cosine_similarity_to_benchmark_answer, 0.9)  # Adjust threshold as needed
 
 
 if __name__ == "__main__":
