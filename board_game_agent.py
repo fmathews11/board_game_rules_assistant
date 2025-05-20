@@ -4,6 +4,7 @@ import logging
 from typing import TypedDict, Annotated, Optional, List
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, END
 
 dotenv.load_dotenv()
@@ -178,7 +179,7 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
         - If the answer is not found in the manual, clearly state that.
         - Do not make assumptions or use external knowledge.
         - Answer the question directly, as you are a subject matter expert.
-        - DO NOT include "based on the provided manual" or "based on the context".
+        - DO NOT include phrases such as "based on the provided manual" or "based on the context".
         - Be as verbose as necessary.  First provide a detailed explanation of the answer, then provide a short summary.
         - Use bullet points and/or markdown format to make the answer as easily-interpreted as possible.
         - Generate some potential follow up questions and suggest them to the user in a conversational manner.
@@ -201,7 +202,8 @@ builder.add_edge(start_key="identify_game_query", end_key="manage_current_game_a
 builder.add_edge(start_key="manage_current_game_and_manual", end_key="generate_answer")
 builder.add_edge("generate_answer", END)
 builder.set_entry_point("identify_game_query")
-compiled_graph = builder.compile()
+memory = MemorySaver()
+compiled_graph = builder.compile(checkpointer=memory)
 
 
 def execute_agent() -> None:
@@ -222,7 +224,9 @@ def execute_agent() -> None:
         "identified_game_in_query": None,
         "info_message_for_user": None
     }
-    config = {"recursion_limit": 10}
+
+    # Set an arbitrary recursion limit and a thread ID for memory.
+    config = {"recursion_limit": 10, "configurable": {"thread_id": "my_static_thread"}}
     print("I am here to help you with all of your board game questions!")
     # Initiate loop
     while True:
