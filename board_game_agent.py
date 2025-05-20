@@ -2,7 +2,7 @@ import os
 import dotenv
 import logging
 from typing import TypedDict, Annotated, Optional, List
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage
+from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.graph import StateGraph, END
 
@@ -29,7 +29,7 @@ You are a helpful assistant.  Your job is to help users answer questions about b
 class BoardGameAgentState(TypedDict):
     # The lambda expression here tells Langgraph how to handle the messages
     messages: Annotated[
-        list[HumanMessage | AIMessage | SystemMessage], lambda existing_msg, new_msg: existing_msg + new_msg]
+        List[HumanMessage | AIMessage | SystemMessage], lambda existing_msg, new_msg: existing_msg + new_msg]
     current_game_name: Optional[str]
     current_game_manual: Optional[str]
     # Temporary field to hold game name identified from the latest query - Only is populated if the first layer
