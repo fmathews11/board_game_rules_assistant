@@ -10,7 +10,7 @@ The text you extract must be returned in a markdown format with a header at the 
 The header includes the page number.  Format your response for optimal use for a
  language model RAG question/answer application.
  """
-FILE_PATH = "raw_pdf_files/perch.pdf"
+FILE_PATH = "../raw_pdf_files/perch.pdf"
 MODEL = "gemini-2.5-flash-preview-04-17"
 
 
@@ -49,7 +49,7 @@ def extract():
         config=generate_content_config,
     )
 
-    output_file_path = "text/perch.txt"
+    output_file_path = "../text/perch.txt"
     with open(output_file_path, "w", encoding="utf-8") as f:
         f.write(response.text)
     print(f"Extracted text saved to {output_file_path}")
