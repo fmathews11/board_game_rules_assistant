@@ -6,14 +6,24 @@ import uuid
 import time
 
 st.title("Board Game Rules Assistant")
+st.markdown(
 """
 I can help with:
  - Wingspan
  - Scythe
  - Spirit Island
- 
+ - Perch
+
+
 **Ask Away!**
 """
+)
+
+# Selectbox for streaming option
+streaming_option = st.selectbox(
+    "Stream response?",
+    ("Yes", "No")
+)
 
 if "messages" not in st.session_state:
     st.session_state.messages = [SystemMessage(content=SYSTEM_PROMPT)]
@@ -78,19 +88,26 @@ def run_agent_via_streamlit(user_message: str) -> None:
     }
 
     # Execute the graph to get the full response first
-    config = {"recursion_limit": 10}
+    config = {
+        "recursion_limit": 10,
+        "configurable": {"thread_id": st.session_state.chat_uuid}
+            }
     result_state = compiled_graph.invoke(agent_state, config=config)
     ai_message_content = result_state['messages'][-1].content
 
-    # Simulate typing effect
-    with st.chat_message("assistant"):
-        message_placeholder = st.empty()
-        full_response = ""
-        for character in ai_message_content:
-            full_response += character
-            message_placeholder.markdown(full_response + "▌")
-            time.sleep(0.00002) #
-        message_placeholder.markdown(full_response)
+    if streaming_option == "Yes":
+        # Simulate typing effect
+        with st.chat_message("ai"):
+            message_placeholder = st.empty()
+            full_response = ""
+            for character in ai_message_content:
+                full_response += character
+                message_placeholder.markdown(full_response + "▌")
+                time.sleep(0.0000002) #
+            message_placeholder.markdown(full_response)
+
+    else:
+        st.chat_message("ai").write(ai_message_content)
 
     # Update the session state with the complete response
     st.session_state.messages.append(AIMessage(content=ai_message_content))
@@ -111,6 +128,8 @@ for msg in st.session_state.messages:
         st.chat_message("user").write(msg.content)
     else:  # Not necessary but leaving for readability
         pass
+
+
 
 # Chat input and send button
 if user_input := st.chat_input("Ask a question about a board game..."):
