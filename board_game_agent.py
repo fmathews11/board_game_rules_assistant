@@ -2,8 +2,9 @@ import os
 import dotenv
 import logging
 from typing import TypedDict, Annotated, Optional, List
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage
+from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, END
 
 dotenv.load_dotenv()
@@ -12,7 +13,8 @@ dotenv.load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("AgentStatusLogger")
 
-POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe"]
+POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe", "perch"]
+POSSIBLE_BOARD_GAMES_FORMATTED = ", ".join([game.replace("_", " ").title() for game in POSSIBLE_BOARD_GAMES])
 MANUALS_DIR = "text"
 # Using flash preview for both now, but may move to a lower latency model for the game ID model
 GAME_IDENTIFICATION_MODEL_NAME = "gemini-2.5-flash-preview-04-17"
@@ -28,7 +30,7 @@ You are a helpful assistant.  Your job is to help users answer questions about b
 class BoardGameAgentState(TypedDict):
     # The lambda expression here tells Langgraph how to handle the messages
     messages: Annotated[
-        list[HumanMessage | AIMessage | SystemMessage], lambda existing_msg, new_msg: existing_msg + new_msg]
+        List[HumanMessage | AIMessage | SystemMessage], lambda existing_msg, new_msg: existing_msg + new_msg]
     current_game_name: Optional[str]
     current_game_manual: Optional[str]
     # Temporary field to hold game name identified from the latest query - Only is populated if the first layer
@@ -112,7 +114,7 @@ def manage_game_context_and_load_manual_node(state: BoardGameAgentState) -> dict
             logger.debug(f"No new game in query, using existing context: {current_game}")
             game_to_use = current_game
             # Here we want to create a message to let the user know that we don't know what game is being talked about
-            info_message = "Which board game are you asking about?"
+            info_message = f"Which board game are you asking about? I am able to answer questions about {POSSIBLE_BOARD_GAMES_FORMATTED}."
 
     # Handling cases where the first node determined the user has mentioned game
     else:
@@ -131,17 +133,40 @@ def manage_game_context_and_load_manual_node(state: BoardGameAgentState) -> dict
 
 
 def generate_answer_node(state: BoardGameAgentState) -> dict:
+    """
+    Generate an answer node for the given board game state and user query.
+
+    This function interprets the current state of the game as provided in the
+    state object, determines the appropriate response to the last user query,
+    and returns a message structure to relay the response.
+
+    :param state: The current state of the board game agent.
+
+    :return: A dictionary containing a single key "messages". The value of this key
+        is a list of `AIMessage` objects, each representing a crafted response to
+        the user's query.
+
+    :raises KeyError: If required keys ("messages", "current_game_name", etc.)
+        are missing from the `state` parameter.
+    """
     info_message = state.get("info_message_for_user")
     current_game = state.get("current_game_name")
     manual = state.get("current_game_manual")
-    last_user_query = state["messages"][-1].content
 
     # Edge cases
+    # Check if messages list is not empty and the last message is a HumanMessage
+    if not state.get("messages") or not isinstance(state["messages"][-1], HumanMessage):
+        return {"messages": [AIMessage(content="An unexpected error occurred. Please try again.")]}
+    # We now know the user's latest query is a HumanMessage, so we can extract it
+    last_user_query = state["messages"][-1].content
+    previous_messages = state["messages"][:-1]
+    previous_messages_formatted = {type(i).__name__: i.content for i in previous_messages}
     # If there was an error or clarification needed from previous step, prioritize info message
     if info_message:
         return {"messages": [AIMessage(content=info_message)]}
     if not current_game:
-        return {"messages": [AIMessage(content="I'm not sure which game you're referring to. Could you please specify?")]}
+        return {
+            "messages": [AIMessage(content="I'm not sure which game you're referring to. Could you please specify?")]}
 
     prompt_template = f"""
        You are a helpful board game rules assistant.
@@ -149,17 +174,22 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
        --- MANUAL START ---
        {manual}
        --- MANUAL END ---
-        
+       
+       You also have access to the previous chat history:
+       --- CHAT HISTORY START ---
+        {previous_messages_formatted}
+       --- CHAT HISTORY END ---
+
        --- HOW TO ANSWER --
-        - Answer the user's question based ONLY on the provided manual.
+        - Answer the user's question based ONLY on the provided manual and chat history.
         - Provide page number references to cite where the user can find this information.
         - If the answer is not found in the manual, clearly state that.
         - Do not make assumptions or use external knowledge.
-        - Answer the question directly, as you are a subject matter expert.  
-        - DO NOT include "based on the provided manual" or "based on the context".
+        - Answer the question directly, as you are a subject matter expert.
+        - DO NOT include phrases such as "based on the provided manual" or "based on the context".
         - Be as verbose as necessary.  First provide a detailed explanation of the answer, then provide a short summary.
         - Use bullet points and/or markdown format to make the answer as easily-interpreted as possible.
-        - Generate some potential follow up questions and suggest them to the user in a conversational manner. 
+        - Generate some potential follow up questions and suggest them to the user in a conversational manner.
         For instance: "Would you like to know more about *INSERT SUGGESTION(S) HERE*?"
 
        User's question: "{last_user_query}"
@@ -179,10 +209,21 @@ builder.add_edge(start_key="identify_game_query", end_key="manage_current_game_a
 builder.add_edge(start_key="manage_current_game_and_manual", end_key="generate_answer")
 builder.add_edge("generate_answer", END)
 builder.set_entry_point("identify_game_query")
-compiled_graph = builder.compile()
+memory = MemorySaver()
+compiled_graph = builder.compile(checkpointer=memory)
 
 
-def execute_agent():
+def execute_agent() -> None:
+    """
+    Executes an interactive board game assistant loop.
+
+    This function facilitates communication with a conversational agent which specializes in board game rules assistance.
+    It maintains a state for the conversation, including the ongoing messages, current game name, manual,
+    newly identified game, and user-facing informational messages. Users can interact by typing queries,
+    and the agent will process them and respond accordingly.
+
+    :return: None
+    """
     agent_conversation_state = {
         "messages": [SystemMessage(content=SYSTEM_PROMPT)],
         "current_game_name": None,
@@ -190,7 +231,9 @@ def execute_agent():
         "identified_game_in_query": None,
         "info_message_for_user": None
     }
-    config = {"recursion_limit": 10}
+
+    # Set an arbitrary recursion limit and a thread ID for memory.
+    config = {"recursion_limit": 10, "configurable": {"thread_id": "my_static_thread"}}
     print("I am here to help you with all of your board game questions!")
     # Initiate loop
     while True:
@@ -205,13 +248,19 @@ def execute_agent():
             print(f"Info message for user: {agent_conversation_state['info_message_for_user']}")
             continue
 
+        # Ensure message list does not exceed 5
+        if len(agent_conversation_state["messages"]) >= 5:
+            # Keep the first message (SystemMessage) and the last 4 messages
+            agent_conversation_state["messages"] = [agent_conversation_state["messages"][0]] + agent_conversation_state[
+                                                                                                   "messages"][-4:]
+
         agent_conversation_state["messages"].append(HumanMessage(content=user_input))
         # Since we're checking at each message, we need to reset these values to None
         agent_conversation_state['identified_game_in_query'] = None
         agent_conversation_state['info_message_for_user'] = None
 
         result_state = compiled_graph.invoke(agent_conversation_state, config=config)
-        #logger.debug(f"Messages: {result_state['messages']}, Current game: {result_state['current_game_name']}")
+        logger.debug(f"Messages: {result_state['messages']}, Current game: {result_state['current_game_name']}")
         print(f"Agent: {result_state['messages'][-1].content}")
 
         # Ensure manual and current game persist for the next interaction
