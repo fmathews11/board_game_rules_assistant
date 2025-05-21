@@ -1,5 +1,6 @@
 import streamlit as st
-from board_game_agent import compiled_graph, SYSTEM_PROMPT
+from board_game_agent import compiled_graph
+from utils.prompts import SYSTEM_PROMPT
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 import json
 import uuid
