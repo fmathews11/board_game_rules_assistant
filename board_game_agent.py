@@ -13,7 +13,7 @@ dotenv.load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("AgentStatusLogger")
 
-POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe"]
+POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe", "perch"]
 POSSIBLE_BOARD_GAMES_FORMATTED = ", ".join([game.replace("_", " ").title() for game in POSSIBLE_BOARD_GAMES])
 MANUALS_DIR = "text"
 # Using flash preview for both now, but may move to a lower latency model for the game ID model
@@ -161,7 +161,6 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
     last_user_query = state["messages"][-1].content
     previous_messages = state["messages"][:-1]
     previous_messages_formatted = {type(i).__name__: i.content for i in previous_messages}
-    print(previous_messages)
     # If there was an error or clarification needed from previous step, prioritize info message
     if info_message:
         return {"messages": [AIMessage(content=info_message)]}
