@@ -6,9 +6,7 @@ import json
 import uuid
 import time
 
-st.set_page_config(layout="wide")
-
-st.title("Board Game Rules Assistant")
+st.title("Board Game Help Chatbot")
 st.markdown(
     """
 I can help with:
@@ -16,25 +14,41 @@ I can help with:
  - Scythe
  - Spirit Island
  - Perch
-
+ 
 **Ask Away!**
 """
 )
 
-# Selec tbox for streaming option
-streaming_option = st.selectbox(
-    "Stream response?",
-    ("Yes", "No")
-)
-
-if "messages" not in st.session_state:
-    st.session_state.messages = [SystemMessage(content=SYSTEM_PROMPT)]
-
-if 'current_chat_history' not in st.session_state:
-    st.session_state.current_chat_history = []
-    st.session_state.chat_uuid = str(uuid.uuid4())
-
+# Constants
 CHAT_HISTORIES_PATH = "chat_histories/chat_histories.json"
+TYPING_SIMULATION_DELAY = 0.0000002
+
+
+def _load_all_chat_histories():
+    """Loads all chat histories from the JSON file."""
+    try:
+        with open(CHAT_HISTORIES_PATH, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
+
+def _save_chat_history(chat_uuid: str, chat_history: list):
+    """Saves the current chat history to the JSON file."""
+    histories = _load_all_chat_histories()
+    temp_dict = {chat_uuid: chat_history}
+    histories.append(temp_dict)
+    with open(CHAT_HISTORIES_PATH, 'w') as f:
+        json.dump(histories, f)
+
+
+def _initialize_session_state():
+    """Initializes session state variables if they don't exist."""
+    if "messages" not in st.session_state:
+        st.session_state.messages = [SystemMessage(content=SYSTEM_PROMPT)]
+    if 'current_chat_history' not in st.session_state:
+        st.session_state.current_chat_history = []
+        st.session_state.chat_uuid = str(uuid.uuid4())
 
 
 def _clear_chat_and_reset_state():
@@ -44,31 +58,17 @@ def _clear_chat_and_reset_state():
     resetting the session state.
     """
     if st.session_state.current_chat_history:
-        try:
-            with open(CHAT_HISTORIES_PATH, 'r') as f:
-                histories = json.load(f)
-        except FileNotFoundError:
-            histories = []
-        temp_dict = {st.session_state.chat_uuid: st.session_state.current_chat_history}
-        histories.append(temp_dict)
-        with open(CHAT_HISTORIES_PATH, 'w') as f:
-            json.dump(histories, f)
+        _save_chat_history(st.session_state.chat_uuid, st.session_state.current_chat_history)
     st.session_state.messages = [SystemMessage(content=SYSTEM_PROMPT)]
     st.session_state.current_chat_history = []
     st.session_state.chat_uuid = str(uuid.uuid4())
-    st.rerun()
 
 
 def _load_chat_history(chat_uuid):
     """
     Loads a specific chat history by its UUID and sets it as the current chat.
     """
-    try:
-        with open(CHAT_HISTORIES_PATH, 'r') as f:
-            histories = json.load(f)
-    except FileNotFoundError:
-        histories = []
-
+    histories = _load_all_chat_histories()
     for chat in histories:
         if chat_uuid in chat:
             st.session_state.current_chat_history = chat[chat_uuid]
@@ -78,7 +78,14 @@ def _load_chat_history(chat_uuid):
                 st.session_state.messages.append(HumanMessage(content=entry['user']))
                 st.session_state.messages.append(AIMessage(content=entry['assistant']))
             break
-    st.rerun()
+
+
+def _display_chat_message(msg):
+    """Displays a single chat message."""
+    if isinstance(msg, AIMessage):
+        st.chat_message("assistant").write(msg.content)
+    elif isinstance(msg, HumanMessage):
+        st.chat_message("user").write(msg.content)
 
 
 # Function to run the agent with user input and simulate typing
@@ -120,7 +127,7 @@ def run_agent_via_streamlit(user_message: str) -> None:
             for character in ai_message_content:
                 full_response += character
                 message_placeholder.markdown(full_response + "▌")
-                time.sleep(0.0000002)  #
+                time.sleep(TYPING_SIMULATION_DELAY)
             message_placeholder.markdown(full_response)
     else:
         st.chat_message("ai").write(ai_message_content)
@@ -134,36 +141,20 @@ def run_agent_via_streamlit(user_message: str) -> None:
         'game': st.session_state.current_game_name
     })
 
+# Main application logic
+_initialize_session_state()
 
-# Sidebar for previous chats
-with st.sidebar:
-    st.header("Previous Chats")
-    try:
-        with open(CHAT_HISTORIES_PATH, 'r') as f:
-            all_histories = json.load(f)
-    except FileNotFoundError:
-        all_histories = []
-
-    for i, chat_dict in enumerate(all_histories):
-        for chat_id, chat_data in chat_dict.items():
-            if chat_data:
-                # Display the first user message of the chat as the chat title
-                chat_title = chat_data[0]['user']
-                # Make the unique by adding an index
-                if st.button(chat_title, key=f"chat_button_{chat_id}_{i}"):
-                    _load_chat_history(chat_id)
+# Select box for streaming option
+streaming_option = st.selectbox(
+    "Stream response?",
+    ("No", "Yes")
+)
 
 # Display chat messages from history on app rerun
 for msg in st.session_state.messages:
-    if isinstance(msg, AIMessage):
-        st.chat_message("assistant").write(msg.content)
-    if isinstance(msg, HumanMessage):
-        st.chat_message("user").write(msg.content)
-    else:  # Not necessary but leaving for readability
-        pass
+    _display_chat_message(msg)
 
 # Chat input and send button
 if user_input := st.chat_input("Ask a question about a board game..."):
     run_agent_via_streamlit(user_input)
-
 st.button("Start New Chat", on_click=_clear_chat_and_reset_state, key="new_chat_button")
