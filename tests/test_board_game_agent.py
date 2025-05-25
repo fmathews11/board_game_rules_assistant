@@ -6,8 +6,10 @@ from google.genai import types
 from dotenv import load_dotenv
 import os
 import numpy as np
-from answer_benchmarks import WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER, HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER, \
-    WHAT_IS_FEAR_IN_SPIRIT_ISLAND_ANSWER
+from answer_benchmarks import (WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER,
+                               HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER,
+                               WHAT_IS_FEAR_IN_SPIRIT_ISLAND_ANSWER,
+                               VITAL_STRENGTH_CARDS_ANSWER)
 
 load_dotenv()
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -122,12 +124,12 @@ class TestGenerateAnswerNode(unittest.TestCase):
             SystemMessage(
                 content="You are a helpful assistant.  Your job is to help users answer questions about board games "
                         "by referencing the rules."),
-            HumanMessage(content="What are dahan in spirit island?"),
-            AIMessage(content=WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER)  # Include a previous AI response
+            HumanMessage(content="How do you gain presence in spirit island?"),
+            AIMessage(content=HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER)  # Include a previous AI response
         ]
 
         state = BoardGameAgentState(
-            messages=previous_messages + [HumanMessage(content="What is fear?")],  # Add the follow-up question
+            messages=previous_messages + [HumanMessage(content="yes,the last option")],  # Add the follow-up question
             current_game_name="spirit_island",
             current_game_manual=SPIRIT_ISLAND_TEXT,
             identified_game_in_query=None,
@@ -142,6 +144,23 @@ class TestGenerateAnswerNode(unittest.TestCase):
         cosine_similarity_to_benchmark_answer = _cosine_similarity(result_embedding, known_valid_answer_embedding)
         print(f"Cosine similarity for 'What is fear' (follow-up): {cosine_similarity_to_benchmark_answer}")
         self.assertGreater(cosine_similarity_to_benchmark_answer, 0.9)  # Adjust threshold as needed
+
+    def test_tavily_search_response(self):
+        state = BoardGameAgentState(
+            messages=[HumanMessage(content="In spirit island What are vital strength of the earth's starting cards "
+                                           "and what do they do?")],
+            current_game_name="spirit_island",
+            current_game_manual=SPIRIT_ISLAND_TEXT,
+            identified_game_in_query=None,
+            info_message_for_user=None
+        )
+        result = generate_answer_node(state)
+        result_embedding = _get_gemini_embeddings(result["messages"][0].content)
+        known_valid_answer = VITAL_STRENGTH_CARDS_ANSWER
+        known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
+        cosine_similarity_to_benchmark_answer = _cosine_similarity(result_embedding, known_valid_answer_embedding)
+        print(f"CS for 'Vital strength of the earth's starting cards': {cosine_similarity_to_benchmark_answer}")
+        self.assertGreater(cosine_similarity_to_benchmark_answer, 0.9)
 
 
 if __name__ == "__main__":

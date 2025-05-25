@@ -55,3 +55,12 @@ resolved during the Invader Phase (specifically, after the Blighted Island check
 earned stack is picked up, flipped over, and cards are resolved one at a time in the order they were earned. Only the 
 effect listed next to the current Terror Level is used. After resolution, they are discarded to the Fear Discard 
 Space. (p. 9, 12)"""
+
+
+VITAL_STRENGTH_CARDS_ANSWER = """Agent: Vital Strength of the Earth starts with the following four Unique Power 
+Cards: *   **A Year of Perfect Stillness** (Cost 3, Fast, Range 0 from Sacred Site, Target Land, Elements: Sun, 
+Earth) *   Completely shuts down Invader actions in the target land for the turn: Invaders do not Ravage, Build, 
+or Explore there this turn. *   **Draw of the Fruitful Earth** (Cost 1, Slow, Range 1 from Sacred Site, Target Any 
+Land, Elements: Earth, Plant, Animal) *   Gather up to 2 Explorers into the target land. *   Gather up to 2 Dahan 
+into the target land. *   **Guard the Healing Land** (Cost 3, Fast, Range 1 from Sacred Site, Target Land with your 
+Presence, Elements: Water, Earth, Plant)"""
