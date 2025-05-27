@@ -10,6 +10,7 @@ from answer_benchmarks import (WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER,
                                HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER,
                                WHAT_IS_FEAR_IN_SPIRIT_ISLAND_ANSWER,
                                VITAL_STRENGTH_CARDS_ANSWER)
+from utils.prompts import SYSTEM_PROMPT
 
 load_dotenv()
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -43,11 +44,46 @@ def _cosine_similarity(vector1, vector2) -> float | None:
     return similarity
 
 
+def _create_spirit_island_state(user_message_content: str,
+                                previous_messages: list = None) -> BoardGameAgentState:
+    messages = []
+    if previous_messages:
+        messages.extend(previous_messages)
+    messages.append(HumanMessage(content=user_message_content))
+
+    return BoardGameAgentState(
+        messages=messages,
+        current_game_name="spirit_island",
+        current_game_manual=SPIRIT_ISLAND_TEXT,
+        identified_game_in_query=None,
+        info_message_for_user=None
+    )
+
+
 # Bringing in spirit island rules for semantic similarity validation
 SPIRIT_ISLAND_TEXT = _load_spirit_island_manual()
 
 
 class TestGenerateAnswerNode(unittest.TestCase):
+
+    def _assert_cosine_similarity_between_answer_and_benchmark(
+            self,
+            result_messages: list,
+            known_valid_answer: str,
+            similarity_threshold: float,
+            test_description: str,
+            is_follow_up_message: bool = False
+    ):
+        ai_message_content = result_messages[-1].content if is_follow_up_message else result_messages[0].content
+        result_embedding = _get_gemini_embeddings(ai_message_content)
+        known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
+        similarity = _cosine_similarity(result_embedding, known_valid_answer_embedding)
+
+        print(f"Cosine similarity for '{test_description}': {similarity}")
+        self.assertIsNotNone(similarity, f"Cosine similarity was None for '{test_description}'")
+        self.assertGreater(similarity, similarity_threshold,
+                           f"Similarity for '{test_description}' ({similarity}) was not greater than {similarity_threshold}")
+
     def test_generate_answer_node_with_info_message(self):
         state = BoardGameAgentState(
             messages=[HumanMessage(content="What is the rule for scoring?")],
@@ -85,82 +121,55 @@ class TestGenerateAnswerNode(unittest.TestCase):
         self.assertEqual(result["messages"][0].content, expected_message)
 
     def test_what_are_dahan_in_spirit_island_message(self):
-        state = BoardGameAgentState(
-            messages=[HumanMessage(content="What are dahan in spirit island?")],
-            current_game_name="spirit_island",
-            current_game_manual=SPIRIT_ISLAND_TEXT,
-            identified_game_in_query=None,
-            info_message_for_user=None
-        )
+        state = _create_spirit_island_state("What are dahan in spirit island?")
         result = generate_answer_node(state)
-        known_valid_answer = WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER
-        result_embedding = _get_gemini_embeddings(result["messages"][0].content)
-        known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
-        cosine_similarity_to_benchmark_answer = _cosine_similarity(result_embedding,
-                                                                   known_valid_answer_embedding)
-        print(cosine_similarity_to_benchmark_answer)
-        self.assertGreater(cosine_similarity_to_benchmark_answer, 0.9)
-        self.assertLess(cosine_similarity_to_benchmark_answer, 1.0)
+        self._assert_cosine_similarity_between_answer_and_benchmark(
+            result_messages=result["messages"],
+            known_valid_answer=WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER,
+            similarity_threshold=0.9,
+            test_description="What are Dahan"
+        )
 
     def test_how_to_gain_presence_in_spirit_island_message(self):
-        state = BoardGameAgentState(
-            messages=[HumanMessage(content="How do I gain presence in spirit island?")],
-            current_game_name="spirit_island",
-            current_game_manual=SPIRIT_ISLAND_TEXT,
-            identified_game_in_query=None,
-            info_message_for_user=None
-        )
+        state = _create_spirit_island_state("How do I gain presence in spirit island?")
         result = generate_answer_node(state)
-        known_valid_answer = HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER
-        result_embedding = _get_gemini_embeddings(result["messages"][0].content)
-        known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
-        cosine_similarity_to_benchmark_answer = _cosine_similarity(result_embedding, known_valid_answer_embedding)
-        print(f"Cosine similarity for 'How to gain presence': {cosine_similarity_to_benchmark_answer}")
-        self.assertGreater(cosine_similarity_to_benchmark_answer, 0.85)  # Adjust threshold as needed
+        self._assert_cosine_similarity_between_answer_and_benchmark(
+            result_messages=result["messages"],
+            known_valid_answer=HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER,
+            similarity_threshold=0.85,
+            test_description="How to gain presence"
+        )
 
     def test_follow_up_what_is_fear_in_spirit_island_message_with_history(self):
-        # Simulate a previous turn in the conversation
         previous_messages = [
-            SystemMessage(
-                content="You are a helpful assistant.  Your job is to help users answer questions about board games "
-                        "by referencing the rules."),
+            SystemMessage(content=SYSTEM_PROMPT),
             HumanMessage(content="How do you gain presence in spirit island?"),
-            AIMessage(content=HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER)  # Include a previous AI response
+            AIMessage(content=HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER)
         ]
-
-        state = BoardGameAgentState(
-            messages=previous_messages + [HumanMessage(content="yes,the last option")],  # Add the follow-up question
-            current_game_name="spirit_island",
-            current_game_manual=SPIRIT_ISLAND_TEXT,
-            identified_game_in_query=None,
-            info_message_for_user=None
+        state = _create_spirit_island_state(
+            user_message_content="yes,the last option",
+            previous_messages=previous_messages
         )
-
         result = generate_answer_node(state)
-        known_valid_answer = WHAT_IS_FEAR_IN_SPIRIT_ISLAND_ANSWER
-        result_embedding = _get_gemini_embeddings(
-            result["messages"][-1].content)  # Get embedding of the latest AI message
-        known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
-        cosine_similarity_to_benchmark_answer = _cosine_similarity(result_embedding, known_valid_answer_embedding)
-        print(f"Cosine similarity for 'What is fear' (follow-up): {cosine_similarity_to_benchmark_answer}")
-        self.assertGreater(cosine_similarity_to_benchmark_answer, 0.9)  # Adjust threshold as needed
+        self._assert_cosine_similarity_between_answer_and_benchmark(
+            result_messages=result["messages"],
+            known_valid_answer=WHAT_IS_FEAR_IN_SPIRIT_ISLAND_ANSWER,
+            similarity_threshold=0.9,
+            test_description="What is fear (follow-up)",
+            is_follow_up_message=True
+        )
 
     def test_tavily_search_response(self):
-        state = BoardGameAgentState(
-            messages=[HumanMessage(content="In spirit island What are vital strength of the earth's starting cards "
-                                           "and what do they do?")],
-            current_game_name="spirit_island",
-            current_game_manual=SPIRIT_ISLAND_TEXT,
-            identified_game_in_query=None,
-            info_message_for_user=None
+        state = _create_spirit_island_state(
+            "In spirit island What are vital strength of the earth's starting cards and what do they do?"
         )
         result = generate_answer_node(state)
-        result_embedding = _get_gemini_embeddings(result["messages"][0].content)
-        known_valid_answer = VITAL_STRENGTH_CARDS_ANSWER
-        known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
-        cosine_similarity_to_benchmark_answer = _cosine_similarity(result_embedding, known_valid_answer_embedding)
-        print(f"CS for 'Vital strength of the earth's starting cards': {cosine_similarity_to_benchmark_answer}")
-        self.assertGreater(cosine_similarity_to_benchmark_answer, 0.9)
+        self._assert_cosine_similarity_between_answer_and_benchmark(
+            result_messages=result["messages"],
+            known_valid_answer=VITAL_STRENGTH_CARDS_ANSWER,
+            similarity_threshold=0.9,
+            test_description="Vital strength of the earth's starting cards"
+        )
 
 
 if __name__ == "__main__":
