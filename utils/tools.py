@@ -32,7 +32,6 @@ def create_spirit_island_search_chain(llm):
     - A specific search prompt for querying Spirit Island content.
     - The provided LLM for response generation
 
-    :param llm: LLM model istance
     """
 
     chain = (
