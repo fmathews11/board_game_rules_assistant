@@ -126,7 +126,7 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
     if not current_game or not manual:
         return {
             "messages": [AIMessage(
-                content="I'm not sure which game you're referring to or its manual is unavailable. Could you please specify?")]}
+                content="I'm not sure which game you're referring to. Could you please specify?")]}
 
     previous_messages = state["messages"][:-1]
     previous_messages_formatted = {type(i).__name__: i.content for i in previous_messages}
