@@ -17,10 +17,10 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("AgentStatusLogger")
 
 # Establish Constants
-POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe", "perch"]
+POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe", "perch", "moonrakers"]
 POSSIBLE_BOARD_GAMES_FORMATTED = ", ".join([game.replace("_", " ").title() for game in POSSIBLE_BOARD_GAMES])
 MANUALS_DIR = "text"
-GAME_IDENTIFICATION_MODEL_NAME = "gemini-2.5-flash-preview-04-17"
+GAME_IDENTIFICATION_MODEL_NAME = "gemini-2.0-flash-lite"
 QA_MODEL_NAME = "gemini-2.5-flash-preview-04-17"
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
@@ -145,7 +145,7 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
         llm_output_text = llm_output_text.replace(TAVILY_SEARCH_MARKER, "").strip()
 
     if should_use_tavily:
-        logger.info("Using Tavily Search to enhance the spirit island text.")
+        logger.debug(f"Using Tavily Search to enhance the spirit island text to answer: {last_user_query}")
         tavily_search_tool = create_spirit_island_search_chain(qa_llm)
         return {"messages": [AIMessage(content=tavily_search_tool.invoke(last_user_query))]}
 
