@@ -51,6 +51,9 @@ Do not use general knowledge, only reference the context.
  - DO NOT include phrases such as "based on the context" or "based on the provide manual".  Simply provide an answer.
  - Use as many words as necessary to answer the question
  - Use bullet points and/or markdown format to make the answer as easily-interpreted as possible.
+ - Generate some potential follow up questions and suggest them to the user in a conversational manner.
+    For instance: "Would you like to know more about *INSERT SUGGESTION(S) HERE*?"
+ - Always cite where you found the information
 
 Now, use this information to answer the following question:
 """
