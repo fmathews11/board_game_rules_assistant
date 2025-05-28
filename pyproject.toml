@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "board_game_rules_assistant"
+version = "0.1.0"
+description = "A conversational AI assistant for board game rules"
+authors = [
+    {name = "Frank Mathews", email = "fmathews@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+    "python-dotenv~=1.1.0",
+    "google-generativeai==1.14.0",
+    "langchain-core~=0.3.59",
+    "langchain-google-genai~=2.1.4",
+    "langgraph~=0.4.3",
+    "protobuf~=6.31.0rc2",
+    "streamlit==1.45.1",
+    "charset-normalizer",
+    "numpy==2.2.6",
+]
+
+[project.urls]
+Repository = "https://github.com/fmathews11/board_game_rules_assistant"
+
+[project.scripts]
+board-game-assistant = "board_game_rules_assistant.board_game_agent:execute_agent"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
