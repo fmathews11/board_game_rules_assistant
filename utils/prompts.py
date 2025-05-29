@@ -36,7 +36,6 @@ QA_PROMPT_TEMPLATE = """
        Now it's your turn. Begin!:
        """
 
-
 # Tool Prompts
 SPIRIT_ISLAND_SEARCH_PROMPT_TEMPLATE = """
 You are a helpful assistant.  Your job is to answer a user's question based on the context you see.
@@ -53,13 +52,24 @@ Do not use general knowledge, only reference the context.
  - Use bullet points and/or markdown format to make the answer as easily-interpreted as possible.
  - Generate some potential follow up questions and suggest them to the user in a conversational manner.
     For instance: "Would you like to know more about *INSERT SUGGESTION(S) HERE*?"
- - Always cite where you found the information
+ - Always cite the URL(s) where you found the information 
 
 Now, use this information to answer the following question:
 """
-SPIRIT_ISLAND_SEARCH_PROMPT= ChatPromptTemplate.from_messages(
+SPIRIT_ISLAND_SEARCH_PROMPT = ChatPromptTemplate.from_messages(
     [
         ("system", SPIRIT_ISLAND_SEARCH_PROMPT_TEMPLATE),
         ("user", "{question}")
     ]
 )
+STANDALONE_QUESTION_FROM_HISTORY_TEMPLATE = """
+    You are a helpful assistant.  You are proficient in extracting questions from chat history.
+    Using the chat history and user's question, create a standalone question to be used for text retrieval.
+
+    Here is the chat history:
+    {chat_history}
+
+    Now, using this, create a single standalone question from the following user's response:
+    {user_question}
+    """
+STANDALONE_QUESTION_PROMPT = ChatPromptTemplate.from_template(STANDALONE_QUESTION_FROM_HISTORY_TEMPLATE)

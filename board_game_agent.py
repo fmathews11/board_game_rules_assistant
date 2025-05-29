@@ -8,7 +8,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, END
 from utils.prompts import SYSTEM_PROMPT, GAME_IDENTIFIER_PROMPT, QA_PROMPT_TEMPLATE
-from utils.tools import create_spirit_island_search_chain
+from utils.tools import create_spirit_island_search_chain, create_standalone_question_from_chat_history
 
 dotenv.load_dotenv()
 
@@ -39,7 +39,8 @@ class BoardGameAgentState(TypedDict):
 
 game_identifier_llm = ChatGoogleGenerativeAI(model=GAME_IDENTIFICATION_MODEL_NAME,
                                              temperature=0,
-                                             google_api_key=GEMINI_API_KEY)
+                                             google_api_key=GEMINI_API_KEY,
+                                             timeout=30)
 qa_llm = ChatGoogleGenerativeAI(model=QA_MODEL_NAME,
                                 temperature=1,
                                 google_api_key=GEMINI_API_KEY,
@@ -71,6 +72,7 @@ def identify_game_query_node(state: BoardGameAgentState) -> dict[str, None] | di
         return {"identified_game_in_query": None}
     prompt = GAME_IDENTIFIER_PROMPT.format(possible_board_games=str(POSSIBLE_BOARD_GAMES),
                                            last_message_content=last_message_content)
+    logger.debug(f"Prompt for game identification: {last_message_content}")
     response = game_identifier_llm.invoke(prompt)
     text_response = response.content.strip()
     if text_response.lower() == "none" or not text_response:
@@ -145,9 +147,12 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
         llm_output_text = llm_output_text.replace(TAVILY_SEARCH_MARKER, "").strip()
 
     if should_use_tavily:
-        logger.debug(f"Using Tavily Search to enhance the spirit island text to answer: {last_user_query}")
+        question_to_pass = create_standalone_question_from_chat_history(chat_history=previous_messages,
+                                                                        users_question=last_user_query,
+                                                                        llm=game_identifier_llm)
+        logger.debug(f"Using Tavily Search to enhance the spirit island text to answer: {question_to_pass}")
         tavily_search_tool = create_spirit_island_search_chain(qa_llm)
-        return {"messages": [AIMessage(content=tavily_search_tool.invoke(last_user_query))]}
+        return {"messages": [AIMessage(content=tavily_search_tool.invoke(question_to_pass))]}
 
     return {"messages": [AIMessage(content=llm_output_text)]}
 

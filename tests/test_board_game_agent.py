@@ -11,6 +11,7 @@ from answer_benchmarks import (WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER,
                                WHAT_IS_FEAR_IN_SPIRIT_ISLAND_ANSWER,
                                VITAL_STRENGTH_CARDS_ANSWER)
 from utils.prompts import SYSTEM_PROMPT
+import time
 
 load_dotenv()
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -76,6 +77,7 @@ class TestGenerateAnswerNode(unittest.TestCase):
     ):
         ai_message_content = result_messages[-1].content if is_follow_up_message else result_messages[0].content
         result_embedding = _get_gemini_embeddings(ai_message_content)
+        time.sleep(5) # Slowing down to eliminate rate limit errors
         known_valid_answer_embedding = _get_gemini_embeddings(known_valid_answer)
         similarity = _cosine_similarity(result_embedding, known_valid_answer_embedding)
 

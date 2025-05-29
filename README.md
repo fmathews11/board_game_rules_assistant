@@ -43,14 +43,15 @@ The agent operates in a series of steps, which are outlined below:
 
 ```mermaid
 graph TD
-    A[User Input] --> B{Identify Game Query};
-    B --> C{Manage Game Context and Load Manual};
-    C -- No Current Game --> D[Ask User to Specify Game];
-    C -- Has Current Game --> E{Manual Available?};
-    E -- No Manual --> F[Load Manual];
-    E -- Manual Available --> G{Generate Answer Node};
-    D --> G;
-    F --> G;
+    A[Start: Agent waits for user] --> B{User provides input};
+    B -- Input received --> C[Process User Input: Identify game & load rules];
+    C --> D[Consult Rules. Sufficient? Or not Spirit Island];
+    D -- Yes --> E[Generate Answer from Rules];
+    D -- No, and game is Spirit Island --> F[Search Web with Tavily Tool];
+    F --> G[Generate Answer using Rules + Web-Enhanced Context];
+    E --> H[Return Response to User];
+    G --> H;
+    H --> B;
 
 ```
 ## How to Run
