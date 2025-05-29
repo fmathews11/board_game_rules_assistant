@@ -8,3 +8,4 @@ streamlit==1.45.1
 charset-normalizer
 numpy==2.2.6
 langchain-tavily==0.1.6
+langsmith==0.3.42
