@@ -5,6 +5,7 @@ from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 import json
 import uuid
 import time
+import os
 
 st.title("Board Game Help Chatbot")
 st.markdown(
@@ -14,11 +15,11 @@ I can help with:
  - Scythe
  - Spirit Island
  - Perch
+ - Moonrakers
  
 **Ask Away!**
 """
 )
-
 # Constants
 CHAT_HISTORIES_PATH = "chat_histories/chat_histories.json"
 TYPING_SIMULATION_DELAY = 0.0000002
@@ -35,6 +36,8 @@ def _load_all_chat_histories():
 
 def _save_chat_history(chat_uuid: str, chat_history: list):
     """Saves the current chat history to the JSON file."""
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(CHAT_HISTORIES_PATH), exist_ok=True)
     histories = _load_all_chat_histories()
     temp_dict = {chat_uuid: chat_history}
     histories.append(temp_dict)
@@ -141,19 +144,17 @@ def run_agent_via_streamlit(user_message: str) -> None:
         'game': st.session_state.current_game_name
     })
 
+
 # Main application logic
 _initialize_session_state()
-
 # Select box for streaming option
 streaming_option = st.selectbox(
     "Stream response?",
     ("No", "Yes")
 )
-
 # Display chat messages from history on app rerun
 for msg in st.session_state.messages:
     _display_chat_message(msg)
-
 # Chat input and send button
 if user_input := st.chat_input("Ask a question about a board game..."):
     run_agent_via_streamlit(user_input)
