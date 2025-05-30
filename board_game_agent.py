@@ -1,20 +1,21 @@
 import os
 import uuid
 import dotenv
-import logging
 from typing import TypedDict, Annotated, Optional, List
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import StateGraph, END
+from utils.create_logger import create_logger
 from utils.prompts import SYSTEM_PROMPT, GAME_IDENTIFIER_PROMPT, QA_PROMPT_TEMPLATE
-from utils.tools import create_spirit_island_search_chain, create_standalone_question_from_chat_history
+from utils.tools import create_spirit_island_search_chain, create_standalone_question_from_chat_history, \
+    get_tavily_search_spirit_island_text, rephrase_query_for_better_search
+from utils.constants import TAVILY_SEARCH_MARKER, INSUFFICIENT_SEARCH_RESULTS_MARKER
 
 dotenv.load_dotenv()
 
 # Configure logger
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("AgentStatusLogger")
+logger = create_logger("AgentLogger", 'debug')
 
 # Establish Constants
 POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe", "perch", "moonrakers"]
@@ -24,8 +25,7 @@ GAME_IDENTIFICATION_MODEL_NAME = "gemini-2.0-flash-lite"
 QA_MODEL_NAME = "gemini-2.5-flash-preview-04-17"
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
-# Key phrase for using Tavily search as a tool
-TAVILY_SEARCH_MARKER = "[TAVILY_SEARCH_RECOMMENDED_FOR_SPIRIT_ISLAND]"
+# Configuration for the agent
 AGENT_CONFIG = {"recursion_limit": 10, "configurable": {"thread_id": str(uuid.uuid4())}}
 
 
@@ -64,6 +64,47 @@ def _extract_latest_human_message_content(state: BoardGameAgentState) -> Optiona
     if isinstance(last_message, HumanMessage):
         return last_message.content
     return None
+
+
+def _execute_tavily_search(previous_messages: List, last_user_query: str) -> str:
+    """
+    Executes a search using the Tavily search tool to enhance answers related to
+    Spirit Island content. It attempts to improve insufficient search results by
+    rephrasing the query and retrying.
+
+    :param previous_messages: List containing the chat history,
+    :return: The final answer obtained from the Tavily search tool
+    """
+    question_to_pass = create_standalone_question_from_chat_history(chat_history=previous_messages,
+                                                                    users_question=last_user_query,
+                                                                    llm=game_identifier_llm)
+    logger.debug(f"Using Tavily Search to enhance the spirit island text to answer: {question_to_pass}")
+    tavily_search_tool = create_spirit_island_search_chain(qa_llm)
+    # Get initial search results
+    initial_answer = tavily_search_tool.invoke(question_to_pass)
+    # Check if the search results were insufficient
+    if INSUFFICIENT_SEARCH_RESULTS_MARKER in initial_answer:
+        logger.debug("Initial search results were insufficient. Rephrasing query and trying again.")
+        # Remove the marker from the answer
+        clean_initial_answer = initial_answer.replace(INSUFFICIENT_SEARCH_RESULTS_MARKER, "").strip()
+        # Rephrase the query for better search results
+        rephrased_query = rephrase_query_for_better_search(
+            original_query=question_to_pass,
+            previous_answer=clean_initial_answer,
+            llm=qa_llm
+        )
+        logger.debug(f"Rephrased query: {rephrased_query}")
+        # Try again with the rephrased query
+        final_answer = tavily_search_tool.invoke(rephrased_query)
+        # If still insufficient, use the best answer we have
+        if INSUFFICIENT_SEARCH_RESULTS_MARKER in final_answer:
+            logger.debug("Rephrased query still yielded insufficient results. Using best answer available.")
+            final_answer = final_answer.replace(INSUFFICIENT_SEARCH_RESULTS_MARKER, "").strip()
+            final_answer += ("\n\nI've tried to find the most relevant information, but I may not have all the details "
+                             "you're looking for. Could you rephrase your question or ask about a different aspect of"
+                             " Spirit Island?")
+        return final_answer
+    return initial_answer
 
 
 def identify_game_query_node(state: BoardGameAgentState) -> dict[str, None] | dict[str, str]:
@@ -118,13 +159,10 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
     current_game = state.get("current_game_name")
     manual = state.get("current_game_manual")
     last_user_query = _extract_latest_human_message_content(state)
-
     if not last_user_query:
         return {"messages": [AIMessage(content="An unexpected error occurred. Please try again.")]}
-
     if info_message:
         return {"messages": [AIMessage(content=info_message)]}
-
     if not current_game or not manual:
         return {
             "messages": [AIMessage(
@@ -136,23 +174,13 @@ def generate_answer_node(state: BoardGameAgentState) -> dict:
                                                 manual=manual,
                                                 previous_messages_formatted=previous_messages_formatted,
                                                 last_user_query=last_user_query)
+
     llm_response = qa_llm.invoke(prompt_template)
     llm_output_text = llm_response.content
 
-    should_use_tavily = False
-    # Condition under which we want to use Tavily Search to enhance the spirit island text
     if current_game == "spirit_island" and TAVILY_SEARCH_MARKER in llm_output_text:
-        should_use_tavily = True
-        # Remove the marker from the LLM's output
-        llm_output_text = llm_output_text.replace(TAVILY_SEARCH_MARKER, "").strip()
-
-    if should_use_tavily:
-        question_to_pass = create_standalone_question_from_chat_history(chat_history=previous_messages,
-                                                                        users_question=last_user_query,
-                                                                        llm=game_identifier_llm)
-        logger.debug(f"Using Tavily Search to enhance the spirit island text to answer: {question_to_pass}")
-        tavily_search_tool = create_spirit_island_search_chain(qa_llm)
-        return {"messages": [AIMessage(content=tavily_search_tool.invoke(question_to_pass))]}
+        final_answer = _execute_tavily_search(previous_messages, last_user_query)
+        return {"messages": [AIMessage(content=final_answer)]}
 
     return {"messages": [AIMessage(content=llm_output_text)]}
 

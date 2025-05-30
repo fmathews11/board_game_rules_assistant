@@ -1,4 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
+from utils.constants import INSUFFICIENT_SEARCH_RESULTS_MARKER
 
 SYSTEM_PROMPT = """
 You are a helpful assistant.  Your job is to help users answer questions about board games by referencing the rules.
@@ -37,12 +38,12 @@ QA_PROMPT_TEMPLATE = """
        """
 
 # Tool Prompts
-SPIRIT_ISLAND_SEARCH_PROMPT_TEMPLATE = """
+SPIRIT_ISLAND_SEARCH_PROMPT_TEMPLATE = f"""
 You are a helpful assistant.  Your job is to answer a user's question based on the context you see.
 Do not use general knowledge, only reference the context.
 
 ---CONTEXT BEGINNING ---
-{context}
+{{context}}
 ---- CONTEXT END ---
 
 ## Answer guidelines
@@ -52,7 +53,8 @@ Do not use general knowledge, only reference the context.
  - Use bullet points and/or markdown format to make the answer as easily-interpreted as possible.
  - Generate some potential follow up questions and suggest them to the user in a conversational manner.
     For instance: "Would you like to know more about *INSERT SUGGESTION(S) HERE*?"
- - Always cite the URL(s) where you found the information 
+ - Always cite the URL(s) where you found the information
+ - If the context does not contain sufficient information to fully answer the question, include the exact phrase "{INSUFFICIENT_SEARCH_RESULTS_MARKER}" at the end of your answer.
 
 Now, use this information to answer the following question:
 """
