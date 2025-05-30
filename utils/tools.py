@@ -31,7 +31,7 @@ def _extract_raw_text_from_message_history(message_list: list) -> str:
                       in message_list if isinstance(message, (HumanMessage, AIMessage))])
 
 
-def _get_tavily_search_spirit_island_text(question: str) -> str:
+def get_tavily_search_spirit_island_text(question: str) -> str:
     """
     Retrieves and processes the search results for the specified question using
     the Tavily search tool, returning a concatenated string of raw content.
@@ -55,7 +55,7 @@ def create_spirit_island_search_chain(llm):
     """
 
     chain = (
-            {'context': RunnableLambda(_get_tavily_search_spirit_island_text),
+            {'context': RunnableLambda(get_tavily_search_spirit_island_text),
              'question': RunnablePassthrough()}
             | SPIRIT_ISLAND_SEARCH_PROMPT
             | llm
@@ -78,3 +78,28 @@ def create_standalone_question_from_chat_history(chat_history: list,
     return chain.invoke({'chat_history': formatted_chat_history, 'user_question': users_question})
 
 
+def rephrase_query_for_better_search(original_query: str, previous_answer: str, llm) -> str:
+    """
+    Rephrases a query to get better search results when the initial search was insufficient.
+
+    :param original_query: The original query that was used for search
+    :param previous_answer: The answer from the previous search attempt
+    :param llm: The language model to use for rephrasing
+    :return: A rephrased query for better search results
+    """
+    prompt = f"""
+    You are a search query optimization expert. Your task is to rephrase a query to get better search results.
+
+    The original query was: "{original_query}"
+
+    The search results for this query were insufficient to fully answer the question. 
+    Here's the previous answer: "{previous_answer}"
+
+    Please rephrase the query to be more specific, use different keywords, or approach the question from a different angle.
+    Focus on extracting the core information need and expressing it in a way that would yield better search results.
+
+    Rephrased query:
+    """
+
+    response = llm.invoke(prompt)
+    return response.content.strip()
