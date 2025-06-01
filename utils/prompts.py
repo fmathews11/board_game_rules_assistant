@@ -21,11 +21,17 @@ QA_PROMPT_TEMPLATE = """
        --- CHAT HISTORY START ---
         {previous_messages_formatted}
        --- CHAT HISTORY END ---
+       {additional_context_section}
        --- HOW TO ANSWER --
-        - Answer the user's question based ONLY on the provided manual and chat history.
-        - Provide page number references to cite where the user can find this information.
-        - If the answer is not found in the manual or if the information in the manual is insufficient to fully answer the question, clearly state this.
-        - If, AND ONLY IF, the game is 'spirit_island' and you have determined that the manual does not provide sufficient information, you MUST include the exact phrase "[TAVILY_SEARCH_RECOMMENDED_FOR_SPIRIT_ISLAND]" on a new line after your explanation of why the manual is insufficient. Do NOT use this phrase for any other game or if the manual IS sufficient.
+        - Answer the user's question based on the provided manual, chat history, and any additional context provided.
+        - If additional context is provided, use it to supplement the information from the manual.
+        - Provide page number references to cite where the user can find this information in the manual.
+        - If the answer is not found in the manual or any additional context, or if the information is insufficient to fully answer the question, clearly state this.
+        - If, AND ONLY IF, the game is 'spirit_island' and you have determined that the manual and any additional context do not provide sufficient information:
+          1. Identify the SPECIFIC pieces of information that are missing (e.g., specific card details, specific rule clarifications).
+          2. Include the exact phrase "[TAVILY_SEARCH_RECOMMENDED_FOR_SPIRIT_ISLAND]" followed by the specific missing information in square brackets.
+          Example: "[TAVILY_SEARCH_RECOMMENDED_FOR_SPIRIT_ISLAND][guard of the healing land card details]"
+          Do NOT use this phrase for any other game or if the information IS sufficient.
         - Do not make assumptions or use external knowledge unless specifically told a web search will follow.
         - Answer the question directly, as you are a subject matter expert.
         - DO NOT include phrases such as "based on the provided manual" or "based on the context" unless you are explaining why the manual is insufficient.
