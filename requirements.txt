@@ -9,3 +9,4 @@ charset-normalizer
 numpy==2.2.6
 langchain-tavily==0.1.6
 langsmith==0.3.42
+langchain==0.3.25
