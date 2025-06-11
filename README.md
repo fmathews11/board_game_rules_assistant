@@ -43,15 +43,48 @@ The agent operates in a series of steps, which are outlined below:
 
 ```mermaid
 graph TD
-    A[Start: Agent waits for user] --> B{User provides input};
-    B -- Input received --> C[Process User Input: Identify game & load rules];
-    C --> D[Consult Rules. Sufficient? Or not Spirit Island];
-    D -- Yes --> E[Generate Answer from Rules];
-    D -- No, and game is Spirit Island --> F[Search Web with Tavily Tool];
-    F --> G[Generate Answer using Rules + Web-Enhanced Context];
-    E --> H[Return Response to User];
-    G --> H;
-    H --> B;
+    A[User Sends Message] --> B(Agent State Updated with User Message);
+
+    B --> C(identify_game_query_node);
+    C[identifies game in user's query, e.g., Spirit Island] --> D;
+    
+    D(manage_game_context_and_load_manual_node);
+    D[loads the game manual if a new game is identified or confirmed, <br>updates the current game context in the agent state] --> E;
+
+    E(generate_answer_node);
+    E[generates an answer based on the current game context, manual, and chat history] --> F{Context Check};
+
+    F -- Query or Game/Manual Missing? --> G[Determine Game];
+    F -- Context OK --> H{Build QA Prompt};
+    
+    H[constructs a detailed prompt for the LLM using manual, history, etc.] --> I{Invoke QA LLM};
+    I --> J{LLM Response Received};
+
+    J -- Direct Answer from Manual --> K[Output: AIMessage formatted answer based on manual];
+    J -- Manual Insufficient for Spirit Island <br> (TAVILY_SEARCH_MARKER detected) --> L(_execute_tavily_search);
+
+    subgraph _execute_tavily_search [Tavily Search for Spirit Island]
+        direction LR
+        L_Start[Agent decides to search online] --> L_S1(Initial Tavily Search);
+        L_S1 --> L_C1{Results Sufficient?};
+        L_C1 -- Yes --> L_R1[Use Initial Search Results];
+        L_C1 -- No (INSUFFICIENT_SEARCH_RESULTS_MARKER) --> L_P1(Rephrase Query using LLM for better results);
+        L_P1 --> L_S2(Second Tavily Search Attempt);
+        L_S2 --> L_C2{Results Sufficient?};
+        L_C2 -- Yes --> L_R2[Use Rephrased Search Results];
+        L_C2 -- No --> L_R3[Use Best Available Results with a Disclaimer];
+        L_R1 --> L_End[Formatted Search Result for AIMessage];
+        L_R2 --> L_End;
+        L_R3 --> L_End;
+    end
+
+    L --> M[Output: AIMessage <br>formatted answer based on Tavily search results];
+
+    G --> Z(Agent Responds to User);
+    K --> Z;
+    M --> Z;
+    Z --> A_Loop(Waits for Next User Message);
+
 
 ```
 ## How to Run
