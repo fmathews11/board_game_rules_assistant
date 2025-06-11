@@ -28,9 +28,14 @@ class AgentState(TypedDict):
 
 
 def _load_game_manual(game_name: str) -> str:
-    with open(f"text/{game_name}.txt", encoding='utf-8') as f:
-        output = f.read()
-        return output
+    try:
+        with open(f"text/{game_name}.txt", encoding='utf-8') as f:
+            output = f.read()
+            return output
+    except FileNotFoundError:
+        with open(f"../text/spirit_island.txt", encoding='utf-8') as f:
+            output = f.read()
+            return output
 
 
 game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan']
@@ -164,7 +169,6 @@ def augment_search_context(question: str, game: game_names):
     return manual
 
 
-#tools = [search_board_game_text, get_tavily_search_spirit_island_text]
 tools = [augment_search_context]
 qa_llm = qa_llm.bind_tools(tools=tools)
 
@@ -198,11 +202,8 @@ You must always cite page numbers
 
 You have access to the following tools:
 {[tool.name for tool in tools]}
+Pass the user's question directly to the tool.
 
-You MUST always call 'search_board_game_text' first if the user's question mentions a game name.
-If 'search_board_game_text' does not provide sufficient information, you must then use other tools.
-When calling tools, consider the entire chat history and the user's question. From this, create a standalone question
-to be used for text retrieval.
 
 Format your answers using bullet points and markdown for ease of interpretation.
 
@@ -210,11 +211,11 @@ Suggest some follow up questions to the user based on the provided context from 
 For instance, would you like to know more about *INSERT SUGGESTION(S) HERE*?
 
 --- Rules
+ - DO NOT include phrases such as "based on the context" or "based on the provide manual".  Simply provide an answer.
  - Do not answer any questions which are not about board game rules or strategy. Inform the user that you are an assistant for board games.
  - If at any point you do not know which board game a user is asking about, ask for clarification.
  - Do not make any assumptions about the board game the user is inquiring about unless it's explicitly mentioned.
  - If a game is mentioned, always pass the question to the tool(s) to answer the question.
- - Always call the basic tools before appealing to the tavily search. Often most of what you need can be found in the basic tools.
 """
 
 
