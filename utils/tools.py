@@ -10,7 +10,7 @@ import dotenv
 dotenv.load_dotenv()
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
-tavily_search_object = TavilySearch(max_results=10,
+tavily_search_object = TavilySearch(max_results=3,
                                     include_raw_content=True,
                                     include_domains=['https://spiritislandwiki.com/'])
 
