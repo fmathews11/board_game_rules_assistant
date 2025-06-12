@@ -28,6 +28,9 @@ class AgentState(TypedDict):
     messages: Annotated[List[HumanMessage | AIMessage | SystemMessage], add_messages]
 
 
+CHAT_HISTORY = []
+
+
 def _load_game_manual(game_name: str) -> str:
     try:
         with open(f"text/{game_name}.txt", encoding='utf-8') as f:
@@ -94,10 +97,13 @@ def _extract_raw_text_from_message_history(message_list: list) -> str:
     :return: A string containing the formatted raw text of the message history,
         where each message is prefixed by its sender type ('Human:' or 'AI:')
     """
-    return "\n".join([f"Human: {message.content}"
-                      if isinstance(message, HumanMessage)
-                      else f"AI: {message.content}" for message
-                      in message_list if isinstance(message, (HumanMessage, AIMessage))])
+    return '\n'.join([
+        f"Human: {msg.content}" if isinstance(msg, HumanMessage) else
+        f"AI: {msg.content}" if isinstance(msg, AIMessage) else
+        f"tool: {msg.content}" if isinstance(msg, ToolMessage) else
+        ""
+        for msg in message_list
+    ])
 
 
 def get_tavily_search_text(question: str,
@@ -126,6 +132,7 @@ _search_source_mappings = {"spirit_island": 'https://spiritislandwiki.com/',
 @tool
 def augment_search_context(question: str, game: game_names):
     """Use this tool to get information about a board game."""
+    global CHAT_HISTORY
     manual = _load_game_manual(game)
     # If we don't have any external source for searching, return the manual as is
     if not _search_source_mappings.get(game):
@@ -150,11 +157,15 @@ def augment_search_context(question: str, game: game_names):
     
 
     Here is the manual:
+    ---MANUAL BEGIN---
     {manual}
+    ---MANUAL END---
     
     Here is the chat history:
+    ---CHAT HISTORY BEGIN---
+    {chat_history}
+    ---CHAT HISTORY END---
     
-
     Now, here is the user's question:
     {question}
 
@@ -165,7 +176,8 @@ def augment_search_context(question: str, game: game_names):
     router_chain = (
             {
                 'question': RunnablePassthrough(),
-                'manual': lambda x: manual
+                'manual': lambda _: manual,
+                'chat_history': lambda _: CHAT_HISTORY
             }
             | router_prompt
             | qa_llm
@@ -292,3 +304,5 @@ if __name__ == '__main__':
             else:
                 message.pretty_print()
             state['messages'] = s["messages"]
+
+        chat_history = _extract_raw_text_from_message_history(state['messages'])
