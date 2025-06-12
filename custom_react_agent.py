@@ -1,6 +1,5 @@
 import json
 from operator import itemgetter
-
 import langchain_tavily
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage, ToolMessage
 from langchain_core.tools import tool
@@ -152,6 +151,9 @@ def augment_search_context(question: str, game: game_names):
 
     Here is the manual:
     {manual}
+    
+    Here is the chat history:
+    
 
     Now, here is the user's question:
     {question}

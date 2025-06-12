@@ -18,7 +18,7 @@ dotenv.load_dotenv()
 logger = create_logger("AgentLogger", 'debug')
 
 # Establish Constants
-POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe", "perch", "moonrakers"]
+POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe", "perch", "moonrakers", 'tokaido']
 POSSIBLE_BOARD_GAMES_FORMATTED = ", ".join([game.replace("_", " ").title() for game in POSSIBLE_BOARD_GAMES])
 MANUALS_DIR = "text"
 GAME_IDENTIFICATION_MODEL_NAME = "gemini-2.0-flash-lite"
