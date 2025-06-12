@@ -1,0 +1,653 @@
+# Page 1
+Tokaido Rulebook r8.indd 1
+Antoine Bauza
+Naïade
+
+A
+TOKAIDO
+東海道
+
+Table of Contents
+Object of the Game ................................. 2
+Setup ........................................................ 2
+Playing the Game.................................... 3
+Description of the Spaces ...................... 3
+Arriving at an Inn .................................... 5
+Continuing the Journey......................... 5
+Ending the Journey ................................ 5
+Achievement Cards................................ 6
+Descriptions of the Travelers ................ 6
+Special Rules for 2-Player Games ........ 7
+
+10/29/24 11:58 AM
+
+# Page 2
+A
+F
+E
+3
+4
+5
+6
+D
+1
+8
+2
+TOKAIDO
+Object of the Game
+The players are travelers in Japan in days of old. They will follow
+the prestigious Tokaido and try to make this journey as rich an
+experience as possible.
+To do this, they will pass through magnificent countryside, taste
+delicious culinary specialties, purchase souvenirs, benefit from
+the virtues of hot springs, and have unforgettable encounters.
+
+Set-up
+1 Place the game board on a flat surface.
+2 Place the Achievement cards face up next to the board.
+3 Shuffle the Souvenir cards (black back) and make a face-down
+pile.
+4 Shuffle the Hot spring cards (light blue back) and make a face-
+down pile.
+5 Shuffle the Encounter cards (purple back) and make a face-
+down pile.
+6 Shuffle the Meal cards (red back) and make a face-down pile.
+7 Sort the Panorama cards by type (Sea, Mountain, Paddy) and
+by value (placing the 1 above the 2 above the 3...).
+Place the 7 resulting piles on their corresponding locations on
+the board.
+8 Place the coins next to the board as the bank.
+
+2
+B
+Components:
+• 1 Game board
+• 5 Traveler pieces
+• 5 Travel point markers
+• 5 Player color tokens (bags)
+• 50 Coins
+• 10 Traveler tiles
+• 12 Hot Spring cards
+• 60 Panorama cards
+• 25 Meal cards
+• 24 Souvenir cards
+• 14 Encounter cards
+• 7 Achievement cards
+• 5 Reference cards
+
+▲ Each player selects a Traveler piece and the correspondingly
+colored marker and color token (bag). Place the marker on
+square O of the path that records Journey points.
+
+Each player then takes 2 Traveler tiles at random, chooses 1
+and places it face up on the table before them. If this is the
+first time for any player, they
+C
+may choose to reduce the
+complexity by starting with 7
+coins instead of a Traveler.
+
+The player then places their
+color token (bag) in the hole of
+their Traveler tile.
+D
+Place all unchosen and unused
+x3
+tiles in the box out of play.
+
+Each player gains coins equal
+to the number in the upper
+right corner of their chosen tile.
+
+Finally, randomly place all of
+the Traveler pieces in a line
+at the leftmost inn (Kyoto).
+Alternatively, all players
+may start on the rightmost
+inn (Edo) and move right to
+left throughout the game.
+For 2-player games, add a
+third traveler-the Neutral
+traveler-to the starting Inn
+(see page 7).
+
+HIROSHIGE 広重
+Tokaido_Rulebook_r8.indd 2
+10/29/24 11:58 AM
+
+# Page 3
+Playing the Game
+In Tokaido, the player whose Traveler is farthest behind on the
+road (with respect to the destination) is the player who takes the
+next turn.
+This player must move their Traveler forward-that is, toward
+Edo-to the open space of their choice, but not beyond the next
+inn, freely passing over one or more open spaces, if they wish.
+Once they have moved their Traveler, the player receives the
+benefit corresponding to this type of space. (The spaces are
+detailed on this page and the next page of these rules.)
+In most cases, after a Traveler has moved, another Traveler is
+then last on the road, and it becomes that player's turn.
+Sometimes the last Traveler may still be last after moving, in
+which case they go again immediately.
+
+Way of travel
+The Green traveler is farthest behind on the road, so it is their
+turn to move.
+
+サ
+Way of travel
+The Green traveler moves (arrow). It's now the Purple traveler's turn.
+• If the Green traveler had moved and was still behind the Purple traveler,
+they would have to go again.
+
+Double spaces
+Some of the spaces on the board are
+doubled.
+When a traveler lands on a double space,
+they must occupy the space located on
+the road if it is free; a Traveler who arrives
+after them must occupy the second space.
+Double spaces are used only in games
+with 4 or 5 players and the second space
+is considered farther on the road.
+When playing with 2 or 3 players, the
+second space-the one off the road-
+cannot be occupied.
+
+Description of the spaces
+Double, space
+cre
+品
+Single space
+
+Each move leaves a traveler on one of the 8 types of spaces or
+one of the Inn spaces. In the descriptions below, a "collection"
+refers to all of the cards acquired (and placed face up) by a
+player during a game.
+Note: Travelers immediately score all points earned during the
+journey.
+
+Way of travel
+The Purple traveler is farther behind than the Green traveler,
+therefore it is their turn to move.
+
+Shop
+The player draws 3 Souvenir cards and reveals them. They may
+purchase 1 or more of these cards by paying the price indicated
+on each card.
+They then place any unpurchased cards face down on the
+bottom of the pile. Each Souvenir is different, and each belongs
+to one of 4 types: small objects clothing, art, and food
+& drinks
+
+KOMA
+HAGRE
+SHAMISEN
+MANJO
+*
+Tokaido_Rulebook_r8.indd 3
+3
+Souvenirs cost 1, 2 or 3 coins. They are worth 1, 3, 5 or 7 points depending
+on the actual Souvenirs in a player's collection.
+10/29/24 11:58 AM
+
+# Page 4
+To maximize points, players need to collect Souvenirs in sets
+containing each type of Souvenir. (Note that you can purchase
+and score for Souvenirs of any type.)
+As you purchase Souvenir cards, group them into sets in front of
+you; each set can contain only one Souvenir of each type.
+The first Souvenir in a set, no matter which type it is, is
+worth 1 point.
+The second Souvenir in a set, which must be of a different type
+than the first, is worth 3 points.
+The third Souvenir in a set, which must be of a different type
+than the first two, is worth 5 points.
+The fourth Souvenir in a set, which must be of a different type
+than the first three, is worth 7 points.
+The player earns these points at the time that they add these
+cards to their collection. (Examples of souvenir collecting and
+the points earned are given below.)
+Note:
+A traveler must have at least 1 coin to stop in a Shop, but they
+are not required to purchase any souvenirs.
+A traveler may work on several sets in parallel. It is not necessary
+to finish a set before starting a new one.
+
+A few examples of souvenir collecting
+1 point
+1
+2
+Note: Each traveler can create only a single panorama of each type.
+A traveler who completes a panorama can no longer stop on the
+spaces corresponding to that type (Sea, Mountain, or Paddy).
+
+Hot Spring
+26
+36
+The player draws 1 Hot Spring card
+and adds it to their collection.
+Score it immediately.
+These cards are worth 2 or 3 points.
+
+4 points (1+3)
+88
+9 points (1+3+5)
+16 points (1+3+5+7)
+88
+5 points (1+1+3)
+
+Farm
+The player gains 3 coins.
+3 points (1+1+1)
+8 points (1+3+1+3)
+There is no limit to the number of coins a player can have.
+
+Panorama
+Panoramas are made of 3, 4 or 5 sections.
+When a player stops on a Panorama Station, if they don't yet have any
+panorama cards of this type, they gain a Panorama card of value "1".
+Otherwise, they gain the next higher point value card.
+They immediately score a number of points equal to the value
+of the card (1, 2, 3, 4 or 5 depending on the panorama).
+
+4
+Temple
+The player donates 1, 2, or 3 of
+their coins to the temple, placing
+them on the Temple section of the
+board in the area corresponding to
+their color. They immediately score
+1 point for each donated coin.
+0
+#
+Note: A traveler who stops on a Temple space must donate at
+least 1 coin as an offering and cannot donate more than 3 coins.
+It's forbidden to stop and give nothing.
+
+Encounters
+The player draws 1 Encounter card and applies the effect. These
+effects are listed below. After carrying out an effect, the player
+adds the card to their collection.
+
+SHOKUVEN
+ANNALEITO
+Shokunin (Artisan)
+The player draws a Souvenir card and adds it to
+their collection. Immediately score points for
+the added Souvenir.
+
+Annaibito (Guide)
+If the player has not yet started the depicted
+panorama, they gain a value 1 card of the
+appropriate type. If they have started it, they
+gain the next number in ascending order. If
+they have completed it, they can start or add to
+a different panorama of their choice. They score
+points for the Panorama card as usual.
+
+Tokaido_Rulebook_r8.indd 4
+10/29/24 11:58 AM
+
+# Page 5
+SAMURAI
+KUGE
+MIKO
+3%
+COO
+Inns
+Samurai
+The player immediately scores 3 points.
+
+Kuge (Noble)
+The player immediately gains 3 coins.
+
+Miko (Shinto priest)
+The player immediately gains 1 coin and places
+it as an offering in the Temple on the area
+corresponding to their color.
+They score 1 point for this donation.
+
+The Inns are special spaces, and all Travelers must stop at each Inn.
+The Inns are the places where players can buy Meal cards. Meal
+cards cost 1, 2 or 3 coins and all give 6 victory points.
+
+DANGO
+66
+TOFU
+Arriving at an Inn
+Fugu
+The Inns, mandatory stopovers for all
+travelers, are places to enjoy a well-earned
+meal and sample local culinary specialties.
+Each traveler is obliged to stop at each of
+the 4 Inns on the way to Edo, so naturally
+the Inn spaces can hold all of the travelers
+at the same time.
+These Inn spaces are on the board in red.
+The order that players arrive at an Inn
+is important.
+The first traveler occupies the space
+nearest the road, and later travelers form
+a line after them.
+
+The green traveler
+will be the first one
+to leave the Inn.
+When the first traveler arrives at an Inn, they draw as many
+Meal cards as there are players, plus 1. (For example, in a game
+with 3 players, they draw 4 cards.)
+They look at these cards without showing them to other players.
+They may then purchase one Meal card of their choice by paying
+the price (1, 2, or 3 coins) marked on the card.
+They add this card, face up, to their collection and place the
+remaining cards next to the board, face down.
+Each Meal card is worth 6 points, which are immediately scored.
+They then must wait for the other travelers to arrive at the Inn.
+Upon arrival, each traveler may purchase one of the remaining
+Meal cards, if they can afford to.
+The first traveler to arrive at the Inn therefore has a greater
+range of choices than the last!
+Important:
+• A traveler cannot taste the same culinary specialty twice
+during their journey.
+• A traveler can never purchase more than one Meal card per Inn.
+• A traveler is never required to purchase a Meal card.
+
+Example:
+In a game with four players, the first traveler arrives at the Inn;
+they draw 5 Meal cards (4 players + 1) and choose their Meal
+from among these 5 cards.
+The second traveler arrives at the Inn; they choose their Meal
+from among the 4 remaining cards.
+The third traveler arrives at the Inn; they would like to choose
+a Meal from among the 3 remaining cards, but they don't have
+enough money to pay! Alas, they cannot take a Meal card and
+go hungry at this stop.
+The fourth traveler arrives at the Inn with 3 Meal cards from
+which to choose as the previous traveler did not purchase a
+Meal. They purchase one, then place the remaining cards at the
+bottom of the pile.
+
+Continuing the Journey
+Once all travelers have arrived at the Inn and had a chance to
+taste the local cuisine, the journey can continue.
+• Place unpurchased Meal cards on the bottom of the
+appropriate pile.
+• The last traveler on the route-that is, the one farthest from
+the Inn-takes the next turn and starts out on the road again.
+
+End of the Journey
+When all of the travelers have arrived in Edo at the last Inn,
+the game ends after each Traveler has the opportunity to buy
+one last meal card.
+Award the achievement cards (Gourmet, Collector, Bather,
+Chatterbox) to the appropriate travelers. (See page 6.)
+
+Tokaido_Rulebook_r8.indd 5
+5
+10/29/24 11:58 AM
+
+# Page 6
+The travelers score additional points depending on their ranking
+as donors to the Temple.
+The most generous donor scores 10 points.
+The second scores 7 points.
+The third scores 4 points.
+All other donors score 2 points.
+In the event of a tie, all tied players score points from that rank;
+e.g., two players tied for first place score 10 points each.
+Travelers who haven't donated a single coin to the Temple do
+not score any points.
+
+Other achievement cards
+These cards are awarded to players at the end of the journey.
+If two or more travelers are tied for first for any of the
+achievements, they each score 3 points.
+
+36
+Bather
+The traveler who has the most Hot Spring
+cards receives this achievement card and
+scores 3 points.
+
+5
+A
+8
+b
+Example:
+10
+36
+The picture shows each traveler's offerings at the end of the
+36
+journey.
+The Yellow traveler, in 1st place, scores 10 points.
+The Blue and Green travelers, tied for 2nd place, each score 7
+points.
+The White and Purple travelers score no points as they did not
+donate anything.
+36
+The player with the most points wins the game. In the event of a
+tie, the tied player with the most achievement cards wins.
+
+Chatterbox
+The traveler who has the most Encounter cards
+receives this achievement card and scores 3
+points.
+
+Collector
+The traveler who has the most Souvenir cards
+receives this achievement card and scores 3
+points.
+
+Gourmet
+The traveler with the highest sum of coin costs
+on their Meal cards receives this achievement
+card and scores 3 points.
+
+In Tokaido, Journey points are scored throughout the game.
+However, if you think you have made a mistake, your collection
+allows you to recount your points at the end of the game.
+
+Achievement Cards
+Seven achievement cards are distributed to the travelers, 3
+during the game and 4 at the end of it.
+
+Panorama achievement cards
+Three cards are given during the travel to Edo.
+The first traveler to complete a panorama of a particular type
+receives the achievement card corresponding to this panorama.
+Panorama achievement cards immediately score 3 points.
+
+Description of the Travelers
+Chuubei the messenger
+When Chuubei arrives at each of the 3
+intermediate Inns, before the Meal he draws 1
+Encounter card and applies its effect.
+
+Hiroshige the artist
+When Hiroshige arrives at each of the 3
+intermediate Inns, before the Meal he gains any
+sequential panorama card.
+
+Hirotada the priest
+Each time he stops at the Temple, Hirotada can
+gain 1 coin from the reserve and donate it to the
+Temple, scoring 1 point for this coin. This is in
+addition to the 1, 2, or 3 coins he can donate to
+the Temple.
+
+Tokaido_Rulebook_r8.indd 6
+36
+36
+36
+6
+10/29/24 11:58 AM
+
+# Page 7
+Kinko the ronin
+Each Meal card purchased by Kinko costs one
+coin less. (Meals that cost 1 are therefore free.)
+
+Mitsukuni the old man
+Mitsukuni earns 1 additional point for each Hot
+Spring card and each achievement card.
+
+Special Rules for 2-Player Games
+Two-player games have slightly different rules.
+During set-up, add a third traveler-the Neutral traveler-to
+the starting Inn. (Determine the order of the three travelers at
+random.)
+As with the travelers controlled by players, this Neutral traveler
+must be moved when they are last on the road.
+The traveler who is furthest ahead on the road decides where
+the Neutral traveler moves.
+Note: Neutral traveler movements are an important part of
+two-player games and are the key to winning!
+
+Sasayakko the geisha
+In the Shop, if Sasayakko purchases at least 2
+Souvenir cards, the cheapest Souvenir is free.
+Note: She must have the coins on hand to pay
+for all Souvenirs, but she doesn't pay for the
+cheapest one.
+
+N
+%
+>>16+10
+Satsuki the orphan
+When she arrives at an Inn, Satsuki receives the
+first Meal card from the Meal cards pile for free.
+Note: After seeing the Meal offered to her, she
+can instead purchase a Meal as normal following
+the usual rule.
+
+Umegae the street entertainer
+Umegae earns 1 point and 1 coin for each
+Encounter.
+Note: This gain happens before applying the
+effects of the Encounter card picked.
+
+Yoshiyasu the functionary
+During each Encounter, Yoshiyasu draws 2
+Encounter cards, keeps 1, then places the other
+card at the bottom of the pile (without showing it
+to the other players).
+
+#
+Way of travel
+The Neutral traveler is green in this example N. Because they are in last
+place on the road, it's their turn to move. The Yellow traveler, as the player
+who is furthest ahead on the road, decides where the Neutral traveler
+moves.
+Neutral traveler movements have no effect on the game, except
+at Temple and Inn spaces.
+When the Neutral traveler stops on a Temple
+space, take a coin from the bank and place it on
+the space corresponding to their color. Thus, the
+Neutral traveler is involved at the end of the game
+when calculating the additional points connected to
+Temple offerings.
+With two players, the first player at the Inn draws
+four Meal cards. When the Neutral traveler stops on
+an Inn space, the player who moved them takes the
+Meal cards and discards one at random. Place this
+card on the bottom of the pile without revealing it.
+Excepting these two cases, the rest of the game plays with the
+usual rules.
+
+Tokaido_Rulebook_r8.indd 7
+Zen-emon the merchant
+Once per Shop, Zen-emon can purchase one
+Souvenir for 1 coin instead of the marked price.
+7
+10/29/24 11:58 AM
+
+# Page 8
+A few words about Japan...
+Tokaido
+The Tokaido road, which dates back to the 11th century,
+connects the two most important cities in Japan: Edo (today
+called Tokyo) and Kyoto.
+It is 500km long and follows the southern coast of the biggest
+island in the Japanese archipelago, Honshu.
+Travelers in the 17th century took approximately two weeks to
+complete the route, usually on foot, sometimes on horseback,
+and more rarely in litters (for the wealthiest).
+There were 53 stages to the route, and a number of inns
+were located along the road where travelers could rest and
+stock up on supplies. The road and inns inspired a number of
+artists, among them the famous Hiroshige, who produced a
+series of woodcut prints: Tokaido Gojusan Tsugi no Uchi (The
+fifty-three stations of the Tokaido).
+
+Panoramas
+Japan is three-quarters mountainous, including a number of
+volcanoes, some still active today. As a result, there is little
+arable space, which is mainly taken up by rice paddies.
+The Japanese coastline is thousands of kilometers long and
+extremely varied, with vistas over the seas surrounding the
+country. This particular geography has given the sea a special
+place in the hearts of the inhabitants and artists.
+
+Hot springs
+There are many natural hot springs (Onsen in Japanese)
+in the country, and they are very popular. Most have been
+transformed into baths, both public and private, and they
+are sometimes used to cook eggs and vegetables!
+On the island of Hokkaido (in the north of the archipelago),
+one often finds springs occupied by macaques, who seem
+to appreciate their beneficial effects in the same way that
+humans do...
+
+Cuisine
+Traditional Japanese cuisine consists of meat, fish, rice,
+noodles, vegetables, and algae.
+The dish best known outside the borders is sushi (sliced raw
+fish on a serving of aromatic rice), but each region of Japan
+has varied and savory specialties. The cuisine and the meal
+is a powerful symbol in Japanese culture.
+The most popular drinks are, of course, sake (rice alcohol,
+actually called nihonshu in Japanese) and tea. There is a rich
+variety of both, with some flavors that only connoisseurs can
+truly appreciate.
+
+Souvenirs
+When traveling to visit someone in Japan, it is customary to
+bring a souvenir (Omiyage in Japanese).
+Here are suggested souvenirs in different categories and their
+Japanese names: Small objects-chopsticks (Hashi), tops
+(Koma); Clothing-hats (Boshi), wooden sandals (Geta);
+Food & drink-pastries (Manju), candies (Kompeito); Art-
+boxes (Hako), laquer (Urushi), prints (Ukiyo-e), sculptures
+(Netsuke), musical instruments (Gakki).
+
+Credits
+Designed by Antoine Bauza
+Illustrated by Naïade
+Graphic design by Funforge Studio
+Proofreading by W. Eric Martin, Yann Belloir, and Gersende Cheylan
+
+Antoine Bauza special thanks:
+Michaël Bertrand, Bruno Goube, Toni Bauza, Élisabeth Watremez, Françoise
+Sengissen, Émilie Pautrot, Frédéric Vuillet, Mikaël Bach, Fabrice Rabellino, Myriam
+Moussier, Matthieu Houssais, Franck Lefebvre, Marielle Lefebvre, Frédéric Escribano,
+Maël Cathala, Mathias Guillaud, Thibaut Paulevé, Adèle Perché, Natacha Deshayes,
+Adrien Martinot, Charles, Catherine Ellena, Éric Robert, Bruno Faidutti, Jef Gontier,
+Coralie Desoeuvres, Émilie Escoulen, Clémens Winkelmann, Corentin Lebrat, Cyril
+Sandelion and Sylvain Thomas.
+
+Other special thanks:
+Nobuaki Takerube for their priceless help on cultural validation, Christine Clotté (for
+everything and even more), Claude Amardeil (for everything), Elodie Sallares, Jean-
+Marie David, Anne-Sophie Girault-Guessoum, Eddy Neveu, Abrial Da Costa, all of the
+playtesters from the Ludopathic Gathering for their help as well as Marie Cardouat for
+her watchful eye.
+
+Petal Brush Tom Chalky Font Bros. www.fontbros.com
+
+Tokaido_Rulebook_r8.indd 8
+8
+©2024 Stonemaier LLC. All rights reserved.
+10/29/24 11:58 AM
