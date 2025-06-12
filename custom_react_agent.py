@@ -1,5 +1,7 @@
 import json
 from operator import itemgetter
+
+import langchain_tavily
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage, ToolMessage
 from langchain_core.tools import tool
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
@@ -38,7 +40,7 @@ def _load_game_manual(game_name: str) -> str:
             return output
 
 
-game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan']
+game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan', 'tokaido']
 
 
 @tool
@@ -66,6 +68,7 @@ def search_board_game_text(question: str,
      - Answer the question directly, as you are a subject matter expert.
      - DO NOT include phrases such as "based on the context" or "based on the provide manual".  Simply provide an answer.
      - Provide page number references to cite where the user can find this information.
+     - If URL's are present, cite the specific URLs where you found the information.
      - Use as many words as necessary to answer the question
      - Use bullet points and/or markdown format to make the answer as easily-interpreted as possible.
 
@@ -80,11 +83,6 @@ def search_board_game_text(question: str,
             | StrOutputParser()
     )
     return chain.invoke({'user_question': question, 'manual': manual})
-
-
-tavily_search_object = TavilySearch(max_results=10,
-                                    include_raw_content=False,
-                                    include_domains=['https://spiritislandwiki.com/'])
 
 
 def _extract_raw_text_from_message_history(message_list: list) -> str:
@@ -103,27 +101,38 @@ def _extract_raw_text_from_message_history(message_list: list) -> str:
                       in message_list if isinstance(message, (HumanMessage, AIMessage))])
 
 
-@tool
-def get_tavily_search_spirit_island_text(question: str) -> str:
+def get_tavily_search_text(question: str,
+                           tavily_search_object: langchain_tavily.TavilySearch) -> str:
     """
     Retrieves and processes the search results for the specified question using
     the Tavily search tool, returning a concatenated string of raw content.  This should only be used
     when search_spirit_island_basic is not sufficient.
 
+    :param tavily_search_object:
     :param question: The search query to be processed.
     """
     response = tavily_search_object.invoke(question)
-    return " ".join([i['content'] + f"Found in {i['url']}"
+    if isinstance(response, str):
+        return ""
+    return " ".join([i['content'] + f" Found in {i['url']}"
                      for i in response['results']
                      if i.get('content')])
+
+
+_search_source_mappings = {"spirit_island": 'https://spiritislandwiki.com/',
+                           "scythe": 'https://www.reddit.com/r/SCYTHE/'
+                           }
 
 
 @tool
 def augment_search_context(question: str, game: game_names):
     """Use this tool to get information about a board game."""
     manual = _load_game_manual(game)
-    router_prompt_template = """You are a helpful assistant.  Your job is to look at the board game manual
-    and determine if you have enough information to answer a user's question in it's entirety.
+    # If we don't have any external source for searching, return the manual as is
+    if not _search_source_mappings.get(game):
+        return manual
+    router_prompt_template = """You are a helpful assistant.  Your job is to look at the board game manual and 
+    chat history to determine if you have enough information to answer a user's question in it's entirety.
 
     If so, response in a json format with:
     ```
@@ -132,11 +141,14 @@ def augment_search_context(question: str, game: game_names):
 
     If not, respond with
     ```
-    "more_information_needed": ARRAY_OF_QUESTIONS_TO_ASK_AN_EXTERNAL_SOURCE_HERE
+    "more_information_needed": ARRAY_OF_SEARCH_TERMS_FOR_EXTERNAL_SOURCE
     ```
 
-    If you respond with "more_information_needed", you MUST respond with at least one question, but no more than 3.
-    The questions to be asked are not to the user, rather an additional knowledge base
+    If you respond with "more_information_needed", you MUST respond with at least search term, but no more than 3.
+    The search terms should be phrased as if they're being input into a search engine for optimal text retrieval.
+    
+    Only output the JSON.  Do not output any other text.
+    
 
     Here is the manual:
     {manual}
@@ -159,10 +171,13 @@ def augment_search_context(question: str, game: game_names):
     )
     response = router_chain.invoke(question)
     if "more_information_needed" in response:
+        tavily_search_object = TavilySearch(max_results=10,
+                                            include_raw_content=False,
+                                            include_domains=[_search_source_mappings.get(game)])
 
         for question in response["more_information_needed"]:
             print(f"Getting answer for {question}")
-            answer = get_tavily_search_spirit_island_text(question)
+            answer = get_tavily_search_text(question, tavily_search_object)
             manual += answer
             print(len(manual))
 
