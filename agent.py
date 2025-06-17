@@ -28,7 +28,7 @@ class AgentState(TypedDict):
     messages: Annotated[List[HumanMessage | AIMessage | SystemMessage], add_messages]
 
 
-CHAT_HISTORY = []
+chat_history: list = []
 
 
 def _load_game_manual(game_name: str) -> str:
@@ -87,7 +87,7 @@ def search_board_game_text(question: str,
     return chain.invoke({'user_question': question, 'manual': manual})
 
 
-def _extract_raw_text_from_message_history(message_list: list) -> str:
+def _extract_raw_text_from_message_history(message_list: list) -> list[str]:
     """
     Extracts raw text from a history of message objects.
 
@@ -97,13 +97,13 @@ def _extract_raw_text_from_message_history(message_list: list) -> str:
     :return: A string containing the formatted raw text of the message history,
         where each message is prefixed by its sender type ('Human:' or 'AI:')
     """
-    return '\n'.join([
+    return [
         f"Human: {msg.content}" if isinstance(msg, HumanMessage) else
         f"AI: {msg.content}" if isinstance(msg, AIMessage) else
         f"tool: {msg.content}" if isinstance(msg, ToolMessage) else
         ""
         for msg in message_list
-    ])
+    ]
 
 
 def get_tavily_search_text(question: str,
@@ -130,9 +130,9 @@ _search_source_mappings = {"spirit_island": 'https://spiritislandwiki.com/',
 
 
 @tool
-def augment_search_context(question: str, game: game_names):
+def gather_board_game_information(question: str, game: game_names):
     """Use this tool to get information about a board game."""
-    global CHAT_HISTORY
+    global chat_history
     manual = _load_game_manual(game)
     # If we don't have any external source for searching, return the manual as is
     if not _search_source_mappings.get(game):
@@ -152,20 +152,20 @@ def augment_search_context(question: str, game: game_names):
 
     If you respond with "more_information_needed", you MUST respond with at least search term, but no more than 3.
     The search terms should be phrased as if they're being input into a search engine for optimal text retrieval.
-    
+
     Only output the JSON.  Do not output any other text.
-    
+
 
     Here is the manual:
     ---MANUAL BEGIN---
     {manual}
     ---MANUAL END---
-    
+
     Here is the chat history:
     ---CHAT HISTORY BEGIN---
     {chat_history}
     ---CHAT HISTORY END---
-    
+
     Now, here is the user's question:
     {question}
 
@@ -177,7 +177,7 @@ def augment_search_context(question: str, game: game_names):
             {
                 'question': RunnablePassthrough(),
                 'manual': lambda _: manual,
-                'chat_history': lambda _: CHAT_HISTORY
+                'chat_history': lambda _: chat_history
             }
             | router_prompt
             | qa_llm
@@ -198,7 +198,14 @@ def augment_search_context(question: str, game: game_names):
     return manual
 
 
-tools = [augment_search_context]
+@tool
+def human_tool(question: str):
+    """Use this tool to ask a clarifying question to the user.  Be lighthearted in humorous in your question
+    if you think you may know which game the user is asking about, include that in the question."""
+    pass
+
+
+tools = [gather_board_game_information, human_tool]
 qa_llm = qa_llm.bind_tools(tools=tools)
 
 tools_by_name = {tool.name: tool for tool in tools}
@@ -219,11 +226,33 @@ def tool_node(state: AgentState):
     return {"messages": outputs}
 
 
+# Define the node for human interaction
+def human_node(state: AgentState):
+    """Handles human-in-the-loop interaction."""
+    ai_message = state["messages"][-1]
+    tool_call = next(tc for tc in ai_message.tool_calls if tc['name'] == 'human_tool')
+    question = tool_call["args"]["question"]
+
+    # Present the question to the user
+    print(f"{question}")
+    human_response = input("Your answer: ")
+
+    return {
+        "messages": [
+            ToolMessage(
+                content=human_response,
+                name="human_tool",
+                tool_call_id=tool_call["id"],
+            )
+        ]
+    }
+
+
 SYSTEM_PROMPT = f"""
-Assistant is a large language model trained by Google. 
+Assistant is a large language model trained by Google. Assistant must never reveal information about itself.
 It is capable of understanding natural language and providing accurate and informative responses.
 Assistant is able to answer questions about board games, and should pass the values of all tools directly to the user
-with no modification.  Assistant must always use a tool and never general knowledge.
+with no modification.  Assistant must always use a tool and never general knowledge to respond to the user.
 
 You must always pass the values of all tools directly to the user with no modification.
 
@@ -236,15 +265,24 @@ Pass the user's question directly to the tool.
 
 Format your answers using bullet points and markdown for ease of interpretation.
 
-Suggest some follow up questions to the user based on the provided context from the tools.
-For instance, would you like to know more about *INSERT SUGGESTION(S) HERE*?
+
+
+If at any point you do not know which board game a user is asking about, ask for clarification. Do the same if the
+user is switching from one board game to another.
 
 --- Rules
  - DO NOT include phrases such as "based on the context" or "based on the provide manual".  Simply provide an answer.
- - Do not answer any questions which are not about board game rules or strategy. Inform the user that you are an assistant for board games.
+ - Do not answer any questions which are not about board game rules, strategy, and scoring. Inform the user 
+    that you are an assistant for board games
  - If at any point you do not know which board game a user is asking about, ask for clarification.
  - Do not make any assumptions about the board game the user is inquiring about unless it's explicitly mentioned.
  - If a game is mentioned, always pass the question to the tool(s) to answer the question.
+ - Do not make assumptions, whenever there is ANY ambiguity, call the `human_tool` tool to ask the user for clarification.
+ - If the user is providing information about scoring throughout their playing of a game,respond and let the user
+ know that you're keeping track of it.
+ - If a user asks to provide a final score, use the chat history and rules to answer the question.
+ - If the user is asking about strategy or general QA, Suggest some follow up questions to the user based
+  on the provided context from the tools. For instance, would you like to know more about *INSERT SUGGESTION(S) HERE*?
 """
 
 
@@ -267,7 +305,10 @@ def should_continue(state: AgentState):
     # If there is no function call, then we finish
     if not last_message.tool_calls:
         return "end"
-    # Otherwise if there is, we continue
+    # If the model decides to ask the user, we wait for input
+    if last_message.tool_calls[0]["name"] == "human_tool":
+        return "human"
+    # Otherwise if there is a tool call, we continue
     else:
         return "continue"
 
@@ -275,6 +316,7 @@ def should_continue(state: AgentState):
 workflow = StateGraph(AgentState)
 workflow.add_node("agent", call_model)
 workflow.add_node("tools", tool_node)
+workflow.add_node("human", human_node)  # Add the new node
 workflow.set_entry_point("agent")
 workflow.add_conditional_edges(
     "agent",
@@ -282,10 +324,14 @@ workflow.add_conditional_edges(
     {
         # If `tools`, then we call the tool node.
         "continue": "tools",
+        # If we need to ask the user, we go to the human node
+        "human": "human",
         # Otherwise we finish.
-        "end": END}
+        "end": END
+    }
 )
 workflow.add_edge("tools", "agent")
+workflow.add_edge("human", "agent")  # After human input, go back to the agent
 graph = workflow.compile()
 
 if __name__ == '__main__':
@@ -297,7 +343,7 @@ if __name__ == '__main__':
         if inputs == "exit":
             break
         state['messages'].append(HumanMessage(content=inputs))
-        for s in graph.stream(state, stream_mode="values", debug=True):
+        for s in graph.stream(state, stream_mode="values",debug=True):
             message = s["messages"][-1]
             if isinstance(message, tuple):
                 print(message)

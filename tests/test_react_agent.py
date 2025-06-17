@@ -1,5 +1,5 @@
 import unittest
-from custom_react_agent import graph as react_graph, AgentState as react_state
+from agent import graph as react_graph, AgentState as react_state
 from langchain_core.messages import HumanMessage, ToolMessage
 from answer_benchmarks import RAZE_ANSWER,BLIGHT_LOSS_ANSWER
 from tests.test_utility_functions import get_gemini_embeddings, cosine_similarity

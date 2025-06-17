@@ -4,7 +4,7 @@ from google import genai
 from google.genai import types
 from langchain_core.messages import HumanMessage
 
-from board_game_agent import BoardGameAgentState
+from deprecated.board_game_agent import BoardGameAgentState
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 EMBEDDING_MODEL = "gemini-embedding-exp-03-07"

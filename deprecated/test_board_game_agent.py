@@ -1,5 +1,5 @@
 import unittest
-from board_game_agent import generate_answer_node, BoardGameAgentState
+from deprecated.board_game_agent import generate_answer_node, BoardGameAgentState
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from answer_benchmarks import (WHAT_ARE_DAHAN_IN_SPIRIT_ISLAND_ANSWER,
                                HOW_TO_GAIN_PRESENCE_IN_SPIRIT_ISLAND_ANSWER,
