@@ -87,7 +87,7 @@ def search_board_game_text(question: str,
     return chain.invoke({'user_question': question, 'manual': manual})
 
 
-def _extract_raw_text_from_message_history(message_list: list) -> str:
+def _extract_raw_text_from_message_history(message_list: list) -> list[str]:
     """
     Extracts raw text from a history of message objects.
 
@@ -97,13 +97,13 @@ def _extract_raw_text_from_message_history(message_list: list) -> str:
     :return: A string containing the formatted raw text of the message history,
         where each message is prefixed by its sender type ('Human:' or 'AI:')
     """
-    return '\n'.join([
+    return [
         f"Human: {msg.content}" if isinstance(msg, HumanMessage) else
         f"AI: {msg.content}" if isinstance(msg, AIMessage) else
         f"tool: {msg.content}" if isinstance(msg, ToolMessage) else
         ""
         for msg in message_list
-    ])
+    ]
 
 
 def get_tavily_search_text(question: str,
@@ -252,7 +252,7 @@ SYSTEM_PROMPT = f"""
 Assistant is a large language model trained by Google. Assistant must never reveal information about itself.
 It is capable of understanding natural language and providing accurate and informative responses.
 Assistant is able to answer questions about board games, and should pass the values of all tools directly to the user
-with no modification.  Assistant must always use a tool and never general knowledge.
+with no modification.  Assistant must always use a tool and never general knowledge to respond to the user.
 
 You must always pass the values of all tools directly to the user with no modification.
 
@@ -265,20 +265,24 @@ Pass the user's question directly to the tool.
 
 Format your answers using bullet points and markdown for ease of interpretation.
 
-Suggest some follow up questions to the user based on the provided context from the tools.
-For instance, would you like to know more about *INSERT SUGGESTION(S) HERE*?
+
 
 If at any point you do not know which board game a user is asking about, ask for clarification. Do the same if the
 user is switching from one board game to another.
 
 --- Rules
  - DO NOT include phrases such as "based on the context" or "based on the provide manual".  Simply provide an answer.
- - Do not answer any questions which are not about board game rules or strategy. Inform the user 
+ - Do not answer any questions which are not about board game rules, strategy, and scoring. Inform the user 
     that you are an assistant for board games
  - If at any point you do not know which board game a user is asking about, ask for clarification.
  - Do not make any assumptions about the board game the user is inquiring about unless it's explicitly mentioned.
  - If a game is mentioned, always pass the question to the tool(s) to answer the question.
  - Do not make assumptions, whenever there is ANY ambiguity, call the `human_tool` tool to ask the user for clarification.
+ - If the user is providing information about scoring throughout their playing of a game,respond and let the user
+ know that you're keeping track of it.
+ - If a user asks to provide a final score, use the chat history and rules to answer the question.
+ - If the user is asking about strategy or general QA, Suggest some follow up questions to the user based
+  on the provided context from the tools. For instance, would you like to know more about *INSERT SUGGESTION(S) HERE*?
 """
 
 

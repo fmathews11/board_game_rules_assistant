@@ -20,7 +20,7 @@ logger = create_logger("AgentLogger", 'debug')
 # Establish Constants
 POSSIBLE_BOARD_GAMES = ["spirit_island", "wingspan", "scythe", "perch", "moonrakers", 'tokaido']
 POSSIBLE_BOARD_GAMES_FORMATTED = ", ".join([game.replace("_", " ").title() for game in POSSIBLE_BOARD_GAMES])
-MANUALS_DIR = "text"
+MANUALS_DIR = "../text"
 GAME_IDENTIFICATION_MODEL_NAME = "gemini-2.0-flash-lite"
 QA_MODEL_NAME = "gemini-2.5-flash-preview-04-17"
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
