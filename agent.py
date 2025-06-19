@@ -17,7 +17,7 @@ from langgraph.graph import StateGraph, END
 load_dotenv()
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-QA_MODEL_NAME = "gemini-2.5-flash-preview-04-17"
+QA_MODEL_NAME = "gemini-2.5-flash"
 qa_llm = ChatGoogleGenerativeAI(model=QA_MODEL_NAME,
                                 temperature=0,
                                 google_api_key=GEMINI_API_KEY,
@@ -199,13 +199,13 @@ def gather_board_game_information(question: str, game: game_names):
 
 
 @tool
-def human_tool(question: str):
+def ask_clarifying_question(question: str):
     """Use this tool to ask a clarifying question to the user.  Be lighthearted in humorous in your question
     if you think you may know which game the user is asking about, include that in the question."""
     pass
 
 
-tools = [gather_board_game_information, human_tool]
+tools = [gather_board_game_information, ask_clarifying_question]
 qa_llm = qa_llm.bind_tools(tools=tools)
 
 tools_by_name = {tool.name: tool for tool in tools}
@@ -230,7 +230,7 @@ def tool_node(state: AgentState):
 def human_node(state: AgentState):
     """Handles human-in-the-loop interaction."""
     ai_message = state["messages"][-1]
-    tool_call = next(tc for tc in ai_message.tool_calls if tc['name'] == 'human_tool')
+    tool_call = next(tc for tc in ai_message.tool_calls if tc['name'] == 'ask_clarifying_question')
     question = tool_call["args"]["question"]
 
     # Present the question to the user
@@ -277,7 +277,7 @@ user is switching from one board game to another.
  - If at any point you do not know which board game a user is asking about, ask for clarification.
  - Do not make any assumptions about the board game the user is inquiring about unless it's explicitly mentioned.
  - If a game is mentioned, always pass the question to the tool(s) to answer the question.
- - Do not make assumptions, whenever there is ANY ambiguity, call the `human_tool` tool to ask the user for clarification.
+ - Do not make assumptions, whenever there is ANY ambiguity, call the `ask_clarifying_question()` tool to ask the user for clarification.
  - If the user is providing information about scoring throughout their playing of a game,respond and let the user
  know that you're keeping track of it.
  - If a user asks to provide a final score, use the chat history and rules to answer the question.
@@ -306,7 +306,7 @@ def should_continue(state: AgentState):
     if not last_message.tool_calls:
         return "end"
     # If the model decides to ask the user, we wait for input
-    if last_message.tool_calls[0]["name"] == "human_tool":
+    if last_message.tool_calls[0]["name"] == "ask_clarifying_question":
         return "human"
     # Otherwise if there is a tool call, we continue
     else:
@@ -316,7 +316,7 @@ def should_continue(state: AgentState):
 workflow = StateGraph(AgentState)
 workflow.add_node("agent", call_model)
 workflow.add_node("tools", tool_node)
-workflow.add_node("human", human_node)  # Add the new node
+workflow.add_node("human", human_node)
 workflow.set_entry_point("agent")
 workflow.add_conditional_edges(
     "agent",
