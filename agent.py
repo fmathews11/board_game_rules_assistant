@@ -1,11 +1,12 @@
 import json
-from operator import itemgetter
+from json import JSONDecodeError
+
 import langchain_tavily
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage, ToolMessage
 from langchain_core.tools import tool
-from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
+from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.runnables import RunnableConfig, RunnablePassthrough
+from langchain_core.runnables import RunnableConfig, RunnablePassthrough, RunnableLambda
 from langchain_tavily import TavilySearch
 from langgraph.graph import add_messages
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -19,7 +20,7 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 QA_MODEL_NAME = "gemini-2.5-flash"
 qa_llm = ChatGoogleGenerativeAI(model=QA_MODEL_NAME,
-                                temperature=0,
+                                top_p=0.7,
                                 google_api_key=GEMINI_API_KEY,
                                 max_tokens=50000)
 
@@ -42,49 +43,7 @@ def _load_game_manual(game_name: str) -> str:
             return output
 
 
-game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan', 'tokaido']
-
-
-@tool
-def search_board_game_text(question: str,
-                           game_name: game_names):
-    """
-    Search and provide answers to questions related to board game manual.
-    The inputs to this function should always be phrased as a question.  If the inbound query is a question,
-    do not alter it.
-
-    :param question: The question to be answered.
-    :param game_name: The name of the game for which the manual is to be searched.
-    """
-    manual = _load_game_manual(game_name)
-    prompt_template = """
-    You are a helpful assistant. You are proficient in answering questions about board game rules.
-
-    Use the following rulebook to answer a user's question
-
-    ---RULES START---
-    {manual}
-    ---RULES END---
-
-    ## Answer guidelines
-     - Answer the question directly, as you are a subject matter expert.
-     - DO NOT include phrases such as "based on the context" or "based on the provide manual".  Simply provide an answer.
-     - Provide page number references to cite where the user can find this information.
-     - If URL's are present, cite the specific URLs where you found the information.
-     - Use as many words as necessary to answer the question
-     - Use bullet points and/or markdown format to make the answer as easily-interpreted as possible.
-
-    Now, use ONLY this information to answer a user's question. Do not use any other information.
-    Here is the user's question: {user_question}
-    """
-    prompt = ChatPromptTemplate.from_template(prompt_template)
-    chain = (
-            {"user_question": itemgetter('user_question'), "manual": itemgetter('manual')}
-            | prompt
-            | qa_llm
-            | StrOutputParser()
-    )
-    return chain.invoke({'user_question': question, 'manual': manual})
+game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan', 'tokaido', 'dice_throne']
 
 
 def _extract_raw_text_from_message_history(message_list: list) -> list[str]:
@@ -141,11 +100,13 @@ def gather_board_game_information(question: str, game: game_names):
     chat history to determine if you have enough information to answer a user's question in it's entirety.
 
     If so, response in a json format with:
+    JSON
     ```
     "answer":"I can answer this question"
     ```
 
     If not, respond with
+    JSON
     ```
     "more_information_needed": ARRAY_OF_SEARCH_TERMS_FOR_EXTERNAL_SOURCE
     ```
@@ -173,6 +134,14 @@ def gather_board_game_information(question: str, game: game_names):
     """
     router_prompt = ChatPromptTemplate.from_template(router_prompt_template)
 
+    def _parse_json(input_message: AIMessage):
+        parser = JsonOutputParser()
+        try:
+            return parser.parse(input_message.content)
+        except JSONDecodeError:
+            print(f"Error parsing JSON: {input_message.content}")
+            raise
+
     router_chain = (
             {
                 'question': RunnablePassthrough(),
@@ -181,19 +150,22 @@ def gather_board_game_information(question: str, game: game_names):
             }
             | router_prompt
             | qa_llm
-            | JsonOutputParser()
+            | RunnableLambda(_parse_json)
     )
-    response = router_chain.invoke(question)
-    if "more_information_needed" in response:
-        tavily_search_object = TavilySearch(max_results=10,
-                                            include_raw_content=False,
-                                            include_domains=[_search_source_mappings.get(game)])
 
-        for question in response["more_information_needed"]:
-            print(f"Getting answer for {question}")
-            answer = get_tavily_search_text(question, tavily_search_object)
-            manual += answer
-            print(len(manual))
+    response = router_chain.invoke(question)
+    if "more_information_needed" not in response:
+        return manual
+
+    tavily_search_object = TavilySearch(max_results=10,
+                                        include_raw_content=False,
+                                        include_domains=[_search_source_mappings.get(game)] or [])
+
+    for question in response["more_information_needed"]:
+        print(f"Getting answer for {question}")
+        answer = get_tavily_search_text(question, tavily_search_object)
+        manual += answer 
+        print(len(manual))
 
     return manual
 
@@ -251,7 +223,7 @@ def human_node(state: AgentState):
 SYSTEM_PROMPT = f"""
 Assistant is a large language model trained by Google. Assistant must never reveal information about itself.
 It is capable of understanding natural language and providing accurate and informative responses.
-Assistant is able to answer questions about board games, and should pass the values of all tools directly to the user
+Assistant exists to chat with users about board games, and should pass the values of all tools directly to the user
 with no modification.  Assistant must always use a tool and never general knowledge to respond to the user.
 
 You must always pass the values of all tools directly to the user with no modification.
@@ -343,7 +315,7 @@ if __name__ == '__main__':
         if inputs == "exit":
             break
         state['messages'].append(HumanMessage(content=inputs))
-        for s in graph.stream(state, stream_mode="values",debug=True):
+        for s in graph.stream(state, stream_mode="values", debug=False):
             message = s["messages"][-1]
             if isinstance(message, tuple):
                 print(message)

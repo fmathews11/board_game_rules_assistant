@@ -12,6 +12,7 @@ I can help with:
  - Perch
  - Moonrakers
  - Tokaido
+ - Dice Throne
 
 **Ask Away!**
 """
