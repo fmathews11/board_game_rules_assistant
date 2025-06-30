@@ -1,8 +1,3811 @@
+```markdown
 # Page 1
-لو
+لله
+B
+لله
+♡
+لله
+B
+لله
+♡
+لله
+2
+ap
+♡
+B
+ap
+ap
+ap
+THE LAW OF
+ROOT
+B
+لله
+B
+لله
+♡
+ap
+B
+لله
+Table of Contents
+B
+1. Golden Rules
+2
+13. Corvid Conspiracy
+14
+2. Key Concepts
+3
+14. Lord of the Hundreds
+14
+3. Victory
+3
+15. Keepers in Iron
+16
+لله
+4. Key Actions
+4
+Appendix A. Advanced Setup 17
+5. Setup
+4
+Appendix B. Components
+18
+6. Marquise de Cat
+5
+Appendix C. Variant Maps
+19
+7. Eyrie Dynasties
+6
+Appendix D. Vagabonds
+20
+8. Woodland Alliance
+7
+Appendix E. Hirelings
+♡
+20
+9. Vagabond
+8
+Appendix F. Landmarks
+21
+10. Lizard Cult
+10
+Appendix G. Glossary
+21
+11. Riverfolk Company
+as
+11
+Index
+22
+12. Underground Duchy
+12
+له
+ap
+♡
+B
+ap
+0
+♡
+(September 5, 2024)
+
+# Page 2
+Reading the Law
+Text in SMALL CAPITALS defines key terms.
+Text in italics gives reminders and clarifi-
+cations. Faction icons mark rules modified
+by Faction Rules and Abilities sections.
+
+Root contains two rulebooks: the Learning to Play guide
+and this book, the Law. If you like a conversational
+teaching style and many graphical examples, read the
+Learning to Play guide. If you like a strictly defined,
+formal rules in a concise reference style, read the Law.
+
+These rules of thumb will help you interpret the Law.
+Q1. I'd like to do something, and the rules don't say
+that I can't do it. Can I do it?
+A1. Within the confines of the action, yes! The game will often
+surprise you with outlandish, unexpected situations, and that's
+part of the fun, but this doesn't mean you can flip the table.
+
+Q2. Can another player not consent to an action?
+A2. No actions require consent. Just do the thing.
+
+Q3. It seems like something should happen, but the
+rule doesn't tell me to do that thing. What do I do?
+A3. Follow the literal word of the Law, not your instinct, even
+if a similar rule exists.
+
+Q4. A rule uses a specific term or action. Does it also
+include another, closely related term or action?
+A4. Nope! Assume we mean only the original term and not any
+related terms. For example, the terms Move and PLACE are dif-
+ferent, which is important in rules such as The Keep (6.2.2).
+
+If you have any other questions, check our website for
+more answers: ledergames.com/root
+
+If you have any missing or damaged components, you
+can go here for support: ledergames.com/replacements
+
+1. Golden Rules
+This chapter gives answers to technical, detailed ques-
+tions. You do not need to read it when first learning.
+
+1.1 RULES CONFLICTS
+1.1.1 Precedence. If a card conflicts with the Law, follow
+the card. If the Learning to Play guide conflicts with
+the Law, follow the Law. If you can follow both a gen-
+eral rule and a faction or hireling rule, follow both; if
+you cannot, follow the faction or hireling rule.
+1.1.2 Use of CANNOT. The term CANNOT is absolute. It
+cannot be overridden unless explicitly instructed.
+1.1.3 Unclear Resolutions and Choices. Whenever it is
+unclear what order simultaneous effects should re-
+solve in, or which player should make a decision,
+the player taking their turn chooses.
+2
+1.2 PUBLIC AND PRIVATE INFORMATION
+1.2.1 Hands. Players may only show or reveal cards in
+their hand if explicitly instructed, but the number
+of cards in their hand is public information.
+1.2.2 Discard. The discard pile can be searched and in-
+spected at any time.
+
+1.3 NEGOTIATION AND DEALS
+1.3.1 Agreements. Players may discuss the game and
+make agreements, but they are non-binding.
+1.3.2 Cards. Players may only give cards to each other
+if explicitly instructed.
+
+1.4 GAME STRUCTURE
+1.4.1 Turn Structure. Each player's turn has three
+phases: Birdsong, Daylight, and Evening. Any-
+thing that says "at start of" a phase happens be-
+fore everything else in the phase, and anything
+that says "at end of" happens after everything else
+in the phase but before the start of the next phase,
+if any. After a player ends Evening, the next clock-
+wise player begins their turn. Play continues until
+one player has won the game (3.1).
+1.4.2 Interrupts. You cannot interrupt an action (in-
+cluding a compound action such as the Marquise's
+March), ability (such as the Corvids' Exposure), or
+persistent effect (such as the Eyrie Emigre card) with
+another effect unless it explicitly allows it. (For ex-
+ample, the Armorers card says it is used "In battle...").
+
+1.5 PIECES
+1.5.1 Limits. Pieces are limited by the contents of the
+game. Do not use proxy pieces if you run out.
+1.5.2 Starting Faction. Each player owns the faction
+they choose in setup (5) and the pieces listed on
+the back of its faction board except for items. Ge-
+nerically, these are called FACTION PIECES or sim-
+ilar. Specifically, these are called [FACTION NAME]
+PIECES. (For example, "your faction warriors" and
+"warriors of your faction" and "Marquise warriors" all
+refer to the orange wooden cat-shaped warriors.)
+1.5.3 Piece Ownership. The ownership of faction piec-
+es cannot change. (For example, the Marquise can-
+not use Field Hospitals on Riverfolk mercenaries or
+hirelings, since these are not Marquise warriors.)
+1.5.4 Piece Manipulation. Pieces are placed and re-
+moved as defined in the Glossary (G.1.19, G.1.22).
+If you are prompted to place, take, or remove piec-
+es but you cannot do so fully, you must place, take,
+or remove the maximum number possible. (This
+does not let you avoid costs or prerequisites. You just can-
+not do less than the most you can.) If multiple pieces
+are removed simultaneously and that would trigger
+effects, remove all pieces before triggering effects.
+1.5.5 Use of FORCE. Some effects let you Force a play-
+er or their pieces to act. Resolve this exactly as if
+that player were choosing to do this, as limited by
+the effect. (For example, if you force the Eyrie to move
+warriors, they benefit from Lords of the Forest.)
+
+# Page 3
+2. Key Concepts
+Terms are defined strictly in the Glossary (Appendix G).
+
+2.1 CARDS
+You draw cards from the top of the shared deck, and
+discard to a shared discard pile. If the deck is ever emp-
+ty, shuffle the discard pile immediately to form a new
+deck. Each card has a suit: bird, fox, rabbit, or mouse.
+Most cards also have an effect you can craft (4.1).
+2.1.1 Birds Are Wild. You can treat any bird card as a
+card of another suit, even if you must spend, take,
+or give multiple cards of the same suit.
+I Forced Effects. If you are prompted to discard
+or give cards of non-bird suits, you must treat
+your bird cards as a prompted suit.
+II Reverse Substitution. If you are prompted to
+spend, discard, take, or give a bird card, you
+cannot substitute a card of another suit.
+2.1.2 Ambush Cards. There are five AMBUSH CARDS: one
+mouse, one rabbit, one fox, and two birds. You
+may spend an ambush card for its suit, but it does
+not have a crafted effect. You may also play one in
+battle to deal hits (4.3.1).
+2.1.3 Dominance Cards. There are four DOMINANCE
+CARDS matching the four suits. You may spend a
+dominance card for its suit, but it cannot be craft-
+ed. You may also play one to permanently change
+your victory condition (3.3).
+
+2.2 CLEARINGS AND PATHS
+The map of the Woodland is composed of many CLEAR-
+INGS linked by PATHS.
+2.2.1 Adjacency. A clearing is adjacent to all other clear-
+ings linked to it by a path.
+2.2.2 Suit. Each clearing has a SUIT: mouse, rabbit, or fox.
+2.2.3 Slots. Each clearing has a number of BUILDING
+SLOTS (white boxes). Whenever you place a build-
+ing, it fills an open slot. You cannot place a build-
+ing in a clearing with no open slots.
+2.2.4 Ruins. Slots marked with a small "R" begin the
+game filled with RUINS. Ruins cannot be removed
+unless explicitly instructed (such as by the Vaga-
+bond's Explore action, 9.5.3).
+
+2.3 RIVERS
+Many clearings are linked by rivers. (Rivers are not
+paths, but can be treated as paths if explicitly instructed. Riv-
+ers do not divide clearings or forests.)
+
+2.4 FORESTS
+Areas on the map enclosed by printed paths and clear-
+ings are called FORESTS.
+2.4.1 Adjacency. A forest is adjacent to all clearings that
+touch it without crossing a printed path, and it is
+adjacent to all forests that are separated by only
+one printed path.
+2.5 RULE
+A player rules a clearing if they have more total war-
+riors and buildings in it than each other player. (Tokens
+and pawns do not contribute to rule.) If there is a tie be-
+tween players in a clearing, no one rules it. A
+
+3. Victory
+3.1 HOW TO WIN
+The first player to reach 30 victory points immediate-
+ly wins the game. If multiple players reach 30 or more
+victory points simultaneously, the player taking the cur-
+rent turn wins.
+
+3.2 SCORING VICTORY POINTS
+Each faction has a unique way to score victory points,
+but any faction can score victory points as follows.
+3.2.1 Removing Buildings and Tokens. Whenever you
+remove an enemy's building or token, you score
+one victory point.
+3.2.2 Crafting Items. Whenever you craft an item (4.1),
+score the victory points listed on the card.
+
+3.3 DOMINANCE CARDS
+The deck has four dominance cards, which let you win
+the game without scoring 30 victory points.
+3.3.1 Activating. During your Daylight, if you have at
+least 10 victory points, you may ACTIVATE a domi-
+nance card in your hand by placing it in your play
+area. Remove your score marker from the score
+track. You can no longer score victory points.❤
+I Mouse, Rabbit, or Fox Dominance. You win
+the game immediately if you rule three clear-
+ings of the suit matching the activated domi-
+nance card at the start of your Birdsong.
+II Bird Dominance. You win the game immedi-
+ately if you rule two clearings in opposite cor-
+ners at the start of your Birdsong.
+3.3.2 Activated Cards. An activated dominance card
+does not count against your hand limit, and it
+cannot be removed from play. You cannot replace
+an activated dominance card with a different one.
+3.3.3 Using Dominance Cards. A dominance card can be
+spent for its suit. Anytime a dominance card would
+be placed in the discard pile, instead place it near
+the map to show it is AVAILABLE to be taken.
+3.3.4 Taking Available Cards. During your Daylight,
+you can take an available dominance card into
+your hand by spending a card of matching suit.
+You cannot treat an available bird dominance
+card as a non-bird suit.
+3
+
+# Page 4
+4. Key Actions
+4.1 CRAFT
+You can CRAFT most cards from your hand to gain an
+immediate or persistent effect.
+4.1.1 Cost. To craft a card, you must ACTIVATE crafting
+pieces of the suits listed in the card's bottom-left
+corner. (A faction's crafting piece is listed in its Craft-
+ing section.) A crafting piece's suit matches its
+clearing. Each crafting piece may be activated
+only once per turn. A three-color question mark
+denotes a crafting piece of any suit.
+4.1.2 Immediate Effects. When you craft an immediate
+effect (paper box), resolve its effect and then dis-
+card the card. If it shows an item, take the match-
+ing item from the item supply on the map and
+place it in the Crafted Items box on your faction
+board. If the card lists an item not in the item sup-
+ply, the card cannot be crafted.
+4.1.3 Persistent Effects. When you craft a persistent ef-
+fect (stone box), place it in your play area. You may
+use the effect described on the card.
+4.1.4 No Duplicates. You cannot craft a persistent ef-
+fect if you have an identical one in your play area.
+
+4.2 MOVE
+When you move, take any number (more than zero) of
+your warriors and pawns from one clearing and move
+them on a linking path (2.2) to one adjacent clearing.
+4.2.1 You Must Rule. To take a move, you must rule
+the origin clearing, destination clearing, or both.
+4.2.2 No Movement Limits. A given piece can be
+moved any number of times per turn. If you are
+prompted to take multiple moves, you may move
+the same or separate groups of warriors.
+
+4.3 BATTLE
+When you BATTLE, choose a clearing with any number
+of your warriors and pawns as the CLEARING OF BATTLE.
+You are the ATTACKER. Choose an enemy in the clearing
+of battle to be the DEFENDER.
+4.3.1 Step 1: Defender May Ambush. The defender
+may play one ambush card matching the clearing
+of battle. If so, resolve 4.3.1.I-II in order.
+4
+I Foil Ambush. The attacker may also play an
+ambush card matching the clearing of the bat-
+tle. If they do, the defender discards their am-
+bush card and skips 4.3.1.II.
+II Resolve Ambush. The defender deals two hits
+immediately (4.3.4). Then, the defender dis-
+cards the ambush card. If no attacking warriors
+or pawns remain, end the battle immediately.
+4.3.2 Step 2: Roll Dice. Roll both dice. The attacker
+will deal hits equal to the higher roll, and the de-
+fender will deal hits equal to the lower roll. If the
+rolls are equal, attacker and defender will deal the
+same number of hits. (The use of "will" here reflects
+that hits are not dealt until step 4.)
+I Maximum Rolled Hits. The maximum hits
+you can deal from rolling equals the number of
+your warriors in the clearing of battle, whether
+you are the attacker or defender.
+4.3.3 Step 3: Use Effects. The attacker and defender
+may use optional effects (such as the Brutal Tactics
+card) that affect battle. If both want to use effects,
+the attacker chooses who uses them first (1.1.3).
+I Extra Hits. Many effects will deal EXTRA HITS,
+which are not limited by the number of war-
+riors in the clearing of battle.
+II Defenseless. If the defender has no warriors in
+the clearing of battle, the attacker will deal an
+extra hit.
+4.3.4 Step 4: Deal Hits. Each hit that a side deals re-
+moves one piece of the other side from the clearing
+of battle. (You score one victory point per enemy build-
+ing or token removed.) The side taking hits chooses
+the order in which their own pieces are removed,
+but all of their warriors there must be removed be-
+fore any of their buildings or tokens there can be
+removed; they also choose the order of any effects
+triggered by their pieces being removed.
+
+5. Setup
+If any players are new to the game, use the Standard
+Setup (5.1) If everyone has played and you want more
+variety, use the Advanced Setup (Appendix A). If you
+want to play with five or more factions that would start
+in corner clearings, you must use the Advanced Setup.
+
+5.1 STANDARD SETUP
+5.1.1 Step 1: Assign Factions and Starting Player.
+Assign one faction to each player in any way.
+Determine the starting player and seating order
+randomly. Each player takes their chosen faction
+board and the pieces listed on its back.
+5.1.2 Step 2: Place Score Markers. Each player places
+their score marker on "0" on the score track.
+5.1.3 Step 3: Draw Starting Hands. If you are play-
+ing with two players, remove all four dominance
+cards from the deck. Shuffle the deck. Each player
+draws three cards.
+5.1.4 Step 4: Place Ruins. Place a ruin in each slot on
+the map marked with an "R" (four in total).
+
+# Page 5
+5.1.5 Step 5: Form Item Supply. Place these items on
+the matching spaces of the item supply near the
+top of the map: 27, 28, 1 1 2,2,2
+5.1.6 Step 6: Gather Other Pieces. Hand out the 16
+faction overview cards as desired, and place the
+two dice near the map.
+5.1.7 Step 7: Set Up Factions. In setup order (A, B, C,
+etc.), each player follows their faction's setup in-
+structions, listed in their rules section and on the
+back of their faction board.
+
+5.2 REACH
+To set up an interesting game, choose factions whose
+REACH values add up to at least the total reach recom-
+mended for your player count. (Adventurous players are
+welcome to use any faction mix with 17+ Reach.)
+
+Viable Reach Sums
+Players
+2
+3
+4
+5
+6
+Total Reach 17+ 18+ 21+ 25+ 28+
+
+Reach Values
+Marquise de Cat
+10
+Lord of the Hundreds
+9
+Keepers in Iron
+8
+Underground Duchy
+8
+Eyrie Dynasties
+7
+Vagabond (first/second)
+5/2
+Riverfolk Company
+5
+Woodland Alliance
+3
+Corvid Conspiracy
+3
+Lizard Cult
+2
+
+6. Marquise de Cat
+6.1 OVERVIEW
+The Marquise de Cat occupies the Woodland and wants
+to turn it into an industrial and military powerhouse.
+Each time the Marquise builds one of her Buildings-a
+workshop, sawmill, or recruiter-she scores victory
+points. The more of the same building she has on the
+map, the more points she scores. However, to fuel on-
+going construction, the Marquise must maintain and
+protect a strong, interconnected economy of WOOD.
+
+6.2 FACTION RULES AND ABILITIES
+6.2.1 Crafting. The Marquise crafts during Daylight by
+activating workshops.
+6.2.2 The Keep. The Marquise can place pieces in the
+clearing with the keep token, and other players
+cannot. (Pieces may be moved into it. If the keep is
+removed, there is no way to place it on the map again.)
+6.2.3 Field Hospitals. Whenever any number of Mar-
+quise warriors are removed from a clearing, the
+Marquise may spend a card matching that clear-
+ing to place those warriors in the clearing with
+the keep token instead of the Marquise's supply.
+6.3 FACTION SETUP
+6.3.1 Step 1: Gather Warriors and Wood. Form sup-
+plies of 25 warriors and 8 wood tokens.
+6.3.2 Step 2: Place Keep. Place the keep token in any
+corner clearing. This is your starting clearing.
+6.3.3 Step 3: Garrison. Place a warrior in each clearing
+except the clearing in the diagonally opposite cor-
+ner from the clearing with the keep token.
+6.3.4 Step 4: Place Starting Buildings. Place 1 saw-
+mill, 1 workshop, and 1 recruiter. You may place
+them among the clearing with the keep token and
+any adjacent clearings, in any combination.
+6.3.5 Step 5: Fill Buildings Tracks. Place your re-
+maining 5 sawmills, 5 workshops, and 5 recruit-
+ers on your matching Buildings tracks from right
+to left. (Leave the leftmost space of each track empty.)
+
+6.4 BIRDSONG
+Place wood tokens in each clearing with any number of
+sawmills, one wood per sawmill there.
+
+6.5 DAYLIGHT
+First, you may activate workshops to craft cards from
+your hand. Then, you may take up to three actions-
+plus one action per bird card you spend (not as part of
+an action)-in any order and number.
+6.5.1 Battle. Initiate a battle.
+6.5.2 March. Take up to two moves.
+6.5.3 Recruit. Place one warrior at each recruiter. You
+may take this action only once per turn.
+6.5.4 Build. Place a building.
+I Choose Clearing and Building. Choose a
+clearing you rule. Choose whether you want
+to place a sawmill, workshop, or recruiter. You
+will place the leftmost building of its type from
+your faction board. You must be able to pay its
+cost (6.5.4.II) and place it (6.5.4.III).
+II Pay Cost. Find the chosen building's cost at
+the top of its column. Remove wood tokens
+equal in number to the cost from the chosen
+clearing, any adjacent clearings you rule, or any
+clearings connected to the chosen clearing you
+rule through any number of clearings you rule.
+III Place Building and Score. Place the chosen
+building in the chosen clearing, and score the
+victory points listed on the space uncovered on
+your faction board.
+6.5.5 Overwork. Spend a card matching the clearing of
+a sawmill, and place a wood token there.
+
+6.6 EVENING
+Draw one card, plus one card per uncovered draw bo-
+nus. Then, if you have more than five cards in your
+hand, discard cards of your choice until you have five.
+5
+
+# Page 6
+6
+7. Eyrie Dynasties
+7.1 OVERVIEW
+The Eyrie Dynasties wish to restore their once-
+dignified kind to their former glory in the Woodland
+by retaking control of the forest clearings. During
+their Evening, the Eyrie score victory points based on
+the number of roosts on the map. The greater their
+presence in the Woodland, the greater their gains.
+However, the Eyrie are bound by their Decree, an ev-
+er-increasing set of mandated actions promised by their
+LEADER. Each turn, they must take all of the actions on
+their Decree, or else fall into TURMOIL.
+
+7.2 FACTION RULES AND ABILITIES
+7.2.1 Crafting. The Eyrie craft before resolving the De-
+cree during Daylight by activating roosts.
+7.2.2 Lords of the Forest. The Eyrie rule a clearing
+when tied for most combined warriors and
+buildings there, and they have at least one Eyrie
+piece there.0
+7.2.3 Disdain for Trade. Whenever the Eyrie craft an
+item, they ignore the listed victory points and in-
+stead score only one victory point. (They can still
+score extra crafting points from effects such as Master
+Engravers and the Legendary Forge.)
+
+7.3 FACTION SETUP
+7.3.1 Step 1: Gather Warriors. Form a supply of
+20 warriors.
+7.3.2 Step 2: Place Roost and Starting Warriors. Place
+1 roost and 6 warriors in a corner clearing that is
+not the starting corner clearing of another play-
+er and, if possible, is diagonally opposite from a
+starting corner clearing. This is your starting clear-
+ing. (This is updated from earlier printings for flexibility.)
+7.3.3 Step 3: Choose Leader. Choose 1 of the 4 Eyrie
+leader cards and place it in your Leader Card slot.
+Gather the remaining leaders face up near you.
+7.3.4 Step 4: Tuck Viziers. Tuck your 2 Loyal Vizier
+cards, showing their suit, into the Decree columns
+above your faction board as listed on your leader.
+7.3.5 Step 5: Fill Roosts Track. Place your 6 remaining
+roosts on your Roosts track from right to left.
+
+7.4 BIRDSONG
+Your Birdsong has three steps in the following order.
+7.4.1 Emergency Orders. If you have no cards in your
+hand, draw one card.
+7.4.2 Add to the Decree. You must add one or two cards
+to the Decree, but only one card added may be a
+bird card. You may play each card to any column,
+and each column can hold any number of cards.
+7.4.3 A New Roost. If you have no roosts on the map,
+place a roost and three warriors in a clearing
+with the fewest warriors where all those pieces
+can be placed.
+7.5 DAYLIGHT
+Your Daylight has two steps in the following order.
+7.5.1 Craft. You may activate roosts to craft cards from
+your hand.
+7.5.2 Resolve the Decree. You must resolve the Decree,
+starting with the leftmost column and moving
+right. In each column, you must resolve all of its
+cards, but in any order. For each card, you must
+take the action listed for its column, as follows. If
+you cannot fully take an action, you immediately
+fall into turmoil (7.7).
+I Recruit. Place a warrior in any clearing with a
+roost whose suit matches the card suit.
+II Move. Move from any clearing whose suit
+matches the card suit. (You must move at least
+one warrior.)
+III Battle. Initiate a battle in any clearing whose
+suit matches the card suit.
+IV Build. Place a roost in any clearing you rule
+whose suit matches the card suit and which
+has no roost.
+
+7.6 EVENING
+Your Evening has two steps in the following order.
+7.6.1 Score Points. Score the victory points listed on
+the rightmost empty space of your Roosts track.
+7.6.2 Draw and Discard. Draw one card, plus one card
+per uncovered draw bonus. Then, if you have
+more than five cards in your hand, discard cards
+of your choice until you have five.
+
+7.7 TURMOIL
+If you cannot fully take an action in the Decree (7.5.2)
+for any reason, you fall into turmoil. You must take the
+Turmoil action as follows in order.
+7.7.1 Step 1: Humiliate. Lose one victory point per
+bird card (including Loyal Viziers) on the Decree.
+7.7.2 Step 2: Purge. Discard all of the cards on the De-
+cree except your Loyal Viziers.
+7.7.3 Step 3: Depose. Flip your current leader face
+down and set it aside, choose a new leader from
+those face up, and place on your faction board.
+Tuck your Loyal Viziers into the Decree spaces
+listed on your new leader.
+I A New Clutch. If you must choose a new lead-
+er but none are face up, flip them all face up.
+7.7.4 Step 4: Rest. End Daylight and begin Evening.
+
+7.8 LEADERS REFERENCE
+The Eyrie have four leader cards, as follows.
+7.8.1 Builder. Loyal Viziers begin on Recruit and Move.
+Whenever you craft, you ignore your Disdain for
+Trade special ability (7.2.3).
+7.8.2 Charismatic. Loyal Viziers begin on Recruit and
+Battle. Whenever you take a Recruit action, you
+must place two warriors instead of one.
+
+# Page 7
+7.8.3 Commander. Loyal Viziers begin on Move and
+Battle. In battle as attacker, you deal an extra hit.
+7.8.4 Despot. Loyal Viziers begin on Move and Build.
+Whenever you remove at least one enemy build-
+ing or token in battle, you score one extra victory
+point (two in total, 3.2.1).
+
+8. Woodland Alliance
+8.1 OVERVIEW
+The Woodland Alliance works to gain the SYMPATHY of
+the various creatures of the Woodland who are dissatis-
+fied with their present condition. Each time the Alliance
+places a sympathy token, they may score victory points.
+The more sympathy on the map they have, the more
+victory points they score. Gaining the sympathy of the
+people requires supporters. These supporters can also
+be put toward violent ends, inciting outright rebellion
+across the forest. When a revolt erupts, the Alliance will
+establish a BASE. Bases allow the Alliance to train offi-
+cers, increasing their military flexibility.
+
+8.2 FACTION RULES AND ABILITIES
+8.2.1 Crafting. The Alliance crafts during Daylight by
+activating sympathy tokens.
+8.2.2 Guerrilla War. As defender in battle, the Alliance
+will deal hits equal to the higher roll, and the at-
+tacker will deal hits equal to the lower roll.
+8.2.3 The Supporters Stack. To take various actions,
+the Alliance spends supporters, which are cards
+on their Supporters stack. Supporters can only be
+spent for their suit and do not count against the
+Alliance's hand size. Supporters are face down,
+but the Alliance may inspect them at any time.
+I Capacity. If the Alliance has no bases on the
+map, the Supporters stack can only hold up
+to five cards. If the Alliance would gain a sup-
+porter but the stack cannot hold it, that card
+is discarded. If any bases are on the map, the
+Supporters stack can hold unlimited cards.
+8.2.4 Removing Bases. Whenever a base is removed,
+the Alliance must discard all supporters matching
+the printed suit of the base (including birds) and re-
+move half of their officers, rounded up. If the Alli-
+ance has no more bases on the map and has more
+than five supporters, they must discard down to
+five supporters.
+8.2.5 Sympathy Tokens. The Alliance has 10 sympa-
+thy tokens.
+I Placement Limits. A clearing can hold only
+one sympathy token.
+II Terms. A SYMPATHETIC CLEARING is one with a
+sympathy token. An UNSYMPATHETIC CLEARING
+is one without a sympathy token.
+8.2.6 Outrage. Whenever another player removes a
+sympathy token or moves any warriors into a sym-
+pathetic clearing, they must add one card match-
+ing the affected clearing from their hand to the
+Supporters stack. If they have no matching cards
+(including no birds), they must show their hand to
+the Alliance, and then the Alliance draws a card
+from the deck and adds it to the Supporters stack.
+
+8.3 FACTION SETUP
+8.3.1 Step 1: Gather Warriors. Form a supply of
+10 warriors.
+8.3.2 Step 2: Place Bases. Place 3 bases on the match-
+ing spaces in your Bases box.
+8.3.3 Step 3: Fill Sympathy Track. Place 10 sympathy
+tokens on your Sympathy track.
+8.3.4 Step 4: Gain Supporters. Draw 3 cards and place
+them face down on your Supporters stack.
+
+8.4 BIRDSONG
+Your Birdsong has two steps in the following order.
+8.4.1 Revolt. Any number of times, you may take the
+Revolt action, as follows.
+I Step 1: Choose Clearing. Choose a sympa-
+thetic clearing that matches a base on your fac-
+tion board.
+II Step 2: Spend Supporters. Spend two support-
+ers matching the suit of the chosen clearing.
+III Step 3: Resolve Effect. Remove all enemy piec-
+es from the chosen clearing. Then, place the
+matching base there, and place warriors there
+equal to the number of sympathetic clearings
+matching the base's printed suit. Finally, place
+one warrior in the Officers box. This warrior is
+now an officer. (Remember to score one victory
+point per token and building removed.)
+8.4.2 Spread Sympathy. Any number of times, you may
+take the Spread Sympathy action, as follows.
+I Step 1: Choose Clearing. Choose an unsym-
+pathetic clearing adjacent to a sympathetic
+clearing. If there are no sympathetic clearings,
+you may choose any clearing.
+II Step 2: Spend Supporters. Spend supporters
+matching the suit of the chosen clearing. The
+number of supporters that must be spent is
+listed above the sympathy token.
+a Martial Law. You must spend another
+matching supporter if the target clearing
+has at least 3 warriors of another player, in-
+cluding warriors they are treating as their
+own for rule (Mercenaries, hirelings, etc.).
+III Step 3: Place and Score. Place a sympathy token
+in the chosen clearing. Score the victory points
+on the space uncovered on your faction board.
+
+8.5 DAYLIGHT
+You may take the following actions in any order and
+number.
+8.5.1 Craft. You may activate sympathy tokens to craft
+a card from your hand.
+8.5.2 Mobilize. Add a card from your hand to the Sup-
+porters stack.
+7
+
+# Page 8
+8
+8.5.3 Train. Spend a card whose suit matches the print-
+ed suit of a base on the map to place a warrior in
+the Officers box. This warrior is now an OFFICER.
+
+8.6 EVENING
+Your Evening has two steps in the following order.
+8.6.1 Military Operations. You may take actions, as
+follows, up to your number of officers, in any or-
+der and number.
+I Move. Take one move.
+II Battle. Initiate a battle.
+III Recruit. Place a warrior in any clearing with
+a base.
+IV Organize. Remove one Alliance warrior from
+an unsympathetic clearing, place a sympathy
+token there, and score the victory points listed
+on the space uncovered on your faction board.
+8.6.2 Draw and Discard. Draw one card, plus one card
+per uncovered draw bonus. Then, if you have
+more than five cards in your hand, discard cards
+of your choice until you have five.
+
+9. Vagabond
+9.1 OVERVIEW
+The Vagabond plays all sides of the conflict while going
+on quests to increase his renown throughout the wood.
+Each time the Vagabond improves his RELATIONSHIP
+with another faction, or removes a warrior belonging to
+a faction hostile toward him, he scores victory points.
+He can also complete QUESTS to score victory points. To
+move and act effectively the Vagabond must manage his
+pack of ITEMS, expanding his selection by exploring the
+forest ruins and providing aid to other factions.
+
+9.2 FACTION RULES AND ABILITIES
+9.2.1 Crafting. The Vagabond exhausts ☑ to craft. All
+of his match the suit of his current clearing. If
+the Vagabond crafts an item, he may immediately
+take it, face up.
+9.2.2 Lone Wanderer. The Vagabond pawn is not a war-
+rior (so he cannot rule a clearing or stop another player
+from ruling one). The Vagabond pawn cannot be
+removed from the map.
+I Full Removal. Whenever an enemy player uses
+an effect that says it removes all enemy pieces
+from a clearing (such as Alliance revolts, Favor of
+the Mice cards, Conspiracy bombs) with the Vaga-
+bond, the Vagabond damages three items.
+9.2.3 Nimble. The Vagabond can move regardless of
+who rules his origin or destination clearing (4.2.1).
+9.2.4 Defenseless. In battle, the Vagabond is defense-
+less (4.3.2.II) if he has no undamaged.
+9.2.5 Items. The Vagabond's capabilities depend on the
+items he acquires. Instead of a Crafted Items box,
+he has a Satchel and various item tracks. Items on
+the Vagabond's faction board can be face up or
+9.2.6
+face down. The Vagabond Exhausts face-up un-
+damaged items, flipping them face down, to take
+many actions.
+I Item Tracks. When gained or flipped face up in
+the Satchel,,, and are placed face up on
+their matching tracks. When flipped face down,
+,, or on tracks are placed face down
+in the Satchel. Each track can only hold three
+matching items.
+II The Satchel. When gained, Z, 7,
+and
+are placed face up in the Vagabond's Satchel.
+Maximum Rolled Hits. In battle, the Vagabond's
+maximum rolled hits (4.3.2.I) equals his undam-
+aged, face up or face down, in his Satchel.
+9.2.7 Taking Hits. Whenever the Vagabond takes a hit
+(4.3.3), he must damage one undamaged item,
+moving it to his Damaged box. If no undamaged
+items remain to damage, the Vagabond ignores
+any remaining hits.
+9.2.8 Dominance Cards and Coalitions. The Vagabond
+cannot activate a dominance card for its normal
+victory condition (3.3.1). Instead, in games with
+four or more players, the Vagabond can activate a
+dominance card to form a coalition with another
+player, placing his score marker on that player's
+faction board. (The Vagabond no longer scores points.)
+That player must have fewer victory points than
+each other player except the Vagabond forming
+the coalition, and that player cannot be in a coa-
+lition. If there is a tie for fewest victory points, he
+chooses one tied player. If the coalitioned player
+wins the game, the Vagabond also wins.
+9.2.9 Relationships. Your faction board shows a Rela-
+tionships chart, which has four spaces on the Al-
+lied track and one Hostile box. It holds a relation-
+ship marker for each non-Vagabond faction.
+1 Improving Relationships. You can improve a
+relationship with a non-Hostile faction by tak-
+ing the Aid action.
+a Cost. Aid a non-Hostile faction the number
+of times listed between their current Allied
+space and their next Allied space during the
+same turn. (A given Aid action counts toward
+only one improvement in relationship.)
+
+# Page 9
+II
+III
+a
+b Effect. Advance that faction's relationship
+marker one space right on the track. Score
+the victory points listed in the new space.
+Allied Status. If a relationship marker reaches
+the final space on the Allied track, you are now
+ALLIED with the faction shown by that relation-
+ship marker. (Their warriors trust you!)
+Aiding Ally. Each time you Aid an Allied
+faction, score two victory points.
+b Moving with Ally. Whenever you move to
+an adjacent clearing, you may also force war-
+riors of one Allied faction to move from your
+origin clearing to your destination clearing
+along with your Vagabond pawn.
+c Attacking with Ally. At the start of battle as
+the attacker, you may treat the warriors of
+one Allied faction in the clearing of battle as
+your own. The maximum hits you can roll
+equals the number of their warriors there
+plus your total undamaged ✔. You cannot
+treat Allied warriors as your own when at-
+tacking the same Allied faction.
+d Taking Hits with Ally. In a battle where you
+treat Allied warriors as your own, you can
+take hits by removing them. However, if you
+take more hits by removing Allied warriors
+than by damaging items during the same
+battle, that Allied faction becomes Hostile
+(9.2.9.III) at the end of the battle. This rule
+overrides the condition for becoming Hos-
+tile in 9.2.9.III.
+Hostile Status. If you remove a warrior of a
+non-Hostile faction, move their relationship
+marker to the Hostile box. This faction is now
+HOSTILE. Then, if this happened in battle during
+your turn, check for Infamy scoring (9.2.9.IIIa).
+Infamy. Score one extra victory point for
+each piece of a Hostile faction you remove
+in battle during your turn, except the war-
+rior that made the faction Hostile. (Add this
+a to points scored for enemy buildings and tokens.)
+b Moving into Hostile Clearings. You must
+exhaust an extra to move into a clearing
+with any warriors of any Hostile faction.
+c Aiding Hostile Factions. You cannot move
+a relationship marker out of the Hostile box
+by using Aid, but you can still Aid a Hostile
+faction to take crafted items.
+d Coalition with Hostile Faction. You can
+form a coalition (9.2.8) with a Hostile fac-
+tion. If you do, move their relationship
+marker to the Indifferent space.
+
+9.3 FACTION SETUP
+9.3.1 Step 1: Choose Character. Choose a character
+card and place it in your Character Card slot.
+9.3.2 Step 2: Place Pawn. Place your Vagabond pawn
+in any forest.
+9.3.3 Step 3: Get Quests. Shuffle your quest deck, draw
+3 quest cards, and place them face up near you.
+9.3.4 Step 4: Populate Ruins. Take the 4 ruins from the
+map, and take the,
+and items marked
+with an "R." Place one beneath each ruin and then
+shuffle each ruin stack. Then, return each stack to
+an empty ruin slot on the map.
+9.3.5 Step 5: Take Starting Items. Take the items
+marked with an "S" listed on your character card.
+Place any listed ☑ ☑, and items face up on the
+matching tracks of your faction board. Place all
+other listed items face up in your Satchel. Return
+any remaining "S" items to the box.
+9.3.6 Step 6: Set Relationships. Take a relationship
+marker for each non-Vagabond faction and place
+them all on the Indifferent space of your Relation-
+ships chart.
+
+9.4 BIRDSONG
+Your Birdsong has two steps in the following order.
+9.4.1 Refresh. Flip two exhausted items face up for each
+☑ face up on the Refresh track at the start of your
+Birdsong. Then flip up three more exhausted items.
+9.4.2 Slip. You may move into an adjacent clearing or
+forest without exhausting any ☑, even for moving
+into a Hostile clearing (9.2.9.IIIb). This move ig-
+nores all effects that prevent movement out of a
+clearing (such as the Corvids' snare).
+
+9.5 DAYLIGHT
+You can exhaust items to take the following actions, in
+any order and number. If you exhaust a, or on
+a track, move it to the Satchel.
+9.5.1 Move. Exhaust one ☑ to move, plus one if the
+destination clearing has any Hostile warriors. You
+cannot move into a forest. If in a forest, you may
+only move into an adjacent clearing.
+9.5.2 Battle. Exhaust one ☑ to initiate a battle. (Check
+your relationship with the defender.)
+9.5.3 Explore. Exhaust one to take one item under
+a ruin in your clearing, reveal it, and place it face
+up in your Satchel or on its matching track. If you
+take an item, score one victory point. If you re-
+move the last item from a ruin, remove the ruin.
+9.5.4 Aid. Exhaust any one item, and give one of your
+cards matching your clearing to any player with
+faction pieces there (even Hostile). Then, you may
+take one item, if any, from that player's Crafted
+Items box, and place it face up in your Satchel or
+on its matching track. (Check your relationship with
+that player's faction.)
+9.5.5 Quest. Choose a quest whose suit matches your
+clearing, and exhaust the two items listed on the
+quest to complete it. Place the quest in your play
+area, and then draw a new quest and place it near
+the map. You may score one victory point per quest
+of matching suit you have completed, including
+this one, or draw two cards from the deck.
+9
+
+# Page 10
+10
+9.5.6 Strike. Exhaust one to remove an enemy war-
+rior from your clearing. If that enemy has no war-
+riors there, you may instead remove one of their
+other faction pieces there. (Check your relationship
+with that player's faction.)
+9.5.7 Repair. Exhaust one to move one damaged
+item to the Satchel, keeping the item on its cur-
+rent side. (Face-up, and immediately move
+to their tracks.)
+9.5.8 Craft. Play a card from your hand, and exhaust the
+☑ of listed suit to craft it. All of your match the
+suit of your clearing. If a card requires multiple of
+one suit to craft, you must exhaust the listed num-
+ber of. If you craft an item, you may place it face
+up in your Satchel or on the matching track.
+9.5.9 Special Action. Exhaust one to take the action
+listed on your character card.
+
+9.6 EVENING
+Your Evening has four steps, as follows.
+9.6.1 Rest. If you are in a forest, move all items in your
+Damaged box to your Satchel or their matching
+track, and flip them face up.
+9.6.2 Draw Cards. Draw one card, plus one card per
+face up on the matching track.
+9.6.3 Discard Cards. If you have more than five cards
+in your hand, discard cards of your choice until
+you have five.
+9.6.4 Check Item Capacity. If you have more items
+total in your Satchel and Damaged box than
+your item limit-six plus two per face up on
+the matching track-remove items from your
+Satchel and Damaged box until you have items
+equal to your item limit, and remove them from
+the game permanently.
+
+9.7 PLAYING WITH TWO VAGABONDS
+If you have The Riverfolk Expansion, you can play a game
+with two Vagabonds by following these rules.
+9.7.1 Setup. Use both sets of "R" items and place two
+random "R" items in each ruin slot. If you are us-
+ing the Standard Setup (5.1), randomly determine
+which Vagabond sets up first.
+9.7.2 Share Quests. Either Vagabond may complete
+any of the three face-up quests. Do not add extra
+quest cards during setup.
+9.7.3 Taking Items from Ruins. When a Vagabond ex-
+plores a ruin with two items, or the Hundreds raze
+a ruin (14.4.1) with two items, that player may
+look at those items and take one of their choice.
+(By taking two Explore actions, the Vagabond could
+take both items from one ruin.) A player cannot take
+an "R" item if they have the same type of "R" item
+on their faction board. (If the Vagabond explores but
+does not take an item, he does not score a victory point,
+but the is still exhausted.)
+The next two sections refer to factions
+in The Riverfolk Expansion.
+
+10. Lizard Cult
+10.1 OVERVIEW
+Catering to the discarded creatures of the Woodland,
+the Lizard Cult seeks to overwhelm its foes through
+sheer force of will. Wherever the Cult rules clearings, it
+can build GARDENS, using word of mouth and beak to
+spread its gospel to the animals living there. The firmer
+its hold over the hearts of its followers, the more victory
+points the Cult can score by completing the proper RIT-
+UALS. While other factions spend cards to achieve their
+aims, the Cult acts chiefly by revealing cards and grad-
+ually gathering a set of ideal followers. These revealed
+cards are returned to the Cult's hand in Evening, unless
+discarded to score victory points. However, this gentler
+approach makes movement and battle difficult-the
+Cult can only take these actions with its radicalized AC-
+OLYTES, gained as the Cult's warriors are slaughtered
+while defending in battle.
+
+10.2 FACTION RULES AND ABILITIES
+10.2.1 Crafting. The Cult crafts during Evening by ac-
+tivating gardens whose printed suit matches the
+Outcast suit (10.4.1). (Generally this matches the
+clearing, except with the Lost City landmark.)
+10.2.2 Hatred of Birds. Bird cards are not wild for
+Cult rituals.
+10.2.3 Revenge. Whenever a Cult warrior is removed
+while defending in battle, it is placed in the Aco-
+lytes box instead of the Cult's supply.
+10.2.4 Pilgrims. The Cult rules any clearings where they
+have any gardens. This overrides the Eyrie's Lords
+of the Forest (7.2.2).
+10.2.5 Fear of the Faithful. Whenever a garden is re-
+moved, the Cult must discard a random card.
+10.2.6 The Lost Souls Pile. Whenever any card is spent
+or discarded (even a dominance card), place it in
+the Lost Souls pile instead of the discard pile.
+The Lost Souls pile can be inspected by any play-
+er at any time.
+
+10.3 FACTION SETUP
+10.3.1 Step 1: Gather Warriors. Form a supply of
+25 warriors.
+10.3.2 Step 2: Place Warriors. Place 4 warriors and 1 gar-
+den of matching printed suit in a corner clearing
+that is not the starting corner clearing of anoth-
+er player and, if possible, is diagonally opposite
+from a starting corner clearing. This is your start-
+ing clearing. Then place 1 warrior in each adjacent
+clearing. (This is updated from earlier printings for
+flexibility.)
+10.3.3 Step 3: Choose Outcast. Place the outcast marker
+on any suit space in the Outcast box. The suit of
+this space is called the OUTCAST.
+
+# Page 11
+10.3.4 Step 4: Fill Gardens Tracks. Place your 14 re-
+maining gardens on the matching spaces of your
+Gardens tracks from right to left.
+
+10.4 BIRDSONG
+Your Birdsong has three steps in the following order.
+10.4.1 Adjust Outcast. Look at the cards in the Lost
+Souls pile, ignoring birds. The suit with the most
+cards becomes the new Outcast-move the out-
+cast marker, showing its Outcast side, to that suit.
+If that suit was already the Outcast, flip the mark-
+er to Hated. If no one suit had the most cards,
+the marker stays on its current suit and, if it is not
+Hated, flips to its Hated side.
+10.4.2 Discard Lost Souls. Discard all of the cards in
+the Lost Souls pile to the discard pile. (Dominance
+cards become available to take.)
+10.4.3 Perform Conspiracies. You can spend acolytes,
+returning them to your supply, to perform con-
+spiracies in clearings matching the Outcast, in
+any order and number, as follows. If the Outcast
+is Hated, the conspiracy costs one fewer acolyte.
+I Crusade. Spend two acolytes to initiate a
+battle in an Outcast clearing or to move (at
+least one warrior) from an Outcast clearing and
+then, if you wish, initiate a battle in the desti-
+nation clearing.
+II Convert. Spend two acolytes to replace an en-
+emy warrior from an Outcast clearing with a
+Cult warrior. (To replace a piece, you must be able
+to remove the old piece and place the new piece.)
+III Sanctify. Spend three acolytes to replace an
+enemy building from an Outcast clearing with
+a garden of the Outcast suit.
+
+10.5 DAYLIGHT
+You may reveal any number of cards and perform one
+ritual per card revealed, in any order and number, as
+follows. (Reveal cards from your hand into your play area.
+They cannot be used for any other purposes during Daylight.)
+10.5.1 Build. In a clearing you rule matching the re-
+vealed card, place a matching garden.
+10.5.2 Recruit. In a clearing matching the revealed card,
+place a warrior.
+10.5.3 Score. Spend the same card you reveal (placing in
+Lost Souls) to score the victory points listed above
+the rightmost empty Gardens space of the suit
+matching the revealed card. You may perform this
+only once per turn per suit.
+10.5.4 Sacrifice. Place a warrior in the Acolytes box. To
+perform this ritual, you must reveal a bird card.
+
+10.6 EVENING
+Your Evening has three steps in the following order.
+10.6.1 Return Revealed Cards. Return all cards you re-
+vealed this turn to your hand.
+10.6.2 Craft. You may craft by activating gardens whose
+printed suit matches the Outcast suit.
+10.6.3 Draw and Discard. Draw one card, plus one card
+per uncovered draw bonus. Then, if you have
+more than five cards in your hand, discard cards
+of your choice until you have five.
+
+11. Riverfolk Company
+11.1 OVERVIEW
+When news arrived that the Woodland on the shore of
+the great lake was descending into all-out war, the Riv-
+erfolk Company quickly dispatched its officers to set
+up shop. As other factions purchase their services, the
+Riverfolk can further entrench their commercial inter-
+ests by establishing Trade Posts along the river, scor-
+ing victory points. So too can they score points by raw
+accumulation of FUNDS, but a big treasury makes for an
+easy target, so the Riverfolk must take care in expand-
+ing their operations across the dangerous forest.
+
+11.2 FACTION RULES AND ABILITIES
+11.2.1 Crafting. The Riverfolk craft during Daylight by
+committing funds to empty spaces on the Trade
+Posts tracks. (They have no crafting pieces.)
+11.2.2 Swimmers. The Riverfolk treat rivers as paths and
+may move along rivers regardless of who rules
+their origin or destination clearing. (They can still
+move using paths.)
+11.2.3 Public Hand. The Riverfolk place their hand face
+up above their faction board. If another player
+would take a random card from the Riverfolk's
+hand, the cards are flipped face down, shuffled,
+drawn from, and then flipped face up.
+11.2.4 Funds. To take many actions, the Riverfolk com-
+mit and spend FUNDS: warriors in their Funds box.
+11.2.5 Trade Posts. The Riverfolk score victory points
+when they place trade posts.
+I Trade Disruption. Whenever a trade post is
+removed, the Riverfolk remove half of their
+funds, rounded up, and remove the trade post
+from the game permanently.
+11.2.6 Buying Services. At the start of another player's
+Birdsong, that player may buy Riverfolk services.
+I Cost. The buyer must place warriors from
+their supply into the Riverfolk's Payments box
+equal in number to the cost of that service list-
+ed on the Riverfolk's Services track.
+II Number of Services. Each turn, a player may
+buy one service plus one per clearing with a
+trade post and their faction pieces.
+III Vagabond Funds. The Vagabond pays for ser-
+vices by exhausting items-for each item he
+exhausts to do so, the Riverfolk place one Riv-
+erfolk warrior in the Payments box.
+11.2.7 Riverfolk Services. The Riverfolk offer three ser-
+vices, as follows.
+I Hand Card. The buyer takes any card from the
+Riverfolk's hand and adds it to their hand. (The
+11
+
+# Page 12
+12
+II
+III
+buyer may buy this service multiple times as long
+as they have access to enough trade posts.)
+Riverboats. The buyer treats rivers as paths
+until the end of their turn.
+Mercenaries. During Daylight and Evening
+of this turn, except when battling the River-
+folk, the buyer treats Riverfolk warriors as
+their own for rule and for battle. (The buyer
+cannot move them, count them toward domi-
+nance, or remove them except by taking hits. They
+are still Riverfolk faction pieces, so they cannot be
+affected by abilities such as the Marquise's Field
+Hospitals or used in actions such as the Duchy's
+Sway Ministers.)
+a Taking Hits. The buyer must split hits,
+taking odd hits by removing owned
+(not Riverfolk) warriors, if any, or owned
+buildings or tokens only if they have no
+warriors (including Riverfolk) in the clear-
+ing of battle.
+b Vagabond Mercenaries. The Vagabond
+cannot buy Riverfolk mercenaries. (If a
+buyer battles the Vagabond and a Riverfolk
+mercenary warrior is removed, the buyer's fac-
+tion becomes Hostile, not the Riverfolk.)
+
+11.3 FACTION SETUP
+11.3.1 Step 1: Gather Warriors. Form a supply of
+15 warriors.
+11.3.2 Step 2: Place Warriors. Place 4 warriors in any
+clearings touching the river.
+11.3.3 Step 3: Fill Trade Posts Tracks. Place 9 trade
+posts on the matching spaces of your Trade
+Posts tracks.
+11.3.4 Step 4: Gain Starting Funds. Place 3 warriors
+in your Payments box.
+11.3.5 Step 5: Set Starting Prices. Place 1 service mark-
+er on any space of each of your Services tracks.
+
+11.4 BIRDSONG
+Your Birdsong has three steps in the following order.
+11.4.1 Protectionism. If the Payments box is empty,
+place two warriors in it.
+11.4.2 Score Dividends. If there are any trade posts on
+the map, score one victory point per two funds.
+(Do not score for warriors in Payments or Committed.)
+11.4.3 Gather Funds. Move all warriors on your fac-
+tion board to the Funds box.
+
+11.5 DAYLIGHT
+You can commit and spend funds to take actions, as
+follows, in any order and number. When you commit a
+fund, move the warrior to the Committed box. When you
+spend a fund, return the warrior to its owner's supply.
+11.5.1 Move. Commit one fund to take a move.
+11.5.2 Battle. Commit one fund to initiate a battle.
+11.5.3 Craft. Commit funds to craft a card from your
+hand. Instead of moving these warriors to the
+Committed box, you must place them on emp-
+ty spaces of the Trade Posts tracks matching the
+suits listed on the crafting cost.
+I Export. You may ignore the listed benefit of
+crafting a card, discarding it, to place one Riv-
+erfolk warrior in the Payments box.
+11.5.4 Draw. Commit one fund to draw a card.
+11.5.5 Recruit. Spend one fund to place a warrior in any
+clearing with a river.
+11.5.6 Establish Trade Post with Garrison. Spend two
+funds to place a trade post and a warrior.
+I Choose Clearing. Choose any clearing with-
+out a trade post that is ruled by any player.
+II Spend Funds. Spend two funds of the player
+who rules the chosen clearing.
+III Place and Score. Place the matching trade
+post and one warrior in the chosen clearing.
+Score the victory points listed on the space un-
+covered on your faction board.
+
+11.6 EVENING
+Your Evening has two steps in the following order.
+11.6.1 Discard Cards. If you have more than five cards
+in your hand, discard cards of your choice until
+there are five.
+11.6.2 Set Costs. You may move each service marker to
+any space on its track, setting it to a new cost.
+
+The next two sections refer to factions in
+The Underworld Expansion.
+
+12. Underground Duchy
+12.1 OVERVIEW
+The Underground Duchy wants to show the foreign
+creatures of the Woodland that they would be better
+off as subjects. As they set up frontier outposts to show
+their power in the Woodland, the Duchy can sway MIN-
+ISTERS to the cause, scoring victory points and diverting
+more of the Duchy's resources. But be careful-a rever-
+sal of fortune could spell public humiliation, leading
+ministers to abandon the task.
+
+12.2 FACTION RULES AND ABILITIES
+12.2.1 Crafting. The Duchy crafts during Evening by ac-
+tivating citadels and markets.
+12.2.2 The Burrow. THE BURROW is an unsuited clear-
+ing adjacent to each clearing with a tunnel token.
+Non-Duchy pieces cannot be placed in or moved
+into the Burrow. The Duchy always rules the Bur-
+row (even with no pieces there).
+12.2.3 The Price of Failure. Whenever any number of
+Duchy buildings are removed, the Duchy returns
+their swayed minister card of highest rank (lord,
+then noble, then squire) to their Unswayed Minis-
+ters pile, and removes its crown from the game
+
+# Page 13
+permanently, then discards a random card. If they
+have multiple swayed ministers of highest rank,
+the Duchy chooses which to return.
+12.2.4 Tunnels. The Duchy has three tunnel tokens. If
+the Duchy is prompted to place a tunnel but all
+three tunnels are on the map, the Duchy may first
+remove any tunnel from the map.
+
+12.3 FACTION SETUP
+12.3.1 Step 1: Gather Warriors and Tunnels. Form sup-
+plies of 20 warriors and 3 tunnel tokens.
+12.3.2 Step 2: Prepare the Burrow. Place the Burrow
+board near the map.
+12.3.3 Step 3: Surface. Place 2 warriors and 1 tunnel in
+a corner clearing that is not the starting corner
+clearing of another player and, if possible, is di-
+agonally opposite from a starting corner clearing.
+This is your starting clearing. Then place 2 war-
+riors in each clearing adjacent to the chosen corner
+clearing, except the Burrow. (This is updated from
+earlier printings for flexibility.)
+12.3.4 Step 4: Fill Buildings Tracks. Place 3 citadels and
+3 markets on your matching Buildings spaces.
+12.3.5 Step 5: Collect Ministers. Place 9 minister cards
+face up on your Unswayed Ministers pile.
+12.3.6 Step 6: Fill Crown Spaces. Place 9 crowns on the
+spaces with victory points on your faction board.
+
+12.4 BIRDSONG
+Place one warrior, plus one warrior per warrior icon
+showing, in the Burrow.
+
+12.5 DAYLIGHT
+Your Daylight has three steps in the following order.
+12.5.1 Assembly. You may take up to two actions in any
+order and number, as follows.
+I Build. Reveal one card to place a citadel or
+market in a matching clearing you rule.
+II Recruit. Place one warrior in the Burrow.
+III Move. Take a move.
+IV Battle. Initiate a battle.
+v Dig. Spend one card to place a tunnel token
+in a matching clearing without a tunnel token.
+Then, move up to four warriors from the Bur-
+row to that clearing. (If all three tunnels are on
+the map, you may remove a tunnel first.)
+12.5.2 Parliament. You may take the action of each
+swayed minister once in any order.
+I Foremole. Reveal any card to place a citadel or
+market in any clearing (matching or not) you rule.
+II Captain. Initiate a battle.
+III Marshal. Take a move.
+IV Brigadier. Take up to two moves or initiate up
+to two battles.
+V Banker. Spend any number of cards (even
+one) of the same suit to score victory points in
+equal number.
+VI Mayor. Take the action of any swayed noble
+or squire.
+VII Duchess of Mud. Score two victory points if
+all three tunnels are on the map.
+VIII Baron of Dirt. Score one victory point per
+market on the map.
+IX Earl of Stone. Score one victory point per cit-
+adel on the map.
+12.5.3 Sway. You may sway one minister, as follows.
+I Choose Minister. Choose a minister card in
+your Unswayed Ministers pile. You must have
+a crown on your faction board matching the
+rank (squire, noble, lord) of that minister.
+II Reveal Cards. Reveal the number of cards
+listed on the chosen minister. For each card
+you wish to reveal, you must have at least one
+Duchy piece in a clearing matching the suit of
+that card. Each such clearing allows you to re-
+veal one matching card.
+III Sway Minister and Score. Take the chosen
+minister card and place it above your faction
+board. Take a crown of that minister's rank
+from your faction board and place it on the
+minister card. Score the victory points listed
+on the space uncovered on your faction board.
+
+12.6 EVENING
+Your Evening has three steps in the following order.
+12.6.1 Discard and Return Revealed Cards. Discard any
+bird cards you revealed this turn, then return all
+other cards you revealed this turn to your hand.
+12.6.2 Craft. You may craft by activating citadels and
+markets. (These are identical for crafting purposes.)
+12.6.3 Draw and Discard. Draw one card, plus one card
+per card draw icon showing. Then, if you have
+more than five cards in your hand, discard cards
+of your choice until you have five.
+0
+13
+
+# Page 14
+14
+13. Corvid Conspiracy
+13.1 OVERVIEW
+The Corvid Conspiracy seeks to strong-arm the Wood-
+land into submission by completing criminal PLOTS,
+scoring victory points each time they flip one. The more
+revealed plots on the map, the more they score. Mis-
+direction is critical-if their plans are too obvious, the
+Corvids risk exposure. To avoid this, they must recruit
+carefully and look for any opportunities for subterfuge
+and extortion.
+
+13.2 FACTION RULES AND ABILITIES
+13.2.1 Crafting. The Corvids craft during Birdsong by
+activating plot tokens (whether face up or down).
+13.2.2 Plot Tokens. The Corvids have eight plot tokens,
+two of each type.
+I Token Facing. While in the Corvids' supply,
+plot tokens are face down (feather). While on
+the map, a plot token can be face up (unique
+icon) or face down. The Corvids can inspect
+any facedown plot token at any time.
+II Placement Limits. Each clearing can hold
+only one plot token.
+13.2.3 Nimble. The Corvids can move regardless of who
+rules their origin or destination clearing.
+13.2.4 Exposure. Anytime on their turn, but before draw-
+ing any cards in their Evening, an enemy player
+with faction pieces in a clearing with a facedown
+plot token may show the Corvids a matching card
+to guess the type of plot token in that clearing.
+If incorrect, the Corvids say "no," and the enemy
+player gives that card to the Corvids. If correct,
+the enemy player removes the plot token (scoring a
+victory point) and ignores its effect.
+13.2.5 Embedded Agents. As defender in battle, if the
+Corvids have a facedown plot token (even defense-
+less) in the clearing of battle, they deal an extra hit.
+
+13.3 FACTION SETUP
+13.3.1 Step 1: Gather Warriors and Plots. Form sup-
+plies of 15 warriors and 8 plot tokens face down.
+13.3.2 Step 2: Scatter. Place 1 warrior in any clearing of
+each suit (total of 3).
+
+13.4 BIRDSONG
+Your Birdsong has three steps in the following order.
+13.4.1 Craft. You may activate plot tokens (whether face
+up or down) to craft cards from your hand.
+13.4.2 Flip Plots. Any number of times, flip a plot token
+face up in a clearing with any Corvid warriors,
+score one victory point per face-up plot token on
+the map (including the newly flipped one), and then
+resolve its flip effect if it is a bomb or extortion.
+13.4.3 Recruit. Once per turn, you may spend any card
+to place one warrior in each matching clearing. (If
+you spend a bird, choose one suit to place warriors in.)
+13.5 DAYLIGHT
+You may take up to three actions, as follows, in any or-
+der and number.
+13.5.1 Move. Take a move.
+13.5.2 Plot. Remove a Corvid warrior, plus another Cor-
+vid warrior per plot you have placed this turn,
+from a clearing with no plot tokens to place a face-
+down plot token there.
+13.5.3 Battle. Initiate a battle.
+13.5.4 Trick. Swap two plot tokens on the map. Both
+plot tokens must be face up or face down.
+
+13.6 EVENING
+Your Evening has two steps in the following order.
+13.6.1 Exert. You may take one action listed in Daylight
+if you choose to not draw cards during Evening.
+13.6.2 Draw. Draw one card plus one card per face-up
+extortion token on the map. Then, if you have
+more than five cards, discard down to five cards.
+
+13.7 PLOT TOKENS REFERENCE
+13.7.1 Bomb. Whenever a bomb token is flipped, re-
+move all enemy pieces in its clearing, then remove
+the bomb token.
+13.7.2 Snare. While a snare token is face up, enemy piec-
+es cannot be placed in or moved from its clearing.
+13.7.3 Extortion. Whenever an extortion token is flipped,
+take a random card from each enemy player with
+faction pieces in its clearing. While an extortion to-
+ken is face up, you draw another card in Evening.
+13.7.4 Raid. Whenever a raid token is removed (face up or
+down), place one warrior in each clearing adjacent
+to the clearing from which the raid was removed.
+(Ignore this effect if the raid is removed by Exposure.).
+
+The next two sections refer to factions in
+The Marauder Expansion
+
+14. Lord of the Hundreds
+14.1 OVERVIEW
+The Lord of the Hundreds suffers no fools and allows
+no dissent. During their Evening, they score points
+based on how well they Oppress their foes. The more
+clearings they rule that have a Hundreds piece and no
+enemy pieces-no warriors, no buildings, nothing-the
+more points they score. To grow in power and attract
+warriors, the Hundreds must gain items and add them
+to their towering Hoard. Leading the Hundreds is the
+WARLORD, a warrior-demagogue whose fickle MOOD
+gives them an ability for the turn. Their warlord is ob-
+sessed with hoarding, so as the Hundreds gain more
+items, they will have fewer moods to choose from. De-
+claring themselves as the true voice of the Woodland,
+the Hundreds can incite mobs, which destroy enemy
+buildings and tokens, and raid ruins for items.
+
+# Page 15
+14.2 FACTION RULES AND ABILITIES
+14.2.1 Crafting. The Hundreds craft during Daylight by
+activating strongholds.
+14.2.2 The Warlord. The Hundreds have a piece called
+the warlord. The warlord is a warrior that cannot
+be removed outside of battle, moved outside of
+the Hundreds' turn, or placed in ways other than
+setup (14.3.2) and the Anoint action (14.4.3).
+14.2.3 Contempt for Trade. Whenever the Hundreds
+craft an item, they may take the item but score
+none of the listed victory points, or may remove the
+item permanently to score the listed victory points.
+(They can still score extra crafting points from effects such
+as Master Engravers and the Legendary Forge.)
+14.2.4 The Hoard. Instead of a Crafted Items box, the
+Hundreds have the Hoard box. This has two
+tracks, Command and Prowess. The Command
+track can hold
+and. The Prowess track
+can hold,,, and
+I Gaining Items. When the Hundreds gain an
+item, they put it in the leftmost empty Com-
+mand or Prowess space based on the item type;
+if there is no such empty space, they must per-
+manently remove the gained item or any item
+on that track, and they score one victory point.
+II Command and Prowess. The number of items
+on the Command and Prowess tracks deter-
+mine their Command and Prowess, which af-
+fect various parts of their rules. With no items,
+they have 1 Command or Prowess; with one or
+two items, they have 2; with three items, they
+have 3; with four items, they have 4.
+14.2.5 Looters. At the start of battle as the attacker, the
+Hundreds may declare that they want to loot the
+defender, so long as the defender has an item in
+their Crafted Items box. (They cannot loot the Vag-
+abond.) If they declare that they want to loot, the
+Hundreds deal no rolled hits. (The defender deals
+rolled hits, and the Hundreds can still deal extra hits,
+such as from their Wrathful mood.) Then, at the end
+of that battle, if the Hundreds rule the clearing
+of battle, they take one item from the defender's
+Crafted Items box.
+
+14.3 FACTION SETUP
+14.3.1 Step 1: Gather Pieces. Form supplies of 20 war-
+riors, 1 warlord, and 6 strongholds.
+14.3.2 Step 2: Garrison. Place your warlord, four war-
+riors, and one stronghold in a corner clearing that
+is not the starting corner clearing of another play-
+er and, if possible, is diagonally opposite from a
+starting corner clearing.
+14.3.3 Step 3: Place Items. Place the four "R" items
+randomly under the ruins, unless this has already
+been done.
+14.3.4 Step 4: Get Stubborn. Place your Stubborn
+mood card on your Mood Card slot.
+14.4 BIRDSONG
+Your Birdsong has four steps in the following order.
+14.4.1 Raze. In each clearing with a mob token, remove
+all enemy buildings and tokens, take one item
+from the ruin in the clearing, if any, and remove
+the ruin if you took its last item. After resolving
+all mobs, you must roll the mob die once and
+place a mob token in a matching clearing that has
+no mob token but is adjacent to a clearing with
+a mob token. (If there are no such clearings, do not
+place a mob.)
+14.4.2 Recruit. Place warriors equal in number to your
+Prowess into the clearing with your warlord. Then,
+place warriors in each clearing with any strong-
+holds, one warrior per stronghold there.
+14.4.3 Anoint. If the warlord is not on the map, you
+must replace any Hundreds warrior on the map
+with the warlord. If you cannot, you must place
+the warlord in any clearing.
+14.4.4 Choose Mood. You must replace the mood card
+in your Mood Card slot with a different mood
+card that does not show an item that is in your
+Hoard. If you are Lavish and cannot choose a new
+mood card, you remain Lavish.
+
+14.5 DAYLIGHT
+Your Daylight has three steps in the following order.
+14.5.1 Craft. You may activate strongholds to craft cards.
+14.5.2 Command the Hundreds. You may take the fol-
+lowing actions, in any order, a number of times up
+to your Command.
+I Move. Take a move.
+II Battle. Initiate a battle.
+III Build. Spend a card to place a stronghold in a
+matching clearing that you rule.
+14.5.3 Advance the Warlord. You may take this action
+a number of times up to your Prowess. You may
+move the warlord with any Hundreds warriors,
+and then you may battle in the warlord's clearing.
+
+14.6 EVENING
+Your Evening has three steps in the following order.
+14.6.1 Incite. Any number of times, you may spend a
+card to place a mob token in a matching clearing
+that has no mob token but does have a Hundreds
+warrior (including your warlord).
+14.6.2 Oppress. You score victory points based on the
+number of clearings you rule that have a Hundreds
+piece and no enemy pieces. For one or two clear-
+ings, score one point; for three or four clearings,
+score two points; for five clearings, score three
+points; for six or more clearings, score four points.
+14.6.3 Draw and Discard. Draw one card. Then, if you
+have more than five cards in your hand, discard
+cards of your choice until you have five.
+15
+
+# Page 16
+16
+14.7 MOODS
+14.7.1 Bitter (). In battle in your warlord's clearing,
+before the roll you may remove any number of
+mob tokens from your warlord's clearing and any
+clearings adjacent to it. Place warriors in your
+warlord's clearing equal to the number of mob to-
+kens you removed.
+14.7.2 Grandiose (). This turn, perform your Advance
+the Warlord step (14.5.3) and your Command the
+Hundreds step (14.5.2) in reverse order. (Advance
+the Warlord first, then Command the Hundreds.)
+14.7.3 Jubilant (☑). Whenever you take the Incite ac-
+tion in your warlord's clearing, after placing the
+mob token for the action, you may-up to four
+times-roll the mob die and place a mob token in
+a matching clearing that has no mob token but is
+adjacent to any clearing with a mob token.
+14.7.4 Lavish (No Item). At the end of your Birdsong,
+you may remove any number of items from your
+Hoard permanently. For each item you remove,
+place two warriors into your warlord's clearing.
+When you are done, shift items in your Hoard to
+fill its tracks from left to right.
+14.7.5 Relentless (). Whenever you take the Advance
+the Warlord action and both move and battle, you
+may then either move your warlord with any Hun-
+dreds warriors or battle in your warlord's clearing.
+14.7.6 Rowdy). In Evening (14.6.3), draw one more
+card. If your warlord's clearing has three or more
+enemy pieces (even a combination of pieces from
+different enemies), draw two more cards instead.
+14.7.7 Stubborn (). In battle in your warlord's clear-
+ing, you ignore the first hit you take. (This does not
+combine with other abilities that let you ignore the first
+hit you take.)
+14.7.8 Wrathful (7). As attacker in battle in your war-
+lord's clearing, you deal an extra hit.
+
+15. Keepers in Iron
+15.1 OVERVIEW
+The Keepers in Iron are an order of devout knights,
+once exiled from the Woodland, who have returned
+to recover RELICS lost in past conflicts. Whether these
+relics belong to the Keepers or the Woodland, though,
+is another question. To accomplish their mission, they
+will need to delve relics out of the forests, move them to
+a WAYSTATION of the same type, and then recover them.
+When they recover a relic, they score points equal to
+the relic's value of one to three, and they also score two
+points each time they complete a set of the three rel-
+ic types-figures, tablets, and jewelry. Over time, the
+Keepers will gather a Retinue of Woodland creatures,
+letting them take more actions. However, each time
+they delve a relic or recover one, they might lose the
+Retinue card they used to act, so they will need to plan
+ahead and take prudent risks in order to succeed.
+15.2 FACTION RULES AND ABILITIES
+15.2.1 Relics. You seek out twelve relic tokens of three
+types-figures, tablets, and jewelry. Each relic
+type has four tokens in total. The relic front shows
+only its type, and the relic back shows a value of
+1, 2, 3, or 3.
+15.2.2 Waystations. You have three waystations. Each
+waystation shows one relic type on its front and
+another relic type on its back.
+15.2.3 Crafting. The Keepers craft during Daylight by
+activating waystations (of any type).
+15.2.4 Devout Knights. In battle, if the clearing of bat-
+tle has at least one relic and at least one Keeper
+warrior, the Keepers ignore the first hit they take.
+(If ambushed, ignore one hit from the ambush, but do
+not ignore further hits.) When moving, the Keepers
+may move one relic with each Keeper warrior that
+they move.
+15.2.5 Prized Trophies. Whenever an enemy removes a
+relic, they place it in any forest face up and score
+an extra victory point (for a total of two).
+
+15.3 FACTION SETUP
+15.3.1 Step 1: Place Starting Relics. Collect all twelve
+relic tokens and shuffle them face down (without
+the value showing). Place one randomly in each
+forest. (We recommend that you just slide the relics
+around face down, then place relics as fast as possible as
+a group. Otherwise, you can use this more random but
+fiddly method: the Keepers stack the randomized relics,
+then any other player cuts the stack, picks it up, and
+drops relics one by one from the bottom onto the forests.)
+15.3.2 Step 2: Gather Warriors. Form a supply of 15
+warriors.
+15.3.3 Step 3: Place Warriors. Place four warriors in
+a corner clearing that is not the starting corner
+clearing of another player and, if possible, is di-
+agonally opposite from a starting corner clearing.
+Then, place four warriors in a clearing on the map
+edge that is adjacent to the chosen clearing.
+15.3.4 Step 4: Place Remaining Relics. Place all remain-
+ing relics randomly, as evenly as possible, among
+forests not adjacent to clearings with your warriors.
+15.3.5 Step 5: Tuck Faithful Retainers. Tuck one Faith-
+ful Retainer card into each Retinue slot of your
+faction board.
+15.3.6 Step 6: Collect Waystations. Place your three
+waystation buildings on the matching Waysta-
+tions spaces of your faction board.
+
+15.4 BIRDSONG
+Your Birdsong has three steps in the following order.
+15.4.1 Encamp. Once per clearing, you may replace a
+Keeper warrior with a waystation. If you have no
+warriors or waystations on the map, instead place
+one waystation and one warrior in any clearing on
+the map edge. In either case, you may place the
+waystation face up or face down.
+
+# Page 17
+15.4.2 Decamp. Once per clearing, you may replace a
+waystation with a Keeper warrior.
+15.4.3 Recruit. Any number of times, you may spend a
+card to place two warriors at a matching waystation.
+
+15.5 DAYLIGHT
+Your Daylight has two steps in the following order.
+15.5.1 Craft. You may activate waystations (of any type)
+to craft cards.
+15.5.2 Act with Retinue. Starting with the leftmost col-
+umn of your Retinue and moving to the right, you
+may take the column's action, as follows, for each
+card in the column in any order.
+I Move. Take a move from a clearing whose suit
+matches the card suit.
+II Battle then Delve. Choose a clearing whose
+suit matches the card suit. You must initiate
+a battle there if any enemy pieces are there.
+Then, if you rule the clearing and it has at least
+one Keeper warrior, you may delve there as fol-
+lows (even if there was no enemy to battle).
+a Step 1: Move and Flip Relic. Move any relic
+from an adjacent forest into that clearing. Flip
+that relic so its value is showing if it is not.
+b Step 2: Check for Discard. Count the num-
+ber of clearings you rule adjacent to the for-
+est from which you delved the relic. If you
+rule fewer of these clearings than the relic's
+value, then you must discard the Retinue
+card used to take this action.
+III Move or Recover. Choose a clearing whose
+suit matches the card suit. Take a move from it,
+or recover relics from it as follows.
+a Step 1: Take Relic. Take a relic there of the
+same type as a waystation there. Place it in
+your leftmost empty Relics space of that
+relic type.
+b Step 2: Score Points. Score victory points
+equal to the relic's value, and score two vic-
+tory points if you filled a Relics column.
+C Step 3: Check for Discard. Count the num-
+ber of clearings you rule whose suit matches
+the clearing from which you are recovering
+the relic. If you rule fewer of these clearings
+than the relic's value, then you must end this
+Recover action and discard the Retinue card
+used to take this action. Otherwise, you may
+return to the Take Relic step or end this Re-
+cover action.
+
+15.6 EVENING
+Your Evening has three steps in the following order.
+15.6.1 Live Off the Land. You must remove one Keeper
+warrior from each clearing that has four or more
+Keeper warriors.
+15.6.2 Gather Retinue. You may add any number of
+cards from your hand to any Retinue slots, or
+you may shift one card in your Retinue to a dif-
+ferent slot. Your Retinue cannot hold more than
+ten cards.
+15.6.3 Draw and Discard. Draw one card, plus one card
+per uncovered draw bonus (equal to waystations on the
+map). Then, if you have more than five cards in your
+hand, discard cards of your choice until you have five.
+
+APPENDICES
+A. Advanced Setup
+There are hundreds of ways to play Root. The icons next
+to the setup steps note which Root products (Appendix
+B) include options for that step.
+
+A.1 STEP 1: CHOOSE And Set UP MAP
+As a group, choose a map. If you choose a variant map
+(Appendix C), follow its Setup Modification section,
+then collect the 12 suit markers, flip them face down,
+and shuffle them, then place one on each clearing, cov-
+ering the printed suit symbols if any. Set up the ruins
+(5.1.4), item supply (5.1.5), and dice (5.1.6) as normal.
+
+A.2 STEP 2: CHOOSE DECK
+As a group, you may choose to replace the entire stan-
+dard deck with the Exiles and Partisans deck.
+
+A.3 STEP 3: SET UP BOTSU
+As a group, you may choose to play with bots, as de-
+scribed in the Law of Rootbotics.
+
+A.4 STEP 4: SEAT PLAYERS
+Determine the seating order and the first player randomly.
+
+A.5 STEP 5: SET UP LANDMARKS
+As a group, you may choose to use landmarks (Appen-
+dix F). If so, you may ignore or override the placement
+of the Tower and Ferry pieces described in Variant Maps
+(Appendix C).
+A.5.1 Step 1: Choose. As a group, choose if you're play-
+ing with one or two landmarks, and remove any
+landmark cards you do not want to play with.
+A.5.2 Step 2: Deal and Collect. Shuffle the chosen land-
+mark cards, deal out the chosen number, and col-
+lect the landmark piece shown on each dealt card.
+17
+
+# Page 18
+18
+A.5.3 Step 3: Set Up. The last player in turn order sets
+up one drawn landmark as described on its card.
+If you chose to play with two landmarks, the sec-
+ond-to-last player in turn order sets up the other
+drawn landmark as described on its card.
+
+A.6 STEP 6: SET UP HIRELINGS
+As a group, you may choose to use exactly three hire-
+lings (Appendix E), as follows.
+A.6.1 Step 1: Collect Pieces. Shuffle all the hirelings
+cards. Deal out three hireling cards and return
+the rest to the box. Collect the pieces for the dealt
+hireling cards into a supply.
+A.6.2 Step 2: Demote. If playing with three players,
+flip over one random hireling to its Demoted side
+(marked with a "D"). If playing with four players,
+flip over two random hirelings to their Demoted
+side. If playing with five or more players, flip over
+all three hirelings to their Demoted side.
+A.6.3 Step 3: Set Up Hirelings. Starting with the last
+player in turn order and going counterclockwise,
+players set up one dealt hireling each as described
+on its hireling card. (Some have no setup instructions.)
+A.6.4 Step 4: Place Hireling Markers. Place the three
+hireling markers-marked "4," "8," and "12"-on
+the "4," "8," and "12" spaces of the score track on
+the map.
+A.6.5 Step 5: Return Corresponding Factions. A fac-
+tion cannot be played if its corresponding hire-
+ling is in play (shown by color and icon). Return the
+corresponding faction boards, pieces, and setup
+cards to the box.
+
+A.7 STEP 7: DRAW FIVE CARDS
+If you are playing with two players, remove all four
+dominance cards from the deck. Shuffle the deck. Each
+player draws five cards. (Not three, as in Standard Setup!
+You will choose three cards to keep in step 10.)
+
+A.8 STEP 8: SET UP FACTIONS
+As a group, you may choose and set up factions as de-
+scribed in the Standard Setup (5.1) or you may use the
+faction setup cards included in the Marauder Expan-
+sion, as described below.
+A.8.1 Step 1: Deal Setup Cards. Shuffle all of the mili-
+tant faction setup cards (red name with sword) and
+deal out one card to a pool in the center of the
+table. Shuffle the remaining militant faction set-
+up cards together with all of the insurgent faction
+setup cards (grey name with no sword), and deal out
+one faction setup card per player. (There will be one
+more faction setup card than the number of players.)
+I Two Players. If you're playing with two players,
+remove all of the insurgent faction setup cards
+before dealing out any. (You may keep them if you're
+playing with hirelings and feeling adventurous.)
+II Lock Last Insurgent. If the last faction setup
+card dealt out is an insurgent, turn it sideways to
+show that it is locked. It cannot be chosen unless
+at least one militant faction has been chosen.
+III Vagabond. Whenever a Vagabond faction set-
+up card is dealt out, also deal out one random
+character card next to it face up. If a player
+chooses this Vagabond as their faction, they
+must use this character card.
+A.8.2 Step 2: Choose Factions. Starting with the last
+player in turn order and going counterclockwise,
+each player chooses one faction setup card from
+the pool and sets up the faction immediately as it
+describes (before another player chooses).
+I Homelands. When setting up, players might
+choose one or more homeland clearings. Play-
+ers cannot choose homelands that enemies
+have chosen as their homelands or where they
+cannot place all the pieces listed in setup.
+II Enemy Homeland Adjacency. Some factions
+require you to choose a homeland that is not
+adjacent to enemy homelands; if you cannot
+do this, choose a homeland adjacent to an ene-
+my homeland. If you must choose a homeland
+that has two or more clearings between it and
+enemy homelands but you cannot, choose a
+homeland that is not adjacent to enemy home-
+lands. (Basically, try to set up as far away as able.)
+III Multiple Homeland Adjacency. If your faction
+has multiple homelands and you cannot ful-
+fill all of their enemy adjacency requirements
+(A.8.2.II), choose and set them up one at a time,
+fulfilling each requirement as best you can.
+
+A.9 STEP 9: PLACE SCORE MARKERS
+Each player places their faction's score marker on the
+"0" space on the score track.
+
+A.10 STEP 10: CHOOSE STARTING HANDS
+Each player chooses three cards in their hand to keep
+and puts the other two cards face down on the shared
+deck. When finished, shuffle the shared deck.
+
+B. Components
+B.1 ROOT
+B.1.1 Booklets. Walkthrough, Learning to Play, and
+this Law.
+B.1.2 Cardboard Pieces. 28 Buildings (7 Roosts, 6 Saw-
+mills, 6 Recruiters, 6 Workshops, 3 Bases), 19 Tokens
+(10 Sympathy, 8 Wood, 1 Keep), 12 Clearing Mark-
+ers (4 Rabbit, 4 Fox, 4 Mouse), 4 Ruins, 4 Victory
+Point Markers, 3 Relationship Markers, 23 Items
+(4 Boots, 4 Swords, 4 Bags, 3 Hammers, 3 Tea, 2 Coins,
+2 Crossbows, 1 Torch).
+B.1.3 Wooden Pieces. 55 Warriors (25 Marquise, 20 Ey-
+rie, 10 Alliance), 1 Vagabond Pawn.
+B.1.4 Cards. 54 Cards for Shared Deck, 16 Faction
+Overviews, 4 Eyrie Leaders, 2 Loyal Viziers, 3 Vag-
+abond Characters, 15 Quests, 4 Walkthroughs.
+B.1.5 Other. Board (Fall and Winter Maps), 2 Dice, 4 Fac-
+tion Boards (Marquise, Eyrie, Alliance, Vagabond).
+
+# Page 19
+B.2 RIVERFOLK EXPANSION
+B.2.1 Booklets. Learning to Play.
+B.2.2 Cardboard Pieces. 15 Buildings (15 Gardens),
+9 Tokens (9 Trade Posts), 3 Victory Point Mark-
+ers, 1 Outcast Marker, 9 Relationship Markers,
+11 Items (3 Boots, 3 Swords, 1 Bag, 1 Hammer,
+1 Torch, 1 Coins, 1 Crossbow), and 17 spare pieces
+with letter backs for future scenarios.
+B.2.3 Wooden Pieces. 40 Warriors (25 Lizard, 15 River-
+folk), 1 Vagabond Pawn.
+B.2.4 Cards. 4 Spies, 2 Faction Overviews, 3 Vaga-
+bond Characters.
+B.2.5 Other. 4 Faction Boards (Second Vagabond, Me-
+chanical Marquise, Riverfolk Company, Lizard Cult),
+3 Service Markers, 1 Card Stand.
+
+B.3 UNDERWORLD EXPANSION
+B.3.1 Booklets. Learning to Play and this Law.
+B.3.2 Cardboard Pieces. 6 Buildings (3 Markets, 3 Cit-
+adels), 19 Tokens (8 Plots, 8 Spare Plots, 3 Tunnels),
+the Burrow, 4 Relationship Markers, 2 Victory
+Point Markers, 6 Closed Path Markers.
+B.3.3 Wooden Pieces. 35 Warriors (20 Duchy, 15 Corvid),
+1 Ferry, 1 Tower, 9 Crowns.
+B.3.4 Cards. 9 Ministers, 2 Overviews.
+B.3.5 Other. Board (Lake and Mountain Maps), 2 Dice,
+2 Faction Boards (Duchy, Corvid).
+
+B.4 MARAUDER EXPANSION
+B.4.1 Booklets. Learning to Play and this Law.
+B.4.2 Cardboard Pieces. 9 Buildings (3 Waystations,
+6 Strongholds), 17 Tokens (12 Relics, 5 Mobs), 4 Rela-
+tionship Markers, 2 Victory Point Markers, 12 Con-
+trol Markers, 3 Club Items, 3 Hireling Markers, 11
+Extra Markers (9 Victory Points, 2 Relationships).
+B.4.3 Wooden Pieces. 56 Warriors (20 Hundreds,
+15 Keepers, 12 Patrol, 5 Dynasty, 4 Uprising), 1 Hun-
+dreds Warlord, 1 Exile Pawn.
+B.4.4 Cards. 8 Moods, 3 Faithful Retainers, 10 Faction
+Setup, 4 Hirelings, 2 Overviews.
+B.4.5 Other. 2 Faction Boards (Hundreds, Keepers),
+3 Dice (Mob, Uprising, Control).
+
+B.5 CLOCKWORK EXPANSION
+B.5.1 Booklets. Law of Rootbotics.
+B.5.2 Cardboard Pieces. 12 Priority Markers.
+B.5.3 Cards. 12 Difficulties, 16 Traits, 3 Vagabots.
+B.5.4 Other. 4 Faction Boards.
+
+B.6 CLOCKWORK EXPANSION 2
+B.6.1 Booklets. Law of Rootbotics.
+B.6.2 Cardboard Pieces. 12 Priority Markers.
+B.6.3 Cards. 12 Difficulties, 20 Traits, 3 Vagabots, 1 In-
+teraction, 11 Services.
+B.6.4 Other. 4 Faction Boards.
+B.7 EXILES and PartISANS DECK
+B.7.1 Cards. 54 Cards for Shared Deck.
+
+B.8 LANDMARKS PACK
+B.8.1 Cards. 1 Setup/Rules, 6 Landmarks.
+B.8.2 Wooden Pieces. 4 Landmarks.
+
+B.9 VAGABOND PACK
+B.9.1 Cardboard Pieces. 3 Items (1 Coins, 1 Hammer,
+1 Boot)
+B.9.2 Wooden Pieces. 7 Vagabond Pawns.
+B.9.3 Cards. 3 Vagabond Characters.
+
+B.10 HIRELING PACKS
+B.10.1 Booklets. Learning to Play Hirelings.
+B.10.2 Cardboard Pieces. 3 Hireling Markers, 12 Con-
+trol Markers. 3 Foothold Tokens in Underworld
+Pack. 6 Vault Buildings in Marauder Pack.
+B.10.3 Wooden Pieces. 1 Flotilla Pawn, 4 Prophet War-
+riors, 4 Bandit Warriors in Riverfolk Pack. 8 Ex-
+pedition Warriors, 6 Spy Warriors, and 1 Protec-
+tor Pawn in Underworld Pack. 6 Bearer Warriors,
+6 Keeper Warriors, and 5 Band Warriors in Ma-
+rauder Pack.
+B.10.4 Cards. 3 Hirelings.
+B.10.5 Other. 1 Control Die.
+
+C. Variant Maps
+C.1 WINTER MAP
+C.1.1 Raging River. The river divides forests (as printed
+paths do).
+
+C.2 LAKE MAP
+C.2.1 Setup Modifications. Place the Ferry piece in the
+corner clearing that is also a coastal clearing.
+C.2.2 The Lake. The Lake is in the center of the map.
+The lake is treated as rivers linking each coastal
+clearing to each other coastal clearing. The lake
+divides forests.
+C.2.3 Coastal Clearings. Clearings touching the lake
+(not separated by a forest) are cOASTAL CLEARINGS.
+C.2.4 Coastal Forests. Forests touching the lake are
+COASTAL FORESTS. Each coastal forest is adjacent to
+its two neighboring coastal forests (separated by one
+coastal clearing).
+C.2.5 The Ferry. Once per turn, pieces moving from the
+coastal clearing with the Ferry can move on the
+lake to any other coastal clearing, ignoring ad-
+jacency, and moving the Ferry along with them.
+(You still must rule the origin or destination clearing.)
+After this, the moving player draws one card. The
+Ferry cannot be battled or removed.
+19
+
+# Page 20
+20
+C.3 MOUNTAIN MAP
+C.3.1 Setup Modifications. Place the 6 closed path
+markers to cover the 6 paths of darker color with
+excavated ground. Place the Tower piece in the
+central clearing showing two towers.
+C.3.2 Closed Paths. A path covered with a closed path
+marker is a closed path. Clearings linked by a
+closed path are not adjacent, and pieces (such
+as Highway Bandits) cannot be placed on closed
+paths. Closed paths enclose and divide forests as
+if they were paths (so the Vagabond can slip across it).
+C.3.3 Removing Closed Paths. Once per turn in their
+Daylight, a player can spend a card to remove a
+closed path marker from the game permanently
+and score one victory point. To remove it, that
+player must have any faction pieces in either clear-
+ing linked by the closed path marker.
+C.3.4 The Pass and Tower. The clearing marked with the
+Tower piece is the Pass. At the end of a player's
+Evening, if that player rules the Pass, that player
+scores one victory point.
+C.3.5 Forests. All areas on the mountain map enclosed
+by paths and clearings are forests (2.2), regardless
+of the presence or placement of trees within.
+
+D. Vagabonds
+D.1 THIEF
+D.1.1 Starting Items. Start with
+D.1.2 Special Action: Steal. Exhaust one to take a
+random card from any player in your clearing.
+
+D.2 TINKER
+D.2.1 Starting Items. Start with
+D.2.2 Special Action: Day Labor. Exhaust one to
+take a card from the discard pile whose suit match-
+es your clearing. (You can always take a bird card.)
+
+D.3 RANGER
+D.3.1 Starting Items. Start with
+D.3.2 Special Action: Hideout. Exhaust one to re-
+pair three items. Then, immediately end Daylight
+and begin Evening.
+
+D.4 VAGRANT
+D.4.1 Starting Items. Start with
+D.4.2 Special Action: Instigate. Exhaust a to initiate
+a battle in your clearing. You choose the attacker
+and defender, you choose the order in which they
+each remove their own buildings and tokens, and
+you remove pieces for each. (Score a victory point
+per building or token of either player removed, and per
+Hostile piece of either player removed.)
+
+D.5 ARBITER
+D.5.1 Starting Items. Start with Z,
+D.5.2 Special Action: Protector. Before dice are rolled
+in a battle, the defender may enlist the Arbiter in
+the clearing of battle. The Arbiter scores one vic-
+tory point and adds all of his undamaged ☑ to the
+maximum rolled hits of the defender. The Arbiter
+cannot enlist himself or be enlisted against himself.
+
+D.6 SCOUNDREL
+D.6.1 Starting Items. Start with
+D.6.2 Special Action: Scorched Earth. Exhaust a ☑
+and place it in your clearing. Remove all enemy
+pieces from that clearing. Pieces cannot be placed
+in or moved into the clearing with the. (You re-
+main in this clearing. Once you move out, you cannot
+move back in. The cannot be removed with a "Favor
+of the..." card because it is not an enemy piece.)
+
+D.7 ADVENTURER
+D.7.1 Starting Items. Start with
+D.7.2 Special Action: Improvise. Once per turn while
+taking the Quest action, you may treat one unex-
+hausted item as any other item. When you exhaust
+it to complete the quest, also damage that item.
+
+D.8 RONIN
+D.8.1 Starting Items. Start with
+D.8.2 Special Action: Swift Strike. You may exhaust a
+☑ to deal an extra hit in battle (after rolling).
+
+D.9 HARRIER
+D.9.1 Starting Items. Start with
+D.9.2 Special Action: Glide. Exhaust a
+to move
+only your Vagabond pawn (not other pieces) to any
+clearing (even Hostile) on the map, ignoring adja-
+cency and paths, without exhausting any ☑.
+
+E. Hirelings
+E.1 GAINING AND LOSING HIRELINGS
+E.1.1 Gaining from Supply. When a player's score
+marker enters a space with a hireling marker, they
+take the hireling marker and place it below their
+Evening (as a reminder). At the end of their turn,
+they take any hireling card from the supply, roll
+for control (1.2), and flip over the hireling marker.
+E.1.2 Rolling for Control. When a player gains a hire-
+ling card, they roll the control die and place con-
+
+# Page 21
+trol markers on the hireling card equal in number
+to the die roll. They count only the gold die pips
+if they have the most victory points or are tied for
+the most; they count all the die pips otherwise (in-
+cluding if they have activated a dominance card).
+E.1.3 Gaining from Another Player. At the end of a
+player's turn, they must remove one control mark-
+er from each hireling card they gained on previ-
+ous turns. Then, they must give each hireling card
+they control that has no control markers, along
+with a hireling marker, to any other player (even
+the player with the highest score). That player puts the
+hireling marker below their Evening (as a remind-
+er) and immediately rolls for control (1.2).
+
+E.2 ABILITIES AND ACTIONS
+Hirelings have various actions and abilities, as shown
+by unique icons. Actions and abilities that start with
+"Controller:" are gained by the hireling's controller.
+E.2.1 When-Hired Action (). When they take con-
+trol of the hireling, the controlling player must
+take this action.
+E.2.2 Ability(). This ability is always active or it
+specifies when it happens.
+E.2.3 Start-of-Birdsong Action (). At the start of
+their Birdsong, the controlling player must or
+may take this action, as the action describes.
+E.2.4 Once-Per-Daylight Action (0). Once in
+their Daylight, the controlling player may take
+this action.
+
+E.3 RULES
+E.3.1 Rule. A hireling's controller treats hireling pieces
+as their own only for rule. (The controller can rule a
+clearing even with hirelings alone.) Uncontrolled hire-
+lings can rule clearings as if they were players (2.5).
+E.3.2 Enemy Status. A hireling is an enemy to players
+other than its controller and players in coalition
+with its controller.
+E.3.3 Separate Pieces. Hireling pieces are not the con-
+troller's faction pieces. (So, the Duchy cannot count
+them as Duchy pieces to sway, the Keepers cannot re-
+move them to encamp, etc.).
+E.3.4 Separate Actions. A hireling's Move or Battle ac-
+tions can only move or battle with the hireling's
+pieces and cannot include the controller's pieces.
+Hirelings cannot take actions in other ways (such
+as from their controller's Move actions, False Orders, or
+the Vagabond's Allied Relationship).
+E.3.5 Separate Effects. Hirelings cannot use their con-
+troller's abilities, crafted persistent effects, or am-
+bush cards. (So, a hireling could not use Boat Builders
+while moving, and the Highway Bandits could not be
+placed on a river. A hireling's controller could not play
+an ambush card while battling with the hireling.)
+E.3.6 No Scoring from Removal. A hireling's control-
+ler does not score victory points if their hireling
+removes an enemy piece (usually in battle). (Play-
+ers can still score points by removing hireling buildings
+and tokens, even when defending in battle against the
+hireling. Players still score as normal if the Warm Sun
+Prophets force that player's faction pieces to battle.)
+E.3.7 Weird Stuff. If you move a hireling with the Ferry,
+you do draw a card. If you move hireling warriors
+into a clearing with an Alliance sympathy token
+or remove Alliance sympathy by using a hireling,
+this does trigger Outrage. (These effects refer to a
+"player moving" or "player removing.")
+
+F. Landmarks
+F.1 GENERAL RULES
+F.1.1 Safety. Landmarks cannot be battled, moved, or
+removed, unless noted explicitly by a landmark.
+F.1.2 Ownership. Landmarks are not owned by any fac-
+tion and are not enemy pieces.
+
+G. Glossary
+G.1.1 Ability. A persistent effect of a faction as listed
+at the top of its faction board and in its Faction
+Rules and Abilities section, or a persistent effect
+of a hireling as listed on its hireling card (E.2.1).
+G.1.2 Adjacent. A clearing is adjacent to all other clear-
+ings linked to it by a path. A forest is adjacent to
+all clearings that touch it without crossing a path,
+and it is adjacent to all forests that are separated
+by only one path, except on the lake (C.2.4).
+G.1.3 Building. A square cardboard piece owned by its
+faction.
+G.1.4 Cannot. See 1.1.2.
+G.1.5 Discard. Place the prompted card in the shared
+discard pile (2.1). If it is a dominance card, place
+it near the map instead (3.3.3).
+G.1.6 Draw. Take the top card from the shared deck (2.1).
+G.1.7 Effect. Anything that changes the game, includ-
+ing persistent effects, faction abilities, and actions.
+G.1.8 Enemy. Any other player that you are not in a co-
+alition with (9.2.8), or a hireling that is in the sup-
+ply or held by an enemy player.
+G.1.9 Enemy Piece. A faction piece of an enemy player
+or a hireling piece of an enemy hireling, except
+while you're treating the piece as your own for
+rule (Riverfolk mercenaries, controlled hirelings, etc.).
+(Items cannot be enemy pieces.)
+G.1.10 Faction Piece. All the warriors, pawns, buildings,
+and tokens listed on the back of a faction board.
+(Items are not faction pieces.) See 1.5.2.
+G.1.11 Forest. An area on the map enclosed by paths and
+clearings.
+G.1.12 Force. See 1.5.5.
+G.1.13 Item. A square cardboard piece showing an item
+,, etc.) that is not owned by any faction.
+G.1.14 Map. See 2.2.
+21
+
+# Page 22
+22
+G.1.15 Map Edge. The single closed loop of clearings
+and paths that define the map boundary, includ-
+ing closed paths on the mountain map.
+G.1.16 Path. A white link between two clearings.
+G.1.17 Pawn. A wooden figure owned by its faction.
+G.1.18 Piece. Any component-building, token, warrior,
+pawn, item, marker, and so on.
+G.1.19 Place. Take the prompted piece from the prompt-
+ed source and put it in the prompted destination.
+Usually, no source is specified-in this case, take
+it from its supply, or take the leftmost prompted
+piece if it is on a track. Put is shorthand for Place.
+G.1.20 Play Area. The area around your faction board.
+Cards in it can only be spent, discarded, or used
+for other purposes if explicitly instructed.
+G.1.21 Replace. Shorthand for REMOVE then PLACE. Re-
+move the prompted piece and place the other
+prompted piece in location from which the first
+was removed. You must complete all steps of the
+REPLACE in order to do it.
+G.1.22 Remove. Take the prompted piece from the
+prompted source and return it to the prompted
+destination. Usually, no destination is specified-
+in this case, return it to its owner's supply, return
+it to the rightmost empty space of its track it has
+one, or remove it permanently otherwise. (Items
+are removed permanently.)
+G.1.23 Reveal. Place the prompted card face up in your
+play area. Usually, no source is specified-in this
+case, take it from your hand.
+G.1.24 River. A blue link between two clearings.
+G.1.25 Ruin. Piece covering an "R" slot in a clearing (2.2.4).
+G.1.26 Rule. See 2.5.
+G.1.27 Show. Let the prompted player see the prompt-
+ed piece.
+G.1.28 Slot. White box in a clearing (2.2.3).
+G.1.29 Spend. See Discard. (These terms are equivalent,
+but SPEND is used in contexts with choice.)
+G.1.30 Supply. The collection of pieces that is not on a
+faction board or the map. The item supply is the
+collection of items on the map.
+G.1.31 Swap. Switch the locations of the two prompted
+pieces. (This ignores Move and PLACE restrictions, such
+as the Corvids' snare and the Marquise's keep.)
+G.1.32 Token. A circular cardboard piece owned by its
+faction.
+G.1.33 Treat. The prompted thing takes on the proper-
+ties of the second prompted thing. While you treat
+enemy pieces as your own for rule, they are not
+enemy pieces, but they are still faction pieces of
+that enemy player. (For example, Riverfolk warriors
+you've hired as mercenaries are not enemy pieces to
+you, but they are still Riverfolk faction pieces.)
+G.1.34 Warrior. A wooden figure owned by its faction.
+(The Vagabond pawn is not a warrior and cannot
+be removed.)
+INDEX
+Ambush cards, 2.1.2
+in battle, 4.3.1
+Battle, 4.3
+ambushing in, 4.3.1
+defenseless rule for, 4.3.3.II
+ending early, 4.3.1.II
+Bots, A.3
+Cards
+ambush, 2.1.2
+birds are wild rule of, 2.1.1
+dominance, 2.1.3
+drawing and discarding, 2.1
+giving to other players, 1.3.2
+suits of, 2.1
+Clearings
+adjacency of, 2.2.1
+homeland, A.8.2.I-II
+on lake map, С.2.3
+slots in, 2.2.3
+suits of, 2.2.2
+ruins in, 2.2.4
+Craft, 4.1
+cost of, 4.1.1
+scoring points with, 3.2.2
+three-color question marks in, 4.1.1
+Decks, A.2
+Defenseless rule, 4.3.3.II
+Dominance cards, 2.1.3
+activating, 3.3.1
+discarding and spending, 3.3.3
+hand limit and, 3.3.2
+taking available, 3.3.4
+winning with, 3.3.1.I-II
+Faction
+drafting in advanced setup, A.8
+pieces, 1.5.2
+standard setup, 5.1.1, 5.1.7
+Ferry piece, C.2.5
+Forests, 2.4
+on lake map, С.2.4
+on mountain map, C.3.5
+Glossary, Appendix G
+
+# Page 23
+Hirelings
+rules for, Appendix E
+setup for, A.6
+Hits
+dealing, 4.3.4
+defenseless rule for, 4.3.3.II
+extra, 4.3.3.1
+maximum rolled, 4.3.2.I
+rolling, 4.3.2
+taking, 4.3.4
+Homelands, A.8.2.I-II
+Information, 1.2
+Lake, C.2.2
+Landmarks
+rules for, Appendix F
+setup for, A.5
+Maps
+rules for, Appendix C
+setup for, A.1
+Move, 4.2
+rule is needed for, 4.2.1
+same piece multiple times, 4.2.2
+using the Ferry, C.2.5
+Negotiation, 2.1
+Pass, The, C.3.4
+Paths, 2.2
+on mountain map, C.3.2-C.3.3
+Persistent effects, 4.1.3
+no duplicates of, 4.1.4
+Pieces
+limits of, 1.5.1
+list of, Appendix B
+manipulating, 1.5.4
+ownership of, 1.5.3
+Reach, 5.2
+Rivers, 2.3
+on lake map, С.2
+on winter map, C.1
+Rule, 2.5
+no rule on tie, 2.5
+Rules conflicts, 1.1
+Setup
+advanced, Appendix A
+standard, 5.1
+Scoring
+by crafting, 3.2.2
+by removing enemy buildings and tokens, 3.2.1
+Terminology, Appendix G
+Timing
+game structure and, 1.4.1
+interrupts and, 1.4.2
+simultaneous things and, 1.1.3
+Tower piece, C.3.4
+Winning
+by dominance, 3.3
+by victory points, 3.1
+simultaneously, 3.1
+23
+
+# Page 24
+24
+Cole dedicates this game to his younger brothers and
+sisters, who never let him forget how to play.
+
+Kyle dedicates this game to his children, who have
+always requested cute animal drawings.
+
+CREDITS
+ROOT & RIVERFOLK
+Cole Wehrle (lead design, devel-
+opment, co-lead graphic design),
+Kyle Ferrin (illustration, co-lead
+graphic design), Patrick Leder
+(concept, development), Joshua
+Yearsley (editing, development),
+Nick Brachmann (development, graphic design), Clayton
+Capra (development), Jake Tonding (development), Jaime
+Willems (graphic design), Kate Unrau (proofreading)
+
+UNDERWORLD
+Patrick Leder (lead design), Kyle Ferrin (illustration), Nick
+Brachmann (lead development, lead graphic design), Cole
+Wehrle (development, graphic design), Joshua Yearsley (edit-
+ing, development), Kate Unrau (proofreading)
+
+MARAUDER
+Patrick Leder (co-lead design), Cole Wehrle (co-lead design),
+Kyle Ferrin (illustration), Nick Brachmann (lead development,
+design, graphic design), Pati Hyun (lead graphic design, pre-
+press), Joshua Yearsley (design, development, editing), Rachel
+Lapidow (proofreading), Kate Unrau (proofreading)
+
+STAFF AT PRINTING
+Patrick Leder, Kyle Ferrin, Caryl Tan, Cole Wehrle,
+Nick Brachmann, Clayton Capra, Pati Hyun, Brooke Nelson,
+Joshua Yearsley, Ted Caya, Claire Donaghue, Andrea
+Francisco, Anne Kinner
+
+PLAYTESTING
+Grayson Page and his amazing group (inc. Martin, Jared, Rich-
+ard, Tony, Harvey), Chas Threlkeld, Drew Wehrle, Blake Wehr-
+le, Corey Porter, Kyle Kirk, Matthew Root, Mark von Minden,
+Davey Janik-Jones, the stalwart players of First Minnesota, Jim
+Bolland, Melissa Lewis-Gentry and Modern Myths, Jennifer
+Gutterman and Hampshire College, Matthew Snow, Justin
+Dowd and the Brass Cat, the Owl & Raven crew, Josh Hous-
+er, Brian Peterson, Ethan Zimmerman, Brandi Leder, Heath-
+er Brian, Ted Scamp, Jenny and Matt Benusa, Andrew Olson,
+Joel McGuire, Nathaniel Hicklin, Jacob Resler, Rae Kawalek,
+Nick Sopkowiak, Aaron Greatorex-Voith, Nicole Szajner, and
+the Brooklyn Game Lab (Robert Hewitt, Jack DeWald, Joseph
+Esbenshade, Nahvid Etedali, David Kanof, Marceline Leiman,
+Jill Pullara), Dāvis Dālmanis, Luke Bridwell, Justin Keenan,
+Bryan Vogel, Nick “Nev” Burton, Doug Radcliffe, Jeremy Li-
+les, Kovács Botond, Mark Overstreet, Hung Nguyen, Luke
+McNally, Joshua Clark Orkin, Guerric Samples, Hunter C
+Fyffe, Steve Owen, Jon Mott, Sam De Roest, Sarah Shirley, Mi-
+chela Garber, Patrick Flores Velarde, Lili Chin, Christina Berk-
+ley, Sebastian Apel, Opie's Funeral, and many others
+
+Need a replacement part?
+ledergames.com/replacements
+
+Learn more about Root:
+ledergames.com/root
+Key References
+CRAFT (4.1)
+Play a card and activate the crafting pieces of the suits
+listed in its bottom-left corner. (Vagabond exhausts.)
+The suit of a crafting piece matches its clearing, and
+you can activate each crafting piece only once per turn.
+
+If you craft an IMMEDIATE EFFECT, resolve it and discard
+the card. Often these effects will let you take an item
+from the supply on the map and score victory points.
+If the item supply on the map does not have the listed
+item to take, you cannot craft the card.
+
+Π If you craft a PERSISTENT EFFECT, place the card in your
+play area. You may use its effect. You cannot craft a per-
+sistent effect if you have one of the same name.
+
+MOVE (4.2)
+Take any of your warriors and pawns from one clearing
+and move them to one adjacent clearing.
+
+You must rule the origin, destination, or both. A given
+piece can be moved any number of times per turn.
+
+BATTLE (4.3)
+You can battle in a clearing with your warriors or pawn.
+Step 1: Defender May Ambush. Attacker may cancel
+defender's ambush card by also playing ambush card.
+
+Step 2: Roll Dice. Attacker will deal hits equal to higher
+roll. Defender will deal hits equal to lower roll.
+
+The maximum hits you can deal by rolling equals your
+number of warriors in the clearing of battle.
+
+Step 3: Use Effects. The players may use optional effects
+that affect battle now. Many deal EXTRA HITS, which are
+not limited by warriors.
+
+Defenseless: If the defender has no warriors in the clear-
+ing of battle, the attacker deals an extra hit.
+
+Step 4: Deal Hits. Each hit removes one piece-
+warriors first, then buildings and tokens, as chosen by
+the player taking the hits.
+
+Remember: Score a victory point each time
+you remove an enemy building or token.
+
+SETUP (5.1)
+Step 1: Assign factions, then determine starting player
+and seating order randomly. Give board and pieces.
+
+Step 2: Place score markers on the "0" space.
+
+Step 3: Draw and give three cards to each player.
+
+Step 4: Place ruins in the four slots marked with "R."
+
+Step 5: Form item supply near the top of the map.
+
+Step 6: Gather dice and overview cards if desired.
+
+Step 7: Set up factions in setup order (A, B, C, etc.).
+```
+
+--- End of root_law.pdf ---
+
+Page 1
 ROOT
 A Game of Woodland Might and Right
 Learning
 to Play
 Table of Contents
-Introduction................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Introduction..
+2
+Walkthrough
+3
+Setup......
+4
+The Map
+5
+The Cards
+6
+Battling.
+8
+Marquise de Cat
+.10
+Eyrie Dynasties
+12
+Woodland Alliance
+14
+Vagabond
+17
+Dominance Cards
+.21
+Scenarios
+.22
+The Winter Map
+.23
+Page 2
+2
+Introduction
+Root is a fast-paced game of adventure and war. You will play as one of four factions
+vying to show that you are the most legitimate ruler of the vast Woodland.
+Flow of Play
+Each turn is split into three phases: BirdsONG, DAYLIGHT, and
+EVENING. Once you play through these phases in order, your turn
+ends, and the player to your left begins their turn. The three phases
+are described in detail on each player's faction board.
+forest. Now y
+ay you can place
+build a kingdom worthy pieces in the clearing
+with the keep token.
+of your name.
+you
+warri
+Birdsong
+Place one wood
+at each sawmill.
+Daylight
+1 Craft using workshops.
+2nd Take up to 3 actions, plus one per
+Battle
+March
+Take two moves.
+Recruit
+you spend.
+Once per turn, place one warrior at each recruiter.
+Build
+In a clearing you rule, place a building, spendir spending its cost in
+wood connected through any number of ruled clearings.
+• Overwork
+Spend a card to place
+clearing.
+Evening
+wood at a sawmill in a matching
+Draw 1 card, plus 1 card per showing. Discard down to 5 cards.
+Victory and Gaining Victory Points
+You can win in one of two ways: score 30 victory points or play and complete a
+dominance card. Dominance cards cannot be played early in the game, so we recommend
+learning about them later—they are described more on page 21.
+In Root, you will play one of four factions. Each scores victory points in its own way.
+The invading Marquise de Cat wishes to exploit the Woodland, using its
+vast resources to fuel her economic and military machine. She scores by
+constructing buildings in the Woodland.
+The proud Eyrie Dynasties wish to reclaim the glory of their once-great
+aristocracy and retake the Woodland from the Marquise. They score each turn
+by building and protecting roosts in the Woodland.
+The upstart Woodland Alliance wish to unite the creatures of the forest and rise
+up against their oppressors. They score by spreading sympathy for their cause
+across the Woodland.
+The wily Vagabond wishes to gain fame-or infamy—in the midst of this brewing
+conflict. He scores by completing quests for the creatures of the Woodland and
+by aiding and harming the other factions.
+As you read on, you'll learn more about the factions and how they score points, along
+with a couple ways that any faction can score points.
+witers
+Workshops
+Sawmills Cost
+Page 3
+Walkthrough
+If your group learns by playing and wants to jump into Root without needing a long
+rules explanation, you can use our robust walkthrough, as described below.
+Skip this page if your group prefers to learn most of the rules before starting play.
+Even if you use this walkthrough, someone should carefully read this learning-to-play
+guide before your group meets to play. We'll assume this person is you.
+Preparing
+Set up the game as described on the next page, but make these changes:
+1
+st Seat the factions in this clockwise order: Marquise, Eyrie,
+Alliance, Vagabond. Along with their faction board, hand
+each player their faction's walkthrough card.
+3
+rd Do not draw 3 cards for each player. Instead, the walkthrough
+cards will tell the players to take specific cards from the deck.
+7th Follow the setup on the walkthrough cards, not on the faction
+board backs. Everyone sets up at the same time, not in order.
+Playing
+When you start playing, give the walkthrough sheet to the
+Marquise player, and ask them to read the text in the Marquise's
+box aloud as they're taking the actions described. When their turn
+is over, pass the sheet to the Eyrie player, and have them read their
+actions aloud as well. After everyone has taken their first turn, flip
+the sheet over and go through the second turn, as before.
+Walkthrough
+1st Place the keep and 1 sawmill
+in the top-left fox clearing.
+(The keep does not fill a slot.)
+nd Place 1 warrior in each
+2
+3rd
+th
+4th
+clearing, except diagonally
+opposite from keep. (11 total.)
+Place 1 workshop and 1
+recruiter on map as shown
+on walkthrough sheet.
+Place rest of buildings on
+your faction board tracks,
+from right to left.
+5th Take these cards from the
+shared deck into your hand:
+(Bird) Brutal Tactics
+(Rabbit) Better Burrow Bank
+(Mouse) Travel Gear
+Walkthrough Card
+Learn-to-Play Walkthrough
+For your first game, pass around this sheet and ask each player to read the actions
+of their faction while taking their turn. After everyone finishes their first turn, flip
+this sheet over and continue the walkthrough.
+Turn 1 introduces these concepts:
+NOTE: ONLY THE
+Darquise (1st player)
+Birdsong. I place a wood at my sawmill
+Daylight, Action 1: Build. I spend that wood to
+build a new sawmill, so I score one point.
+Daylight, Action 2: March. I move my warrior first to
+the
+clearing, then move both warriors
+to the fox clearing. To take a move, I must rule
+the clearing I'm moving from or moving to, which I
+Day
+Recruit
+Alliance
+(3rd player)
+Birdsong, Spread Sympathy
+I spend a fox card on my
+Supporters star
+central fox clearing and
+a point.
+Crossbow car
+activat
+sympathy to score a point and take the
+from the item supply on the map.
+Daylight, Mobilize. I add my other
+cards to my Supporters stack
+Evening. I haven't had a revolt
+yet, so I don't have any officers.
+officers means no actions in
+ng, so all that's
+Turn 1
+structure, battle, movement, crafting, and rule.
+Eyrie (and player)
+NARRATED
+Birdsong. First, I add two rabbit cards to the Recruit
+column of my Decree.
+Daylight, Decree. First 1 recruit
+placing two
+warriors at at my roost. Next I three warriors
+from the rabbit clearing west to the mouse clearing
+Bird cards are always wild, so I'm treating this bird a
+rabbit. Then, because I rule the mouse clearing and it
+oost, I build a roost there.
+Evening. I have
+the map, so I score
+Then,
+car
+Vagabond
+(4th player)
+Birdsong, Sip. I'll slip into
+the central fox clearing
+Daylight, Aid. 1 exhaust
+orch to give
+card to
+Alliance and take their
+rossbow Our relationship
+Daylight, Move.
+Daylight, Move. I exha
+the mouse clearing
+Daylight, Strike. I exhaust s
+Eyric warrior, which mo
+Daylight, Battle. 1 exhaust my
+relationship
+battle the
+Eyric. I roll a 1 and o, and I use the higher roll
+because I'm the attacker. I deal one
+so this removes one Eyrie warrior.
+point becaus
+Finally, I draw a card
+Walkthrough Sheet
+Throughout this process, encourage everyone to ask questions. You
+will likely be able to answer questions about shared concepts such
+as moving and battling with little reference to this guide. If someone
+asks about their faction, encourage them to look over their faction
+board-it is designed to answer most of those questions. Don't be dismayed if play is in-
+terrupted to explain the finer points of battling or crafting. For most players, Root is best
+learned organically. After a few rounds, the game should flow seamlessly.
+3
+Page 4
+Setup
+If playing with three players, remove the Vagabond. If playing with two, also remove the
+Alliance. For more faction mixes, see page 22.
+1
+st Choose Factions. Each player chooses a faction
+board and takes all of their faction's pieces.
+2nd
+The back of each faction board lists all of
+its pieces and gives its basics of play.
+لو
+and Set Scores. Place the score marker for each
+faction in play on “o” on the score track.
+3rd Deal Cards. Shuffle the shared deck of 54 cards,
+and deal three cards to each player.
+Do not confuse this shared deck with the
+types of cards used by specific factions, as
+listed on the backs of their faction boards.
+60
+VPVP VPVP
+لو
+4
+4th Place Ruins. Place the four ruin chits on the
+four slots on the map marked with "R.”
+5
+th Make Item Supply. Gather the 12 item chits
+shown to the right and place them on their
+matching spaces near the top of the map.
+6th Gather Other Pieces. Hand out the 16 faction
+overview cards as desired, and place the two cus-
+tom dice near the map.
+7th Set Up Factions. The players set up their
+factions, as described in Setup on the back of
+each faction board, in this order: Marquise,
+Eyrie, Alliance, Vagabond.
+بل
+Overview view lew lew
+بل
+Step (A)
+Plowing the Margie
+3
+Page 5
+Path
+Forest
+The Map
+Most action in Root unfolds on the map of the Woodland,
+consisting of 12 CLEARINGS connected by PATHS.
+لو
+A river runs through some clearings. Only use the river if
+the Riverfolk Company, an expansion faction, is in play.
+Moving Around the Map
+You can move from clearing to clearing. When you move,
+take any number of your warriors from one clearing and
+move them to a clearing connected by a path.
+The spaces on the Map enclosed by paths are forests,
+which only the Vagabond can move into.
+To move, you must rule the clearing you are moving
+from or moving to.
+You rule a clearing if you have the most combined
+warriors and buildings there. On a tie, no one is ruler.
+لو
+Various other actions in Root will require you to rule clearings.
+Dove Example
+The Eyrie want to move
+out of this clearing, which
+they don't rule.
+*
+00
+00
+00
+00
+لو
+Slot
+Clearing
+00
+00
+Warriors
+They don't rule this
+clearing either, so they
+cannot move here.
+Buildings
+They do rule this
+clearing, so they
+can move here.
+Tokens
+5
+Page 6
+Clearings
+Each clearing on the map has one to three slots,
+which hold buildings that players will place.
+A clearing with no open slots cannot hold more
+buildings.
+لو
+Slots filled with ruins cannot hold buildings until
+the Vagabond explores them. Without a Vagabond,
+these slots will be blocked for the entire game.
+Each clearing also has a suit: fox, rabbit, or mouse.
+A clearing's suit represents the community living there.
+Though both slots in this clearing are
+full, tokens can still be placed here.
+A clearing's suit is shown both by its symbol and by the color of the clearing's trees.
+The Cards
+Throughout play, you will draw cards from Root's shared deck
+into your hand, and many actions will require you to spend cards
+from your hand. Spending a card represents calling upon animals to
+lend you their labor, to do you a favor, or to broker a deal.
+Just like clearings, each card has a sUIT. Besides the fox, rabbit,
+and mouse suits, cards have a fourth suit: BIRD.
+لو
+&
+Once in Daylight, may look
+Codebreakers
+at another player's hand.
+Birds Are Wild: The birds live in the treetops across the whole Woodland, so you can
+always treat a bird card as a mouse, fox, or rabbit card. However, if you must spend a
+bird card, you can't substitute a card of another suit.
+Matching Example
+Let's say you want to
+act in a fox clearing.
+If the action said you must spend a
+matching card, you could spend a
+fox or a bird card, since birds are wild.
+OR
+6
+Page 7
+Crafting Cards
+Most cards have a second use-you can craft the card
+to gain its effect, shown at the bottom.
+To craft a card, you must activate crafting pieces in
+the clearings shown in the card's bottom-left corner.
+You can activate each crafting piece only once per turn.
+Each faction has a different crafting piece, as follows.
+Crafting Pieces
+Marquise crafts
+with workshops.
+Gently Used Knapsack
+Then
+discard.
+Eyrie crafts
+with roosts.
+Immediate Effect
+Alliance crafts
+with sympathy.
+Vagabond crafts
+with hammers.
+If the card gives you an IMMEDIATE
+EFFECT, resolve it and then discard
+the card.
+A common immediate effect is to take an ITEM from the
+map's supply and place it in the Crafted Items box in
+the top-right corner of your faction board.
+لو
+VP Whenever you craft an item, you score the
+victory points listed on the card!
+If the supply does not have the matching item to take,
+you cannot craft the card.
+If the card gives a PERSISTENT EFFECT, tuck the card
+Crafting Example
+The Marquise wants to craft
+a Gently Used Knapsack,
+which costs one mouse.
+Gently Used Knapsack
+Then
+discard.
+,
+The Marquise crafts by
+activating workshops.
+Daylight
+1 Craft using workshops.
+M
+Across the map, the Marquise
+has two fox workshops and two
+mouse workshops.
+So, the Marquise can activate
+one of these mouse workshops to
+craft this card!
++1
+She takes the matching item from
+the supply, scores one victory
+point, and discards the card.
+under your faction board to show only its effect, which you may use as written.
+Brutal Tactics
+In battle as attacker, may deal
+an extra hit, but defender
+scores one point.
+Persistent Effect
+You may not craft a card with a persistent effect if you already have
+one of the same name.
+7
+Page 8
+8
+Battling
+You can BATTLE other players to remove their
+pieces from the map.
+When you battle, choose any clearing where you
+have any warriors. You are the attacker, and you
+choose another faction with any pieces there as
+the defender.
+BROADLY, A BATTLE HAS TWO STEPS:
+» First, roll two dice. The attacker deals hits
+equal to the higher roll, and the defender
+deals hits equal to the lower roll. However,
+each player can roll no more hits than their
+number of warriors in the clearing of battle.
+» Then, remove pieces. Both players remove
+pieces at the same time. The player taking
+hits chooses which pieces to remove, but
+must remove all their own warriors in the
+clearing of battle before removing any of
+their own buildings or tokens there.
+Whenever you remove an enemy
+VP building or token-even outside
+battle-you score a victory point!
+Extra Hits
+Some effects allow you to deal EXTRA HITS.
+Battle Example
+The Eyrie attack the Marquise.
+First...
+00
+00
+00
+00
+The Eyrie roll the dice.
+As the attacker, they
+take the higher result.
+Then...
+3
+Ο
+Both sides deal hits. Because the Eyrie
+only have two warriors, they can only
+deal two hits. The Marquise deals zero
+hits.
+00
++1
+00
+00
+The Marquise returns two pieces to
+her supply, and the Eyrie score a
+victory point for removing a token.
+Extra hits represent superior positioning, tactics, or leadership. They are not limited by the
+number of warriors in the clearing of battle, so a single warrior could deal multiple hits.
+The attacker deals an extra hit if the defender has no warriors in the clearing of battle,
+leaving themselves DEFENSELESS.
+Page 9
+Ambush Cards
+Before the roll in battle, the defender may play an
+AMBUSH CARD whose suit matches the clearing
+of battle to deal two hits immediately.
+Since ambushes deal hits immediately, they can reduce
+the maximum number of hits the attacker can roll.
+Ambush Example
+The Eyrie attack the Marquise.
+00
+00
+00
+00
+However, if the defender plays an ambush card,
+the attacker can foil the ambush, canceling its
+effect, by also playing a matching ambush card.
+Like extra hits, ambush hits are not limited by
+your number of warriors in the clearing of battle.
+You can even play an ambush card if you're
+DEFENSELESS! If you've got an ambush card
+in hand, don't be afraid to bait your enemies
+into attacking you where you seem weak.
+کر
+But...
+The Marquise plays a
+bird ambush card!
+Birds are wild, so this
+card matches the
+mouse clearing.
+Ambush!
+You may ambush in any clearing.
+At start of battle, defender may play to
+deal two immediate hits, unless attacker
+plays a matching ambush card.
+The Eyrie cannot foil the ambush,
+so they must remove two warriors,
+returning them to their supply.
+The battle ends.
+If an ambush card removes all of the attacker's
+warriors, the battle immediately ends.
+"
+リ
+00
+00
+9
+Page 10
+10
+Marquise de Cat
+The Marquise de Cat occupies the Woodland and wants to turn it into an industrial and military powerhouse.
+Each time the Marquise builds one of her buildings—a workshop, sawmill, or recruiter—she scores victory
+points. The more of the same building she has on the map, the more points she scores. However, to fuel ongoing
+construction, the Marquise must maintain and protect a strong, interconnected economy of wood.
+The Keep of Marquise de Cat grants two special abilities while it is on the map. First, no
+one but the Marquise can place pieces in the clearing with the keep token. Also, whenev-
+er Marquise warriors would be removed, the Marquise may call on her Field Hospitals,
+spending a card matching the warriors' clearing to place them back in the clearing with
+the keep token.
+Birdsong
+Place one wood token at each sawmill.
+Daylight
+First, you can craft any cards in your hand using workshops. Then, you can take up to
+three of the following actions.
+Battle: Initiate a battle.
+» March: Take two moves.
+لو
+Hawks for Hire: After taking three actions,
+you may take any number of extra actions
+by spending a bird card per extra action.
+لو
+» Recruit: Place one warrior at each recruiter. You may take this action only once per
+turn.
+» Build: Place one building in a clearing you rule with an open slot by spending wood
+tokens equal to its cost. You may spend any wood on the map connected to this clear-
+ing by any number of clearings you rule. When you place the building, score the victo-
+ry points revealed on your faction board.
+» Overwork: Spend a card to place one wood token at one sawmill in a clearing whose
+suit matches the card spent.
+لو
+Unless otherwise noted, a faction may take actions listed in the same phase
+in any order, and may take a given action multiple times.
+Page 11
+Daylight Example
+First, the Marquise decides to craft the Gently Used Knap-
+sack, so she activates one mouse workshop. She scores a
+victory point and puts the item in her Crafted Items box.
+Then, she begins to take her actions:
+She starts by taking the March action, which lets her move twice.
+She moves two warriors from a mouse clearing, which
+she rules, to a rabbit clearing, which she doesn't.
+00
+Gently Used Knapsack
+Then
+discard.
+Crafted Items
+Vagabond co
+u cards to take these items.
+00
+00
+00
+00
+00
+00
+00
+00
+For her second move, she moves another two warriors into
+the clearing. She now rules the rabbit clearing.
+For her second and third actions, she takes the Overwork
+action twice, spending a mouse and a bird card to put
+two extra wood in a mouse clearing with a sawmill.
+Though she has taken three actions, she would like to go
+again, so she spends a bird card to get an extra action
+(Hawks for Hire). With this action she decides to build.
+Because she rules the rabbit clearing, she can now build in
+its empty slot. The next sawmill to be built costs three wood,
+so she spends wood from the nearby mouse clearing. Then,
+she scores three victory points.
+Evening
+2
+3
+3
+D
++2
++3
+Draw one card plus one card per uncovered draw bonus. Then, if you have more than five
+cards in your hand, discard down to five.
+Most of the other factions draw and discard during Evening in exactly the same way.
+لو
+11
+Page 12
+Eyrie Dynasties
+間
+The Eyrie Dynasties wish to restore their once-dignified kind to their former glory in the Woodland by resettling
+the forest clearings. During their Evening, the Eyrie score victory points from their number of roosts on the
+map. The greater their presence, the greater their gains. However, the Eyrie are bound by their Decree, an
+ever-increasing set of mandated actions promised by their leader. Each turn, they must take all of the actions
+on their Decree, or else fall into turmoil.
+The Eyrie are the Lords of the Forest. They rule a clearing even when tied for presence.
+However, their Disdain for Trade means they score less when crafting items.
+Birdsong
+You must add one or two cards onto any columns in
+the Decree. Only one card added may be a bird card.
+Daylight
+First, you may craft any number of cards, using roosts.
+لو
+Emergency Orders: If you have no cards
+at the start of Birdsong, draw one.
+A New Roost: If you have no roosts,
+place one roost and three warriors in
+the clearing with the fewest warriors.
+Then, you must resolve the Decree, starting with the leftmost column and moving right.
+In each column, you may resolve cards in any order.
+For each card in a column, you must take the action listed by the column in a clearing
+matching the card. Here are the actions in the four columns of the Decree:
+» Recruit: Place a warrior in a matching clearing with a roost.
+» Move: Move at least one warrior from a matching clearing.
+» Battle: Initiate a battle in a matching clearing.
+» Build: Place a roost in a matching clearing you rule with an open slot and no roost.
+Evening
+First, score the victory points shown on the rightmost empty
+space of your Roosts track.
+Then, draw one card plus one per uncovered draw bonus. If you
+12 have more than five cards in your hand, discard down to five.
++
++2
+Roosts
++3
+Page 13
+Turmoil
+If you cannot take an action for any reason, you fall into TURMOIL. Follow these steps:
+» First, your regime is humiliated. Lose one victory point per bird card in the Decree.
+» Then, your court is purged. Discard all of the cards in the Decree except the two Loyal
+Vizier bird cards.
+» Next, your leader is deposed. Flip your current leader face down and set it aside,
+choose a new leader from those face up, and place it on your faction board. Then, tuck
+your Loyal Viziers into the Decree spaces listed on your new leader.
+» Finally, you rest. End Daylight and go to Evening.
+There are many ways to fall into turmoil! For example, you might not have any warriors in your supply
+to recruit, or maybe all the clearings you rule already have a roost, meaning you can't build any more.
+Decree Example
+The Eyrie's Decree has a bird and
+fox card in the Recruit column, and
+a rabbit card in the Move column, a
+bird card on the Battle column, and
+a bird card on the Build column.
+Recruit
+...in a clearing with a roost.
+Move
+Battle
+Build
+in a clearing you rule
+without a roost
+The Decree
+ies
+00
+00
+00
+00
+00
+Next, the Eyrie
+must move at least
+one warrior from
+a rabbit clearing.
+For the recruit, Eyrie choose to treat the bird
+card as a fox card and so place two warriors
+in a fox clearing with a roost.
+00
+00
+00
+00
+2
+Then, the Eyrie must battle.
+They only have a target in
+the rabbit clearing.
+In the battle the Eyrie and
+Marquise each lose one warrior.
+Finally, the Eyrie must place a roost in a clearing they rule that does not have a roost
+already. They have nowhere to place a roost, so the dynasty enters turmoil!
+00
+13
+Page 14
+14
+Woodland Alliance
+The Woodland Alliance works to gain the sympathy of the various oppressed creatures of the Woodland. Each
+time the Alliance places a sympathy token, they score victory points. The more sympathy on the map, the more
+victory points they score. Gaining the sympathy of the people requires supporters, cards on the Alliance's fac-
+tion board. These supporters can also be put toward violent revolt. A revolt establishes a new base, allowing
+the Alliance to train officers that increase their military flexibility.
+The Alliance are experts in Guerrilla War. When defending in battle, the Alliance uses the
+higher roll and the attacker uses the lower roll.
+Supporters, Sympathy, and Outrage
+To act as the Alliance, you often spend SUPPORTERS-cards کم
+in your Supporters stack. Supporters are separate from your
+hand of cards, and you can only spend supporters for their
+suit. For example, you couldn't craft a card in the Supporters
+stack or play an ambush card there to deal hits.
+Supporter Limits: If you don't
+have a base on the map, you may
+only have up to five supporters.
+Discard any excess cards.
+Supporters are often spent to place sympathy tokens. Placing sympathy is the main way
+you score victory points, and sympathy can gain you more supporters through Outrage.
+Whenever another player removes a sympathy token or moves any warriors into a clearing
+with a sympathy token, they must add a card from their hand matching that clearing to
+your Supporters stack. If they don't have a matching card, they show you their hand, and
+then you draw a card from the deck and add it to your Supporters stack.
+Outrage Example
+Supporters Stack
+The Eyrie would like to move into the fox
+clearing. Because it has a sympathy token,
+they must pay one fox card to the Alliance's
+Supporters stack.
+00
+00
+Then the Eyrie battle in the fox clearing and
+remove the sympathy token. They must now
+pay another fox card to the Supporters stack.
+The Eyrie pay a bird card. If they couldn't
+pay, the Alliance would have drawn a card
+from the deck to add to their Supporters stack.
+Page 15
+Birdsong
+You may revolt any number of times, and then spread sympathy any number of times.
+» Revolt: Spend two supporters matching a sympathetic clearing. Remove all enemy
+pieces there and place the matching base. Then, place warriors there equal to the num-
+ber of sympathetic clearings matching the suit of the revolt clearing, including the
+revolt clearing itself. Last, place a warrior in the Officers box.
+و Whenever you remove a base, you'll have to remove half your officers and discard
+all supporters matching the suit of that base—even your bird supporters!
+Spread Sympathy: Place a sympathy token in an unsym-
+pathetic clearing, adjacent to a sympathetic clearing if
+possible. You must spend supporters as shown by the
+cost on your Sympathy track. If the target clearing has
+three or more warriors of another player, you must spend
+another matching supporter to place sympathy there.
+لو
+Sympathy
+2
+3
++1
+If there are no sympathy tokens on the board, you can place your first sympathy in any clearing.
+Birdsong Example
+At the start of Birdsong, the Alliance sees a
+sympathetic fox clearing as a prime target for
+revolt, so they take the opportunity, spending
+a fox and a bird from their Supporters stack.
+Supporters
+Stack
+XX
+00
+N
+00
+00
+00
+X
+Officers
+This revolt removes the Eyrie's roost and two Marquise
+warriors, and the Alliance scores a victory point for the
+removed roost. Because the Alliance has three sympathetic
+fox clearings, they place three warriors and a fox base in the
+fox clearing of the revolt and one warrior in the Officers box.
+XX
+X
+Then, the Alliance places a sympathy token in a
+rabbit clearing. This is the fourth sympathy token, so
+it costs two rabbit supporters. Also, because the Eyrie
+have three warriors there, the cost increases to three
+rabbit supporters. The Alliance places the sympathy
+and scores one victory point.
+ㅇㅇ
+00
+00
+00
+00
+00
+15
+Page 16
+16
+Daylight
+You may take the following actions. Unlike in Birdsong, these cards come from your
+hand, not your supporters.
+» Craft: Craft a card, using sympathy tokens.
+» Mobilize: Add a card to the Supporters stack.
+Train: Spend a card whose suit matches a built base to place a warrior in the Officers
+box. This warrior is now an OFFICER.
+لو
+Your officers determine the number of military operations you can take during Evening.
+Without officers, you can't move or battle with your warriors! Training officers will also let
+you recruit new warriors and place sympathy tokens without spending supporters.
+Evening
+You may take these military operations, up to your
+number of officers.
+» Move: Take one move.
+» Battle: Initiate a battle.
+» Recruit: Place a warrior in a clearing with a base.
+» Organize: Remove one of your warriors from an unsympathetic clearing to place a
+sympathy token there. Score the revealed victory points.
+After you finish military operations, draw one card plus one per uncovered draw bonus.
+Then, if you have more than five cards in your hand, discard down to five.
+Military Operations Example
+It is now the start of Evening. The Alliance has three officers, so they can
+perform three operations.
+First, they choose to
+recruit, placing a
+warrior at their
+00
+00
+fox base.
+00
+X
+00
+Officers
+00
+00
+00
+Next, they move two warriors to an
+adjacent mouse clearing.
+Finally, they organize, removing one of
+their warriors to place a sympathy token
+in the mouse clearing.
+Page 17
+Vagabond
+111
+M
+The Vagabond plays all sides of the conflict, making friends and enemies as suit his ends, while going on quests
+to increase his renown throughout the wood. As the Vagabond improves his relationships with other factions,
+or removes pieces of factions hostile toward him, he scores victory points.
+Being a Lone Wanderer, the Vagabond cannot rule a clearing or stop another player from
+ruling one, but he is Nimble, so he can move regardless of who rules his clearing.
+The Vagabond only has one piece: the VAGABOND PAWN. This pawn can move and battle
+just like a warrior, but it is not a warrior.
+Items
+To move and act effectively as the Vagabond, you must manage your ITEMS, expanding
+your selection by exploring the Woodland's RUINS and providing aid to other factions.
+At any time, an item can be DAMAGED or UNDAMAGED, and an item can be either face up
+or down. You can EXHAUST an undamaged face-up item to perform an action.
+face up
+exhaust
+face down
+Damaged
+While undamaged,
+and are stored on their tracks on the left side of your faction
+board, while all other items are stored in your Satchel. You can only carry so many items
+in your Satchel, and you will have to discard down to your item capacity during Evening.
+Birdsong
+Flip two items face up per ☑ on its track at the
+start of Birdsong, then flip three more face up.
+Then, you may slip once, moving into an adjacent
+clearing or forest without exhausting any
+Possible Slips
+0.0
+لو
+Slip is the only way you can enter a forest!
+17
+Page 18
+Daylight
+You can take various actions by exhausting items, flipping them face down.
+» Move: Exhaust a to take a move.
+Battle: Exhaust a ☑ to initiate a battle.
+Strike: Exhaust a
+to remove a warrior in your clearing. If a player has no warriors
+there, you can instead remove a building or token of that player.
+» Explore: Exhaust a to take one item from a ruin in your clearing and score one vic-
+tory point. Remove the ruin from the map.
+» Aid: Exhaust any one item, and give a card from your hand matching your clearing to
+any player in your clearing. Then, take one item, if any, from their Crafted Items box.
+Quest: Claim a quest whose suit matches your clearing by exhausting the two items
+listed on the quest. Place the claimed quest into your play area. Then, you may draw two
+cards from the deck, or you may score one victory point per quest of this suit that you
+have completed, including this one. Finally, draw and put out a new quest.
+» Craft: Exhaust equal in number to the suits shown on a card's crafting cost. All of
+your match the suit of your clearing.
+» Repair: Exhaust a ☑ to repair a damaged item.
+» Special Action: Exhaust a to take the action listed on your character card.
+Evening
+If you are in a forest, repair all of your damaged items.
+Then, draw one card, plus one card per on its track. If you have
+more than five cards in your hand, discard down to five.
+Finally, if you have more items in your Satchel and Damaged box
+than your item limit-six plus two per on its track-you must
+remove items from your Satchel down to your item limit. Return any
+removed items to the box.
+لو
+Vagabond's
+Draw Bonus
+Unlike other factions, the Vagabond does not uncover draw bonuses, but instead gets draw bonuses
+as items. This item only adds a bonus draw if it is undamaged and face up on its matching track.
+18
+لو
+Page 19
+Shifting Items
+You can freely move face-up, undamaged
+and between your Satchel and their tracks. If
+you exhaust a
+or
+you must move it to
+Vagabond
+your Satchel.
+When an item is damaged, move it to your Dam-
+aged box in your Satchel.
+When an item is repaired, move it out of the
+Damaged box and back to the Satchel.
+Relationships
+Other items are
+placed in the
+Satchel.
+Coin stacks, tea,
+and bags are
+placed on tracks.
+Your Relationships chart represents how friendly or hostile other factions are toward you.
+You can improve a relationship with a faction by giving them cards with the Aid action.
+During the same turn, you must take the Aid action the number of times shown between
+their current relationship space and the next one. When you improve a relationship, you
+score the victory points listed on the new space. When you reach the Allied space, you
+may move and battle with that faction's warriors. For more, see Law of Root (9.2.9).
+If you ever remove a warrior, place its faction's relationship marker in the Hostile box.
+From now on, you score a victory point each time you remove one of their pieces in battle
+during your turn, along with any points you score for removing buildings and tokens.
+However, you must exhaust another ☑ whenever you move into a clearing with any Hos-
+tile warriors.
+Aid and Improving Relationships Example
+The Vagabond would like to improve
+his relationship with the Eyrie.
+He shares a fox clearing with
+them, so he can target the Eyrie
+with the Aid action. Each time, he
+must exhaust an item and give a
+00
+Indifferent
+1
++1
++2
+23
++2
+Ally
+May move and
+battle with allied
+warriors.
+fox or bird card. He decides to aid three times.
+The Vagabond advances the Eyrie marker two
+spaces and scores three victory points.
+Score
++2
+each Aid.
+for
+19
+Page 20
+20
+Battling as the Vagabond
+Because you don't have warriors, you follow a
+few different rules in battle.
+The Vagabond pawn is not a warrior, so
+you can't rule and you are not affected
+by effects that refer to warriors. You
+can battle where your pawn is.
+» The maximum hits you can deal by
+rolling equals your total undamaged
+☑, whether exhausted or not.
+» You take hits by damaging items of
+your choice. If you have no undam-
+aged items, you ignore further hits.
+» You are defenseless, taking an extra hit,
+if you have no undamaged
+Vagabond Battle Example
+The Vagabond is in a clearing with three Marquise warriors. He has
+two face-up swords in his Satchel. After a long and fruitful relationship
+with the Marquise, the Vagabond is ready to betray his friend.
+The First Battle
+He exhausts a sword to battle the Marquise. The Marquise
+doesn't play an ambush card. The Vagabond then rolls the
+dice, rolling a 1 and a 1. The Vagabond deals one hit and
+moves the Marquise's relationship marker to Hostile. The
+Marquise also deals one hit, so the Vagabond chooses to
+damage the exhausted sword.
+The Second Battle
+Undeterred, he exhausts his second sword to battle again.
+The Marquise doesn't play an ambush card. The Vagabond
+then rolls the dice, rolling a 2 and a o. With only one
+undamaged sword, the Vagabond can only deal one hit.
+Because he removed a warrior of a Hostile faction, the
+Vagabond scores one point.
+1
+00
+0.0
+00
+X
+2
+Ο
++1
+00
+0.0
+X
+Page 21
+Dominance Cards
+The deck has four dominance cards, one in each suit. Like
+ambush cards, these cards cannot be crafted, but they can
+be spent for their suit.
+When you discard or spend a dominance card for its suit,
+do not discard it! Instead, place it near the map. Any player,
+during their Daylight, may pick up a dominance card near the
+map by spending a card of matching suit.
+Changing Your Victory Condition
+४
+Dominance
+IF SPENT FOR SUIT, MAKE AVAILABLE.
+If you have at least 10 points, play during
+Daylight and remove your score marker.
+오오
+오
+오
+a aa
+aa
+오
+오오
+오오
+오
+Q
+You win the game if you
+rule three rabbit clearings
+at the start of your Birdsong.
+In games of four or more,
+as Vagabond, you may
+form a coalition.
+During your Daylight, if you have at least 10 victory points, you may play a dominance
+card into your play area to ACTIVATE it. Remove your score marker from the score track.
+For the rest of the game, you can only win by meeting the victory condition listed on your
+activated dominance card.
+Your activated dominance card does not count against your hand size, and it cannot be
+removed from play or replaced.
+Forming a Coalition as the Vagabond
+The Vagabond cannot rule clearings, but he can play a
+dominance card to form a coalition with the player
+other than himself with the lowest score. If there's a tie
+for lowest score, the Vagabond chooses which player to
+form a coalition with.
+When forming a coalition, the Vagabond
+removes his score marker from the score
+track and places it on the faction board
+of that player. Now, the Vagabond will
+share the victory if that player wins.
+A Vagabond can even form a coalition
+with a Hostile faction! If doing so, the
+Vagabond moves his partner's relationship
+marker to the Indifferent space.
+لو
+21
+Page 22
+Scenarios
+Root can be played with many combinations of factions. The following list is not exhaus-
+tive. Other combinations are possible but may be more fragile and thus require experi-
+enced, aggressive players. We offer some recommended mixes (marked with a torch) as
+ideal ways to introduce the game to new players.
+When playing with two players, do not use the dominance cards. The two player game
+is also best played over the course of two full games (each takes about 30-45 minutes).
+After the first game, players should record their scores and trade factions. After the second
+game, each player should add their scores from both games to determine the winner.
+Two Players
+Eyrie versus Marquise is an ideal two-player learning game. The
+Eyrie must grow explosively to keep the Marquise in check.
+Two-player Alliance games offer Alliance players a chance to hone
+their skills in difficult situations. They will usually fare better
+against the Eyrie, but well-timed revolts and rapid mobilization
+can vex the Marquise as well.
+Here the Eyrie must be careful to build a Decree that can withstand
+the Vagabond's nimble attacks.
+Three Players
+The struggle between the Marquise and the Eyrie will be
+the defining characteristic of these games. Vagabond and
+Alliance alike must be careful to pick their friends and not
+create a situation that they cannot later control.
+Here, the Vagabond will have a natural friend in the Alli-
+ance. Both should watch out for dominance victory and not
+neglect developing their military strength.
+Four Players
+22
+With the map brimming with interlopers, the Mar-
+quise must not neglect policing the Woodland in
+the hopes of scoring a few extra victory points. If
+she loses control, she will not easily regain it.
+Page 23
+The Winter Map
+The reverse side of the autumn map is the winter map. You can play any mix of factions
+on this map, but it is recommended only for experienced players.
+Setup
+Before playing on the winter map, take out the 12 suit markers, flip them face down, and
+shuffle them. Then, place one suit marker near each clearing on the map. After a suit
+marker has been added to each clearing, flip them all over, and set up the game as normal.
+Note the different placement of ruins, as shown below.
+ROOT
+A Game of Woodland Dight and Righe
+४
+४
+then place
+12 13
+15
+25 26 27 28 29 30
+The Raging River
+On the winter map, the river divides forests as if it were a path.
+A Warning
+On the winter map, the randomness of clearing suits can
+introduce many new challenges to each faction. Keep
+the map's geography in mind when picking factions,
+and understand that certain factions may gain new ad-
+vantages and disadvantages in each possible layout.
+A Note from Leder Games:
+Sometimes errors happen during
+manufacturing. If you feel a part
+of your game is missing or arrived
+damaged please contact us at
+our website (www.ledergames.
+com) or email us at support@
+ledergames.com and we will
+be happy to work with you to
+replace the missing piece.
+23
+Page 24
+Piece Glossary
+00 00
+00
+Warriors, which can move around
+the map and battle pieces of other
+players. They add to rule.
+Buildings, which start on faction
+boards and can be placed in empty
+slots in clearings. They add to rule.
+Tokens, which can be placed in
+clearings but do not fill slots. They
+do not add to rule.
+VP
+Markers, which track things like
+victory points and the Vagabond's
+relationships with other factions.
+Ruins, which fill slots in clearings.
+The Vagabond can explore ruins to
+find items and empty their slots.
+00
+The Vagabond Pawn, which can
+move around the map and battle
+pieces of other players. It is not a
+warrior and does not add to rule.
+Items, which the Vagabond
+exhausts to take actions. All
+factions can craft items.
+Crafting Pieces
+Marquise crafts
+with workshops.
+Eyrie crafts
+with roosts.
+Alliance crafts
+with sympathy.
+Vagabond crafts
+with hammers.
+HAVE MORE QUESTIONS?
+READ THE LAW OF ROOT!
