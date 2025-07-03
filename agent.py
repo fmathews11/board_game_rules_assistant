@@ -43,7 +43,7 @@ def _load_game_manual(game_name: str) -> str:
             return output
 
 
-game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan', 'tokaido', 'dice_throne']
+game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan', 'tokaido', 'dice_throne','root']
 
 
 def _extract_raw_text_from_message_history(message_list: list) -> list[str]:
