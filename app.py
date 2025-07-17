@@ -13,6 +13,8 @@ I can help with:
  - Moonrakers
  - Tokaido
  - Dice Throne
+ - Root
+ - Vantage
 
 **Ask Away!**
 """
@@ -54,6 +56,8 @@ if __name__ == "__main__":
             if not s.get('messages'):
                 continue
             message = s["messages"][-1]
+            if hasattr(message, 'tool_calls'):
+                print(message.tool_calls)
             if isinstance(message,ToolMessage):
                 continue
             if isinstance(message, tuple):

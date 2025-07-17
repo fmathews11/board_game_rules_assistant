@@ -12,7 +12,7 @@ The header includes the page number.  Format your response for optimal use for a
  """
 RAW_PDF_DIRECTORY = "../raw_pdf_files"
 TEXT_FILE_DIRECTORY = "../text"
-MODEL = "gemini-2.5-flash-preview-04-17"
+MODEL = "gemini-2.5-flash"
 
 
 def extract():

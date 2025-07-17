@@ -1,6 +1,5 @@
 import json
 from json import JSONDecodeError
-
 import langchain_tavily
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage, ToolMessage
 from langchain_core.tools import tool
@@ -43,7 +42,7 @@ def _load_game_manual(game_name: str) -> str:
             return output
 
 
-game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan', 'tokaido', 'dice_throne','root']
+game_names = Literal['moonrakers', 'spirit_island', 'scythe', 'perch', 'wingspan', 'tokaido', 'dice_throne','root','vantage']
 
 
 def _extract_raw_text_from_message_history(message_list: list) -> list[str]:
